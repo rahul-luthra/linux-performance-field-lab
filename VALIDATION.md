@@ -29,3 +29,9 @@ The original collector-only exercises used no sudo, service changes or package i
 - Final app is installed and stopped; it is not enabled at boot. No firewall port, SELinux enforcement, global perf policy or boot setting was changed.
 
 The application report passed headless Edge checks for all three experiment selections, exact p95 values against the derived summaries, phase/comparison tables, profile counts, 300-request evidence download, identical GitHub Pages export, and page layouts at 320, 375 and 768 pixels, with no JavaScript errors. The desktop screenshot was inspected and saved as `app-preview.png`. These are controlled lab results, not a production capacity or monitoring-overhead benchmark.
+
+## Private review and HTML links
+
+All six generated HTML files were opened locally in headless Edge: `app-report.html`, `docs/index.html`, `showcase.html`, `results/cpu-lab.html`, `results/repeat/cpu-lab.html`, and `results/smoke-report.html`. Each rendered charts and its experiment/interval controls without JavaScript errors. The two remaining HTML files are authoring templates with unresolved data placeholders, not finished reports.
+
+GitHub's repository viewer displays these HTML files as source. README review links now distinguish source, rendered PNG previews, and the downloadable offline review bundle. `VIEWING_REPORTS.md` inventories every generated report and explains how to open it locally. `app-latency-preview.png` was captured directly from the rendered application chart for inline GitHub review. Repository privacy is retained and Pages remains off.

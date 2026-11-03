@@ -1,5 +1,7 @@
 # Where and how to showcase this work
 
+**Current review status:** the repository is private and Pages is off. To view the interactive HTML now, follow [VIEWING_REPORTS.md](VIEWING_REPORTS.md). GitHub file links show source code; they are not live website links. The steps below are for when you decide to publish publicly.
+
 ## Recommended home: GitHub repository plus GitHub Pages
 
 Use a public repository for the source, raw public evidence and case study, with GitHub Pages serving the interactive saved-results report. A reviewer can explore the result first and inspect the implementation afterward. GitHub Pages serves the static report; the Java app remains private on the lab VM.

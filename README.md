@@ -2,9 +2,19 @@
 
 **High load does not identify the bottleneck. Follow the work that is waiting.**
 
-A technical portfolio project combining a read-only Linux collector, an offline interactive evidence report, and diagnostic case studies. Open **showcase.html** for a measured CPU experiment from an Oracle Linux VM, followed by four clearly labelled simulated scenarios: I/O stalls, CPU contention, memory contention, and healthy filesystem caching.
+A technical portfolio project combining a read-only Linux collector, offline interactive evidence reports, and diagnostic case studies.
 
-**Start with the application investigation:** open [app-report.html](app-report.html) to explore three measured Java HTTP experiments, including a CPU-quota mitigation. Read [the application case study](APP_CASE_STUDY.md), [installation/reproduction](app/README.md), and [where/how to publish](PUBLISHING.md). The public report is also prepared as `docs/index.html` for GitHub Pages.
+## Review the reports
+
+**GitHub shows HTML files as source code. It does not run these reports inside the repository file viewer.** The repository is private and GitHub Pages is off.
+
+**[Download the interactive review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v1)** → download `linux-performance-field-lab.zip` under Assets → extract it → open `app-report.html` with Edge, Chrome or Firefox. The report works offline and needs no installation or connection to the VM.
+
+For a quick preview directly on GitHub, this is the first measured run:
+
+![Measured HTTP response time and handler wall/CPU time across baseline, CPU contention and recovery](app-latency-preview.png)
+
+Read [how to view every report](VIEWING_REPORTS.md), [the application case study](APP_CASE_STUDY.md), [installation/reproduction](app/README.md), and [where/how to publish later](PUBLISHING.md). The [application report HTML source](app-report.html) and [CPU showcase HTML source](showcase.html) remain available for code inspection. The prepared `docs/index.html` is for a future Pages deployment.
 
 Across the three application experiments, all 900 measured requests succeeded at an offered rate of four per second. First-run p95 latency rose from 92 ms baseline to 411 ms under CPU contention. The repeat measured 113 → 306 ms. A single run with the background workload limited to one CPU measured 91 → 177 ms: a partial mitigation with a cost to background CPU availability. See the case study for sample sizes, timing definitions, recovery and limitations.
 
@@ -19,7 +29,7 @@ This is a focused diagnostic prototype. It does not replace fleet monitoring, hi
 
 ## Start here
 
-1. Open `showcase.html` in a browser. Switch investigations and scrub the interval slider.
+1. [Download and extract the review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v1), then open `app-report.html` in your browser. Open `showcase.html` for the host CPU capture and four simulated teaching scenarios. See [viewing instructions](VIEWING_REPORTS.md).
 2. Read [the measured CPU investigation](LIVE_RESULTS.md), [the illustrative I/O case study](CASE_STUDY.md), and [the investigation runbook](RUNBOOK.md).
 3. On Linux, capture your own measurements and generate the same report.
 
