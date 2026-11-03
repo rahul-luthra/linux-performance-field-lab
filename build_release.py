@@ -12,7 +12,10 @@ PUBLIC = ['.gitignore', 'README.md', 'CASE_STUDY.md', 'LIVE_RESULTS.md', 'RUNBOO
           'app-report.html', 'APP_CASE_STUDY.md', 'PUBLISHING.md', 'app-preview.png', 'docs/index.html', 'docs/.nojekyll',
           'app/QuoteLab.java', 'app/quotelab.service', 'app/install.sh', 'app/run_app_lab.py', 'app/analyze_app.py',
           'app/test_analysis.py', 'app/README.md', 'app/app-report-template.html', 'VIEWING_REPORTS.md', 'app-latency-preview.png',
-          'build_pages.py', 'docs/showcase.html', 'docs/cpu-lab.html', 'docs/cpu-lab-repeat.html', 'docs/smoke-report.html']
+          'build_pages.py', 'docs/showcase.html', 'docs/cpu-lab.html', 'docs/cpu-lab-repeat.html', 'docs/smoke-report.html',
+          'memory-report.html', 'docs/memory.html', 'MEMORY_CASE_STUDY.md', 'memory-preview.png',
+          'memory/MemoryLab.java', 'memory/supervise.py', 'memory/run_memory_lab.py', 'memory/run_pressure_lab.py',
+          'memory/analyze_memory.py', 'memory/test_memory.py', 'memory/README.md', 'memory/report-template.html']
 EVIDENCE = ['cpu-lab.json', 'cpu-lab.html', 'summary.json', 'unit-tests.txt', 'mpstat.txt', 'vmstat.txt',
             'pidstat.txt', 'smoke-capture.json', 'smoke-report.html']
 
@@ -41,6 +44,10 @@ def package():
                     'perf-baseline.txt', 'perf-contention.txt', 'perf-recovery.txt']
     files += [ROOT / 'results' / run / name for run in ('app-run1', 'app-run2', 'app-mitigated') for name in app_evidence]
     files += [ROOT / 'results/java-profile-summary.json', ROOT / 'results/app-analysis-tests.txt']
+    memory_names = {'capture.json', 'config.json', 'http.json', 'summary.json', 'overview.json',
+                    'application.log', 'gc.log', 'gc.log.0', 'gc.log.1', 'unit-command.txt', 'unit-result.txt'}
+    files += [path for path in (ROOT / 'results/memory').rglob('*') if path.is_file() and path.name in memory_names]
+    files += [ROOT / 'results/memory-tests.txt']
     missing = [p.name for p in files if not p.exists()]
     if missing:
         raise FileNotFoundError(missing)
@@ -51,7 +58,7 @@ def package():
     with ZipFile(destination) as archive:
         names = archive.namelist()
         assert all('/ssh/' not in n and 'known_hosts' not in n and 'id_rsa' not in n and 'session_key' not in n for n in names)
-        assert not any(n.endswith('.jfr') or n.endswith('java-profile-events.json') for n in names)
+        assert not any(n.endswith(('.jfr', '.hprof')) or n.endswith('java-profile-events.json') for n in names)
         assert archive.testzip() is None
     print(f'Packaged {len(files)} public files; SSH keys and connection files excluded.')
 

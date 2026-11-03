@@ -1,0 +1,65 @@
+{
+  "baseline": {
+    "window_s": [
+      2,
+      13
+    ],
+    "arrivals": 44,
+    "successes": 44,
+    "errors": 0,
+    "completions_per_s": 4.0,
+    "p50_ms": 78.226,
+    "p95_ms": 87.599,
+    "p99_ms": 96.776,
+    "handler_cpu_mean_ms": 72.922,
+    "handler_wall_mean_ms": 75.519,
+    "client_lag_p95_ms": 2.505,
+    "gc_count_delta": 2,
+    "gc_time_delta_ms": 11,
+    "gc_counter_window_s": 10.753,
+    "cgroup_mean_mib": 60.133,
+    "host_cpu_mean_pct": 21.763
+  },
+  "allocation": {
+    "window_s": [
+      17,
+      38
+    ],
+    "arrivals": 84,
+    "successes": 84,
+    "errors": 0,
+    "completions_per_s": 4.0,
+    "p50_ms": 87.732,
+    "p95_ms": 109.989,
+    "p99_ms": 132.708,
+    "handler_cpu_mean_ms": 84.205,
+    "handler_wall_mean_ms": 87.875,
+    "client_lag_p95_ms": 2.104,
+    "gc_count_delta": 4,
+    "gc_time_delta_ms": 22,
+    "gc_counter_window_s": 20.744,
+    "cgroup_mean_mib": 65.957,
+    "host_cpu_mean_pct": 26.169
+  },
+  "recovery": {
+    "window_s": [
+      42,
+      53
+    ],
+    "arrivals": 44,
+    "successes": 44,
+    "errors": 0,
+    "completions_per_s": 4.0,
+    "p50_ms": 77.935,
+    "p95_ms": 106.446,
+    "p99_ms": 120.413,
+    "handler_cpu_mean_ms": 76.494,
+    "handler_wall_mean_ms": 81.5,
+    "client_lag_p95_ms": 2.142,
+    "gc_count_delta": 2,
+    "gc_time_delta_ms": 16,
+    "gc_counter_window_s": 10.767,
+    "cgroup_mean_mib": 75.199,
+    "host_cpu_mean_pct": 30.183
+  }
+}

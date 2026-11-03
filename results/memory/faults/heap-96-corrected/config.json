@@ -1,0 +1,9 @@
+{
+  "name": "heap-96-corrected",
+  "mode": "heap",
+  "heap_mib": 96,
+  "memory_max_mib": 192,
+  "heap_dump": false,
+  "seconds": 20,
+  "out": "/home/rahul/linux-performance-lab-20261103-QFOnk0/results/memory-v1/heap-96-corrected"
+}

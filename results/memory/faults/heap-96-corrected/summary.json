@@ -1,0 +1,24 @@
+{
+  "name": "heap-96-corrected",
+  "outcome": "Bounded allocation completed",
+  "heap_mib": 96,
+  "service_limit_mib": 192,
+  "java_returncode": 143,
+  "oom_kills": 0,
+  "allocation_complete": true,
+  "cgroup_peak_mib": 96.43,
+  "minimum_host_available_mib": 831.24,
+  "last_retained_mib": 48,
+  "evidence": {
+    "exit_code": 143,
+    "event_deltas": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "java_heap_error": false
+  }
+}

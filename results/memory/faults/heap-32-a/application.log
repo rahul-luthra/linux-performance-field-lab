@@ -1,0 +1,19 @@
+READY mode=heap java=17.0.21
+RETAINED_MIB=2
+RETAINED_MIB=4
+RETAINED_MIB=6
+RETAINED_MIB=8
+RETAINED_MIB=10
+RETAINED_MIB=12
+RETAINED_MIB=14
+RETAINED_MIB=16
+RETAINED_MIB=18
+RETAINED_MIB=20
+RETAINED_MIB=22
+RETAINED_MIB=24
+RETAINED_MIB=26
+RETAINED_MIB=28
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to /home/rahul/linux-performance-lab-20261103-QFOnk0/results/memory-v1/heap-32-a/heap.hprof ...
+Heap dump file created [33996301 bytes in 0.055 secs]
+Terminating due to java.lang.OutOfMemoryError: Java heap space

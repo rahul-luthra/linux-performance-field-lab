@@ -10,3 +10,6 @@ results/analysis-output.txt
 results/app-analysis-output.txt
 results/app-service-log.txt
 results/app-packages.txt
+*.hprof
+memory/build/
+results/memory/analysis-output.txt

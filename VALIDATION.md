@@ -38,6 +38,16 @@ GitHub's repository viewer displays these HTML files as source. The private-revi
 
 ## GitHub Pages publication
 
-The repository is now public and Pages publishes `main` → `/docs` at https://rahul-luthra.github.io/linux-performance-field-lab/ with HTTPS enforced. Five generated pages share relative navigation: the application report, Linux scenarios, first and repeated CPU captures, and collector check. Their root-file counterparts remain usable offline.
+The repository is now public and Pages publishes `main` → `/docs` at https://rahul-luthra.github.io/linux-performance-field-lab/ with HTTPS enforced. Six generated pages share relative navigation: the application report, memory investigation, Linux scenarios, first and repeated CPU captures, and collector check. Their root-file counterparts remain usable offline.
 
 `build_pages.py` exports the report copies; application analysis and release preparation invoke it to keep the site in sync. All five hosted URLs returned HTTP 200 in an anonymous Edge browser context. Experiment and interval controls, navigation between application/host reports, 300-request JSON evidence download, and layouts at 320/375/768 pixels passed without JavaScript errors. GitHub reported a successful Pages build. The site visualizes saved measurements and does not connect to the VM.
+
+## Memory/JVM extension
+
+Six allocation cases ran as isolated transient units: two heap-exhaustion cases, one heap-sizing correction, two cgroup memory-limit kills, and one cgroup-limit correction. The heap failures exited with code 3 and explicit heap-space errors with zero cgroup kills. The Linux kills returned signal 9 and incremented the same-cgroup OOM-kill counter by one. Corrected cases completed their finite targets and were intentionally stopped at the observation deadline.
+
+Three 55-second HTTP runs recorded 220 arrivals each after 60 warmup requests. All 660 measured arrivals returned expected quote/checksum values. Two fresh-array runs and a reusable-buffer trial retained raw HTTP, JVM/GC and cgroup measurements. The first run's elevated recovery tail is retained and documented rather than attributed to GC.
+
+Nine new classification/statistics tests passed on Windows and Linux; Linux output is `results/memory-tests.txt`. They cover missing/reset counters, signal-versus-OOM attribution, configured JVM heap error evidence, bounded completion, correct-response/error denominators, GC sampling windows and percentile handling. Local browser checks cover all six Pages routes, the six fault and three HTTP selections, plotted series, an OOM evidence download, navigation and mobile layouts. The memory report screenshot is `memory-preview.png`.
+
+Cleanup checks found no MemoryLab, supervisor or test-runner processes, no port-8088 listener and no remaining memory transient units. Host available memory was about 920 MiB afterward. One approximately 33-MiB heap dump remains only in the VM's raw test directory. Heap dumps, class files and raw JVM recordings are excluded from the release. The original QuoteLab service was not changed or started during this extension. No global swap, kernel/boot, SELinux or network-exposure settings changed.

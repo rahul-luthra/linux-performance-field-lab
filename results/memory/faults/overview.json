@@ -1,0 +1,86 @@
+[
+  {
+    "name": "heap-32-a",
+    "java_returncode": 3,
+    "events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "allocation_complete": false,
+    "host_available_after_mib": 900.3
+  },
+  {
+    "name": "heap-32-b",
+    "java_returncode": 3,
+    "events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "allocation_complete": false,
+    "host_available_after_mib": 894.51
+  },
+  {
+    "name": "heap-96-corrected",
+    "java_returncode": 143,
+    "events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "allocation_complete": true,
+    "host_available_after_mib": 895.24
+  },
+  {
+    "name": "limit-96-a",
+    "java_returncode": -9,
+    "events": {
+      "low": 0,
+      "high": 0,
+      "max": 44,
+      "oom": 1,
+      "oom_kill": 1,
+      "oom_group_kill": 0
+    },
+    "allocation_complete": false,
+    "host_available_after_mib": 897.94
+  },
+  {
+    "name": "limit-96-b",
+    "java_returncode": -9,
+    "events": {
+      "low": 0,
+      "high": 0,
+      "max": 28,
+      "oom": 1,
+      "oom_kill": 1,
+      "oom_group_kill": 0
+    },
+    "allocation_complete": false,
+    "host_available_after_mib": 889.31
+  },
+  {
+    "name": "limit-192-corrected",
+    "java_returncode": 143,
+    "events": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "allocation_complete": true,
+    "host_available_after_mib": 887.01
+  }
+]

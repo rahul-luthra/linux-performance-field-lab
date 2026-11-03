@@ -1,0 +1,24 @@
+{
+  "name": "limit-96-b",
+  "outcome": "Linux cgroup OOM kill",
+  "heap_mib": 32,
+  "service_limit_mib": 96,
+  "java_returncode": -9,
+  "oom_kills": 1,
+  "allocation_complete": false,
+  "cgroup_peak_mib": 96.0,
+  "minimum_host_available_mib": 824.37,
+  "last_retained_mib": 56,
+  "evidence": {
+    "exit_code": -9,
+    "event_deltas": {
+      "low": 0,
+      "high": 0,
+      "max": 28,
+      "oom": 1,
+      "oom_kill": 1,
+      "oom_group_kill": 0
+    },
+    "java_heap_error": false
+  }
+}

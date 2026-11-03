@@ -1,0 +1,9 @@
+{
+  "name": "allocation-b",
+  "mode": "pressure",
+  "heap_mib": 32,
+  "memory_max_mib": 192,
+  "heap_dump": false,
+  "seconds": 85,
+  "out": "/home/rahul/linux-performance-lab-20261103-QFOnk0/results/memory-pressure/allocation-b"
+}

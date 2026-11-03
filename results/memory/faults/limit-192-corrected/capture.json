@@ -1,0 +1,1932 @@
+{
+  "name": "limit-192-corrected",
+  "synthetic": false,
+  "started_utc": "2026-11-03T12:13:32.743879+00:00",
+  "config": {
+    "name": "limit-192-corrected",
+    "mode": "direct",
+    "heap_mib": 32,
+    "memory_max_mib": 192,
+    "heap_dump": false,
+    "seconds": 20,
+    "out": "/home/rahul/linux-performance-lab-20261103-QFOnk0/results/memory-v1/limit-192-corrected"
+  },
+  "cgroup": "/system.slice/memlab-102730-5.service",
+  "memory_max": "201326592",
+  "memory_swap_max": "0",
+  "memory_oom_group": "0",
+  "events_before": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "samples": [
+    {
+      "time": "2026-11-03T12:13:32.747011+00:00",
+      "elapsed_s": 0.0032,
+      "cgroup_current_bytes": 9781248,
+      "host_available_mib": 898.16,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "metrics_error": "URLError"
+    },
+    {
+      "time": "2026-11-03T12:13:33.005158+00:00",
+      "elapsed_s": 0.2613,
+      "cgroup_current_bytes": 31657984,
+      "host_available_mib": 891.16,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2762088,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:33.454433+00:00",
+      "elapsed_s": 0.7106,
+      "cgroup_current_bytes": 38797312,
+      "host_available_mib": 887.54,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4944904,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:33.714383+00:00",
+      "elapsed_s": 0.9706,
+      "cgroup_current_bytes": 39059456,
+      "host_available_mib": 887.35,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4944904,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:33.971156+00:00",
+      "elapsed_s": 1.2273,
+      "cgroup_current_bytes": 39059456,
+      "host_available_mib": 887.35,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4944904,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:34.227025+00:00",
+      "elapsed_s": 1.4832,
+      "cgroup_current_bytes": 39321600,
+      "host_available_mib": 887.35,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4944904,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:34.483467+00:00",
+      "elapsed_s": 1.7396,
+      "cgroup_current_bytes": 39321600,
+      "host_available_mib": 887.1,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4944904,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:34.742444+00:00",
+      "elapsed_s": 1.9986,
+      "cgroup_current_bytes": 39178240,
+      "host_available_mib": 887.1,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5234008,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:34.999272+00:00",
+      "elapsed_s": 2.2554,
+      "cgroup_current_bytes": 39440384,
+      "host_available_mib": 887.1,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5234008,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:35.254856+00:00",
+      "elapsed_s": 2.511,
+      "cgroup_current_bytes": 39440384,
+      "host_available_mib": 887.1,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5234008,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:35.514830+00:00",
+      "elapsed_s": 2.771,
+      "cgroup_current_bytes": 39440384,
+      "host_available_mib": 886.86,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5234008,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:35.770564+00:00",
+      "elapsed_s": 3.0267,
+      "cgroup_current_bytes": 39702528,
+      "host_available_mib": 886.86,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5234008,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:36.026353+00:00",
+      "elapsed_s": 3.2825,
+      "cgroup_current_bytes": 39702528,
+      "host_available_mib": 886.86,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5386760,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:36.284069+00:00",
+      "elapsed_s": 3.5402,
+      "cgroup_current_bytes": 39702528,
+      "host_available_mib": 886.86,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5531280,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:36.539926+00:00",
+      "elapsed_s": 3.7961,
+      "cgroup_current_bytes": 39960576,
+      "host_available_mib": 885.13,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5531280,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:36.795782+00:00",
+      "elapsed_s": 4.0519,
+      "cgroup_current_bytes": 39956480,
+      "host_available_mib": 885.13,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5531280,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:37.051606+00:00",
+      "elapsed_s": 4.3078,
+      "cgroup_current_bytes": 39956480,
+      "host_available_mib": 885.13,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5531280,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:37.308212+00:00",
+      "elapsed_s": 4.5644,
+      "cgroup_current_bytes": 39956480,
+      "host_available_mib": 885.13,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5531280,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:37.563116+00:00",
+      "elapsed_s": 4.8193,
+      "cgroup_current_bytes": 39956480,
+      "host_available_mib": 884.39,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5820320,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:37.818197+00:00",
+      "elapsed_s": 5.0744,
+      "cgroup_current_bytes": 40218624,
+      "host_available_mib": 884.39,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5820320,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 0,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:38.073560+00:00",
+      "elapsed_s": 5.3297,
+      "cgroup_current_bytes": 44429312,
+      "host_available_mib": 880.7,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5956656,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 4,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:38.329574+00:00",
+      "elapsed_s": 5.5857,
+      "cgroup_current_bytes": 48623616,
+      "host_available_mib": 876.77,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5956656,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 8,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:38.584280+00:00",
+      "elapsed_s": 5.8404,
+      "cgroup_current_bytes": 52817920,
+      "host_available_mib": 861.02,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 5956656,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 12,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:38.839956+00:00",
+      "elapsed_s": 6.0961,
+      "cgroup_current_bytes": 57012224,
+      "host_available_mib": 860.03,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6101176,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 16,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:39.094951+00:00",
+      "elapsed_s": 6.3511,
+      "cgroup_current_bytes": 61468672,
+      "host_available_mib": 856.59,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6237544,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 20,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:39.351608+00:00",
+      "elapsed_s": 6.6078,
+      "cgroup_current_bytes": 65662976,
+      "host_available_mib": 852.65,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6237544,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 24,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:39.607548+00:00",
+      "elapsed_s": 6.8637,
+      "cgroup_current_bytes": 70078464,
+      "host_available_mib": 845.09,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6237544,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 28,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:39.863300+00:00",
+      "elapsed_s": 7.1195,
+      "cgroup_current_bytes": 74272768,
+      "host_available_mib": 843.37,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6237544,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 32,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:40.118982+00:00",
+      "elapsed_s": 7.3751,
+      "cgroup_current_bytes": 78467072,
+      "host_available_mib": 839.93,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6237544,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 36,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:40.375768+00:00",
+      "elapsed_s": 7.6319,
+      "cgroup_current_bytes": 82661376,
+      "host_available_mib": 835.99,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6526672,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 40,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:40.630562+00:00",
+      "elapsed_s": 7.8867,
+      "cgroup_current_bytes": 87117824,
+      "host_available_mib": 828.04,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6526672,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 44,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:40.889297+00:00",
+      "elapsed_s": 8.1454,
+      "cgroup_current_bytes": 91574272,
+      "host_available_mib": 826.57,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6526672,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 48,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:41.145215+00:00",
+      "elapsed_s": 8.4014,
+      "cgroup_current_bytes": 96030720,
+      "host_available_mib": 822.88,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6526672,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 52,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:41.400855+00:00",
+      "elapsed_s": 8.657,
+      "cgroup_current_bytes": 99950592,
+      "host_available_mib": 829.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6526672,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 56,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:41.655622+00:00",
+      "elapsed_s": 8.9118,
+      "cgroup_current_bytes": 104316928,
+      "host_available_mib": 820.56,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6679424,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 60,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:41.910617+00:00",
+      "elapsed_s": 9.1668,
+      "cgroup_current_bytes": 108507136,
+      "host_available_mib": 819.82,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6815744,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 64,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:42.165448+00:00",
+      "elapsed_s": 9.4216,
+      "cgroup_current_bytes": 112451584,
+      "host_available_mib": 815.11,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6815744,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 68,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:42.420201+00:00",
+      "elapsed_s": 9.6764,
+      "cgroup_current_bytes": 116645888,
+      "host_available_mib": 807.23,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6815744,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 72,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:42.675074+00:00",
+      "elapsed_s": 9.9312,
+      "cgroup_current_bytes": 120840192,
+      "host_available_mib": 805.54,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6815744,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 0,
+        "retained_mib": 76,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:42.930651+00:00",
+      "elapsed_s": 10.1868,
+      "cgroup_current_bytes": 125034496,
+      "host_available_mib": 803.8,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 6815744,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 0,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": false,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:43.194487+00:00",
+      "elapsed_s": 10.4506,
+      "cgroup_current_bytes": 127062016,
+      "host_available_mib": 803.06,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2312920,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:43.449176+00:00",
+      "elapsed_s": 10.7053,
+      "cgroup_current_bytes": 127062016,
+      "host_available_mib": 803.06,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2312920,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:43.703746+00:00",
+      "elapsed_s": 10.9599,
+      "cgroup_current_bytes": 127201280,
+      "host_available_mib": 802.32,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2389736,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:43.958897+00:00",
+      "elapsed_s": 11.215,
+      "cgroup_current_bytes": 127201280,
+      "host_available_mib": 802.32,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2556416,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:44.213685+00:00",
+      "elapsed_s": 11.4698,
+      "cgroup_current_bytes": 127201280,
+      "host_available_mib": 802.32,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2556416,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:44.468570+00:00",
+      "elapsed_s": 11.7247,
+      "cgroup_current_bytes": 127201280,
+      "host_available_mib": 802.32,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2633232,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:44.723197+00:00",
+      "elapsed_s": 11.9793,
+      "cgroup_current_bytes": 127299584,
+      "host_available_mib": 801.83,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2633232,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:44.978136+00:00",
+      "elapsed_s": 12.2343,
+      "cgroup_current_bytes": 127295488,
+      "host_available_mib": 801.83,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2735848,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:45.232986+00:00",
+      "elapsed_s": 12.4891,
+      "cgroup_current_bytes": 127295488,
+      "host_available_mib": 801.83,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2816872,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:45.487689+00:00",
+      "elapsed_s": 12.7438,
+      "cgroup_current_bytes": 127295488,
+      "host_available_mib": 801.83,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2816872,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:45.742433+00:00",
+      "elapsed_s": 12.9986,
+      "cgroup_current_bytes": 127295488,
+      "host_available_mib": 801.41,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 2816872,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:45.998440+00:00",
+      "elapsed_s": 13.2546,
+      "cgroup_current_bytes": 127295488,
+      "host_available_mib": 801.41,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3000408,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:46.253239+00:00",
+      "elapsed_s": 13.5094,
+      "cgroup_current_bytes": 127352832,
+      "host_available_mib": 801.41,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3000408,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:46.509045+00:00",
+      "elapsed_s": 13.7652,
+      "cgroup_current_bytes": 127352832,
+      "host_available_mib": 801.41,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3000408,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:46.763497+00:00",
+      "elapsed_s": 14.0196,
+      "cgroup_current_bytes": 127344640,
+      "host_available_mib": 800.36,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3081320,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:47.019691+00:00",
+      "elapsed_s": 14.2758,
+      "cgroup_current_bytes": 127344640,
+      "host_available_mib": 800.36,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3183912,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:47.274560+00:00",
+      "elapsed_s": 14.5307,
+      "cgroup_current_bytes": 127344640,
+      "host_available_mib": 800.36,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3183912,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:47.540111+00:00",
+      "elapsed_s": 14.7963,
+      "cgroup_current_bytes": 127340544,
+      "host_available_mib": 800.36,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3260736,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:47.794763+00:00",
+      "elapsed_s": 15.0509,
+      "cgroup_current_bytes": 127340544,
+      "host_available_mib": 800.17,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3260736,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:48.049759+00:00",
+      "elapsed_s": 15.3059,
+      "cgroup_current_bytes": 127340544,
+      "host_available_mib": 800.17,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3367456,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:48.304504+00:00",
+      "elapsed_s": 15.5607,
+      "cgroup_current_bytes": 127340544,
+      "host_available_mib": 800.17,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3448368,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:48.559228+00:00",
+      "elapsed_s": 15.8154,
+      "cgroup_current_bytes": 127336448,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3448368,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:48.813912+00:00",
+      "elapsed_s": 16.0701,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3448368,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:49.068866+00:00",
+      "elapsed_s": 16.325,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3631888,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:49.323739+00:00",
+      "elapsed_s": 16.5799,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3631888,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:49.579567+00:00",
+      "elapsed_s": 16.8357,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3701416,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:49.834563+00:00",
+      "elapsed_s": 17.0907,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3782320,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:50.089153+00:00",
+      "elapsed_s": 17.3453,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3884912,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:50.343977+00:00",
+      "elapsed_s": 17.6001,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3884912,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:50.598831+00:00",
+      "elapsed_s": 17.855,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3961712,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:50.852960+00:00",
+      "elapsed_s": 18.1091,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 3961712,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:51.107499+00:00",
+      "elapsed_s": 18.3637,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4068432,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:51.361382+00:00",
+      "elapsed_s": 18.6175,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4149336,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:51.615917+00:00",
+      "elapsed_s": 18.8721,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 800.12,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4149336,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:51.870544+00:00",
+      "elapsed_s": 19.1268,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 799.87,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4149336,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:52.125810+00:00",
+      "elapsed_s": 19.382,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 799.8,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4332880,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:52.380612+00:00",
+      "elapsed_s": 19.6368,
+      "cgroup_current_bytes": 127594496,
+      "host_available_mib": 799.8,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4332880,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    },
+    {
+      "time": "2026-11-03T12:13:52.634510+00:00",
+      "elapsed_s": 19.8907,
+      "cgroup_current_bytes": 127856640,
+      "host_available_mib": 799.76,
+      "events": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "jvm": {
+        "heap_used": 4332880,
+        "heap_committed": 32768000,
+        "heap_max": 32768000,
+        "gc_count": 1,
+        "gc_ms": 7,
+        "retained_mib": 80,
+        "allocation_complete": true,
+        "strategy": "quiet"
+      }
+    }
+  ],
+  "java_pid": 103343,
+  "command": [
+    "/usr/lib/jvm/jre-17-openjdk/bin/java",
+    "--add-modules",
+    "jdk.httpserver",
+    "-Xms32m",
+    "-Xmx32m",
+    "-XX:+UseSerialGC",
+    "-XX:NewRatio=3",
+    "-XX:MaxMetaspaceSize=48m",
+    "-XX:ReservedCodeCacheSize=24m",
+    "-XX:MaxDirectMemorySize=128m",
+    "-XX:+ExitOnOutOfMemoryError",
+    "-Xlog:gc*:file=/home/rahul/linux-performance-lab-20261103-QFOnk0/results/memory-v1/limit-192-corrected/gc.log:uptime,level,tags:filecount=2,filesize=2M",
+    "-cp",
+    "/opt/linux-performance-field-lab/memory",
+    "MemoryLab",
+    "direct"
+  ],
+  "finished_utc": "2026-11-03T12:13:52.923231+00:00",
+  "java_returncode": 143,
+  "stopped_by_harness": true,
+  "events_after": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "cgroup_peak_bytes": "128118784",
+  "host_available_after_mib": 887.01,
+  "event_deltas": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "allocation_complete": true
+}

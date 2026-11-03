@@ -8,6 +8,8 @@ A technical portfolio project combining a read-only Linux collector, offline int
 
 **[Open the interactive reports on GitHub Pages](https://rahul-luthra.github.io/linux-performance-field-lab/)** — switch between Java experiments, Linux scenarios and individual host captures directly in your browser. No download or connection to the VM is needed.
 
+**New: [Memory investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html).** Six measured allocation/failure/correction tests distinguish JVM heap exhaustion from Linux cgroup OOM kills while the host still has available RAM. Three HTTP experiments compare temporary allocation churn with reusable buffers. Read [the memory case study](MEMORY_CASE_STUDY.md) and [reproduction instructions](memory/README.md).
+
 For offline use, [download the review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2), extract it, and open `app-report.html` with Edge, Chrome or Firefox. The tagged release is a fixed review snapshot; the live site follows the main branch.
 
 For a quick preview directly on GitHub, this is the first measured run:

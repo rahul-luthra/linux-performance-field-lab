@@ -1,0 +1,14 @@
+test_bounded_completion_is_not_a_spontaneous_exit (test_memory.MemoryEvidenceTests) ... ok
+test_cgroup_kill_requires_signal_and_counter (test_memory.MemoryEvidenceTests) ... ok
+test_errors_and_wrong_checksum_stay_in_denominator (test_memory.MemoryEvidenceTests) ... ok
+test_gc_counters_have_their_own_window (test_memory.MemoryEvidenceTests) ... ok
+test_heap_error_requires_jvm_evidence (test_memory.MemoryEvidenceTests) ... ok
+test_missing_counter_is_not_zero (test_memory.MemoryEvidenceTests) ... ok
+test_no_jvm_samples_remains_unknown (test_memory.MemoryEvidenceTests) ... ok
+test_percentile_small_sample_and_missing (test_memory.MemoryEvidenceTests) ... ok
+test_reset_or_missing_counter_is_unknown (test_memory.MemoryEvidenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK
