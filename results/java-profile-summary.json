@@ -1,0 +1,17 @@
+{
+  "execution_samples": 247,
+  "samples_with_QuoteLab_quote_on_stack": 211,
+  "top_frame_counts": {
+    "java.lang.Math.log1p": 209,
+    "QuoteLab.quote": 2,
+    "java.lang.invoke.DirectMethodHandle$Holder.invokeStatic": 2,
+    "java.lang.invoke.VarHandleInts$FieldInstanceReadWrite.getAndSet": 2,
+    "java.util.concurrent.ConcurrentHashMap.addCount": 1,
+    "java.lang.invoke.AbstractValidatingLambdaMetafactory.validateMetafactoryArgs": 1,
+    "jdk.internal.org.objectweb.asm.AnnotationVisitor.<init>": 1,
+    "jdk.internal.org.objectweb.asm.SymbolTable.addConstantMemberReference": 1,
+    "java.util.stream.StreamOpFlag.fromCharacteristics": 1,
+    "java.util.ResourceBundle.containsKey": 1
+  },
+  "scope": "Sampled Java execution across service recording, including warmup and both experiments. Counts are not elapsed-time percentages or a scheduler/off-CPU profile."
+}

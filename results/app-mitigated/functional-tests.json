@@ -1,0 +1,35 @@
+[
+  {
+    "path": "/health",
+    "status": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  {
+    "path": "/quote",
+    "status": 200,
+    "body": {
+      "quote": 101.052403,
+      "iterations": 1200000
+    }
+  },
+  {
+    "path": "/quote",
+    "status": 200,
+    "body": {
+      "quote": 101.052403,
+      "iterations": 1200000
+    }
+  },
+  {
+    "path": "/missing",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/quote",
+    "method": "POST",
+    "status": 405
+  }
+]

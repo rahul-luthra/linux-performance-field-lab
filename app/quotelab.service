@@ -1,0 +1,27 @@
+[Unit]
+Description=QuoteLab bounded Java performance lab (loopback only)
+After=network.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+StateDirectory=quotelab
+WorkingDirectory=/opt/linux-performance-field-lab/quotelab
+ExecStart=/usr/lib/jvm/jre-17-openjdk/bin/java --add-modules jdk.httpserver -Xms32m -Xmx64m -XX:MaxMetaspaceSize=64m -XX:ReservedCodeCacheSize=32m -XX:MaxDirectMemorySize=16m -XX:+UseSerialGC -XX:StartFlightRecording=name=lab,settings=profile,dumponexit=true,filename=/var/lib/quotelab/recording.jfr,maxsize=16m -cp /opt/linux-performance-field-lab/quotelab QuoteLab
+MemoryMax=256M
+TasksMax=64
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+TimeoutStopSec=15
+SuccessExitStatus=143
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

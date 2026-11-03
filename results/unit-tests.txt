@@ -1,0 +1,19 @@
+test_cpu_denominator_excludes_duplicate_guest_fields (test_monitor.MonitoringTests) ... ok
+test_cpu_reset_is_not_zero_utilization (test_monitor.MonitoringTests) ... ok
+test_device_rates_use_actual_elapsed_time (test_monitor.MonitoringTests) ... ok
+test_device_reset_omitted (test_monitor.MonitoringTests) ... ok
+test_hotplug_invalidates_cpu_interval (test_monitor.MonitoringTests) ... ok
+test_invalid_time_rejected (test_monitor.MonitoringTests) ... ok
+test_memory_available_not_free (test_monitor.MonitoringTests) ... ok
+test_missing_psi_remains_unknown (test_monitor.MonitoringTests) ... ok
+test_network_errors_drops_and_bytes (test_monitor.MonitoringTests) ... ok
+test_network_reset_is_not_negative_rate (test_monitor.MonitoringTests) ... ok
+test_no_completions_await_is_unknown (test_monitor.MonitoringTests) ... ok
+test_psi_microseconds_and_system_cpu_full (test_monitor.MonitoringTests) ... ok
+test_psi_reset_unknown (test_monitor.MonitoringTests) ... ok
+test_report_cannot_be_broken_out_of_json_script (test_monitor.MonitoringTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.092s
+
+OK

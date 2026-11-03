@@ -1,0 +1,77 @@
+{
+  "baseline": {
+    "stable_window_s": [
+      2,
+      18
+    ],
+    "offered_requests": 64,
+    "successful_requests": 64,
+    "errors_or_rejected": 0,
+    "successful_completions_per_second": 4.0,
+    "latency_ms": {
+      "mean": 80.245,
+      "p50": 78.203,
+      "p95": 92.047,
+      "p99": 113.325
+    },
+    "handler_wall_mean_ms": 76.543,
+    "handler_cpu_mean_ms": 73.532,
+    "scheduler_lag_p95_ms": 1.919,
+    "over_illustrative_150ms": 0,
+    "host_cpu_mean_pct": 21.554,
+    "runnable_mean": 2.062,
+    "load1_mean": 0.214,
+    "available_memory_mean_pct": 55.958,
+    "host_intervals": 16
+  },
+  "contention": {
+    "stable_window_s": [
+      22,
+      48
+    ],
+    "offered_requests": 104,
+    "successful_requests": 104,
+    "errors_or_rejected": 0,
+    "successful_completions_per_second": 4.0,
+    "latency_ms": {
+      "mean": 282.951,
+      "p50": 269.703,
+      "p95": 410.713,
+      "p99": 448.558
+    },
+    "handler_wall_mean_ms": 274.252,
+    "handler_cpu_mean_ms": 89.342,
+    "scheduler_lag_p95_ms": 15.695,
+    "over_illustrative_150ms": 104,
+    "host_cpu_mean_pct": 100.0,
+    "runnable_mean": 6.346,
+    "load1_mean": 1.408,
+    "available_memory_mean_pct": 54.144,
+    "host_intervals": 26
+  },
+  "recovery": {
+    "stable_window_s": [
+      52,
+      73
+    ],
+    "offered_requests": 84,
+    "successful_requests": 84,
+    "errors_or_rejected": 0,
+    "successful_completions_per_second": 4.0,
+    "latency_ms": {
+      "mean": 84.091,
+      "p50": 80.394,
+      "p95": 102.42,
+      "p99": 130.142
+    },
+    "handler_wall_mean_ms": 81.049,
+    "handler_cpu_mean_ms": 77.493,
+    "scheduler_lag_p95_ms": 1.834,
+    "over_illustrative_150ms": 0,
+    "host_cpu_mean_pct": 24.645,
+    "runnable_mean": 2.429,
+    "load1_mean": 1.756,
+    "available_memory_mean_pct": 53.71,
+    "host_intervals": 21
+  }
+}

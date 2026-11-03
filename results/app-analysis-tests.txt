@@ -1,0 +1,10 @@
+test_completion_window_uses_completion_time (test_analysis.AnalysisTests) ... ok
+test_failures_remain_in_denominator (test_analysis.AnalysisTests) ... ok
+test_missing_percentile_is_unknown (test_analysis.AnalysisTests) ... ok
+test_nearest_rank_percentiles (test_analysis.AnalysisTests) ... ok
+test_wrong_response_does_not_count_as_success (test_analysis.AnalysisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

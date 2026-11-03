@@ -1,0 +1,12 @@
+__pycache__/
+captures/
+*.pyc
+known_hosts
+ssh/
+*.jfr
+app/build/
+results/java-profile-events.json
+results/analysis-output.txt
+results/app-analysis-output.txt
+results/app-service-log.txt
+results/app-packages.txt
