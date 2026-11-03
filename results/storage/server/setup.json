@@ -1,0 +1,46 @@
+{
+  "role": "server",
+  "uid": 1000,
+  "gid": 1000,
+  "selinux": "Enforcing",
+  "test_data_removed_bytes": 218103808,
+  "export": {
+    "status": 0,
+    "stdout": "/srv/nfs/perf-lab\n\t\tlab-client(sync,wdelay,hide,no_subtree_check,sec=sys,rw,secure,root_squash,no_all_squash)",
+    "stderr": ""
+  },
+  "firewall_rules": {
+    "status": 0,
+    "stdout": "rule family=\"ipv4\" source address=\"lab-client/32\" port port=\"2049\" protocol=\"tcp\" accept",
+    "stderr": ""
+  },
+  "nfs_versions": "-3 +4 +4.1 +4.2",
+  "service_active": "active",
+  "service_enabled": "enabled",
+  "qdisc": [
+    {
+      "kind": "fq_codel",
+      "handle": "8003:",
+      "root": true,
+      "refcnt": 2,
+      "options": {
+        "limit": 10240,
+        "flows": 1024,
+        "quantum": 1464,
+        "target": 4999,
+        "interval": 99999,
+        "memory_limit": 33554432,
+        "ecn": true,
+        "drop_batch": 64
+      }
+    }
+  ],
+  "network_state_removed": true,
+  "rollback_timer_active": "inactive",
+  "disk_scheduler": "none [mq-deadline] kyber bfq",
+  "filesystem": {
+    "status": 0,
+    "stdout": "Filesystem           Size  Used Avail Use% Mounted on\n/dev/mapper/ol-root   22G   21G  1.8G  93% /",
+    "stderr": ""
+  }
+}

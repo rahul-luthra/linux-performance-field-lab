@@ -5,6 +5,7 @@ ROOT = Path(__file__).resolve().parent
 REPORTS = [
     ('app-report.html', 'index.html', 'Java application'),
     ('memory-report.html', 'memory.html', 'Memory investigation'),
+    ('storage-report.html', 'storage.html', 'Storage &amp; NFS'),
     ('showcase.html', 'showcase.html', 'Linux scenarios'),
     ('results/cpu-lab.html', 'cpu-lab.html', 'CPU run 1'),
     ('results/repeat/cpu-lab.html', 'cpu-lab-repeat.html', 'CPU run 2'),
@@ -30,4 +31,4 @@ def build():
 
 if __name__ == '__main__':
     build()
-    print('Exported six linked GitHub Pages reports.')
+    print('Exported seven linked GitHub Pages reports.')

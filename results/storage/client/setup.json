@@ -1,0 +1,19 @@
+{
+  "role": "client",
+  "uid": 1000,
+  "gid": 1000,
+  "selinux": "Enforcing",
+  "test_data_removed_bytes": 16777216,
+  "mount": {
+    "status": 0,
+    "stdout": "SOURCE                           FSTYPE OPTIONS\nlab-nfs-server:/srv/nfs/perf-lab nfs4   rw,nosuid,nodev,noexec,relatime,vers=4.2,rsize=262144,wsize=262144,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=lab-client,local_lock=none,addr=lab-nfs-server",
+    "stderr": ""
+  },
+  "user_read_write_ok": true,
+  "direct_root_write_denied": true,
+  "filesystem": {
+    "status": 0,
+    "stdout": "Filesystem                        Size  Used Avail Use% Mounted on\nlab-nfs-server:/srv/nfs/perf-lab   22G   21G  1.6G  93% /mnt/perf-lab-nfs",
+    "stderr": ""
+  }
+}

@@ -13,3 +13,5 @@ results/app-packages.txt
 *.hprof
 memory/build/
 results/memory/analysis-output.txt
+storage/build/
+results/storage/analysis-output.txt

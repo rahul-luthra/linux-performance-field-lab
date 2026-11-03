@@ -1,0 +1,12 @@
+{
+  "seconds": 34.23,
+  "io_max": "8:0 rbps=max wbps=max riops=max wiops=50",
+  "io_before": "8:0",
+  "io_after": "252:0 rbytes=0 wbytes=5963776 rios=0 wios=1456 dbytes=0 dios=0\n8:0 rbytes=0 wbytes=5963776 rios=0 wios=1456 dbytes=0 dios=0",
+  "worker_writes": [
+    370,
+    358
+  ],
+  "block_bytes": 8192,
+  "workers": 2
+}

@@ -1,0 +1,10 @@
+{
+  "valid_written_slots": 152,
+  "latest": {
+    "sequence": 151,
+    "slot": 151,
+    "crc32": 2442804100
+  },
+  "verification_time_utc": "2026-11-03T14:24:55.785605+00:00",
+  "note": "Read back after cohort; no subsequent writes to this case file."
+}

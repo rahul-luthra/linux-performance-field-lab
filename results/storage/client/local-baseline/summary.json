@@ -1,0 +1,42 @@
+{
+  "name": "local-baseline",
+  "storage": "local",
+  "stable_arrivals": 104,
+  "successes": 104,
+  "errors": 0,
+  "all_arrivals": 120,
+  "all_successes": 120,
+  "p50_ms": 8.295,
+  "p95_ms": 25.889,
+  "p99_ms": 86.332,
+  "force_p95_ms": 6.865,
+  "write_p95_ms": 0.281,
+  "handler_cpu_mean_ms": 1.138,
+  "client_lag_p95_ms": 2.659,
+  "client_cpu_mean_pct": 10.983,
+  "server_cpu_mean_pct": 9.07,
+  "server_disk": {
+    "device": "sda",
+    "samples": 25,
+    "rw_await_ms_weighted": 3.568,
+    "queue_mean": 0.005,
+    "busy_mean_pct": 0.082,
+    "write_mib_s_mean": 0.01,
+    "flush_await_ms_mean": 2.667
+  },
+  "client_disk": {
+    "device": "sda",
+    "samples": 26,
+    "rw_await_ms_weighted": 2.179,
+    "queue_mean": 0.037,
+    "busy_mean_pct": 1.974,
+    "write_mib_s_mean": 0.262,
+    "flush_await_ms_mean": 4.102
+  },
+  "rpc": {},
+  "client_readback_matches": true,
+  "server_readback_matches": null,
+  "noise_write_ops_s": null,
+  "noise_io_max": null,
+  "host_alignment_note": "Host samples selected by UTC window; clocks/snapshots are not atomically aligned. RPC deltas cover the full 120-arrival measurement, unlike the trimmed HTTP percentiles."
+}

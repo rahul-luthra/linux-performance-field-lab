@@ -1,0 +1,15 @@
+test_counter_reset_is_omitted (test_storage.StorageEvidenceTests) ... ok
+test_disk_await_is_completion_weighted (test_storage.StorageEvidenceTests) ... ok
+test_failed_requests_stay_in_denominator_and_unknown_readback (test_storage.StorageEvidenceTests) ... ok
+test_missing_disk_is_unknown (test_storage.StorageEvidenceTests) ... ok
+test_missing_rpc_source_is_not_zero (test_storage.StorageEvidenceTests) ... ok
+test_mountstats_selects_only_target_mount (test_storage.StorageEvidenceTests) ... ok
+test_no_operations_mean_unknown_latency (test_storage.StorageEvidenceTests) ... ok
+test_percentile_and_empty (test_storage.StorageEvidenceTests) ... ok
+test_rpc_inflight_difference_is_not_false_zero (test_storage.StorageEvidenceTests) ... ok
+test_rpc_units_and_retransmissions (test_storage.StorageEvidenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.006s
+
+OK

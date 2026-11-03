@@ -8,7 +8,11 @@ A technical portfolio project combining a read-only Linux collector, offline int
 
 **[Open the interactive reports on GitHub Pages](https://rahul-luthra.github.io/linux-performance-field-lab/)** — switch between Java experiments, Linux scenarios and individual host captures directly in your browser. No download or connection to the VM is needed.
 
-**New: [Memory investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html).** Six measured allocation/failure/correction tests distinguish JVM heap exhaustion from Linux cgroup OOM kills while the host still has available RAM. Three HTTP experiments compare temporary allocation churn with reusable buffers. Read [the memory case study](MEMORY_CASE_STUDY.md) and [reproduction instructions](memory/README.md).
+**[Memory investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html).** Six measured allocation/failure/correction tests distinguish JVM heap exhaustion from Linux cgroup OOM kills while the host still has available RAM. Three HTTP experiments compare temporary allocation churn with reusable buffers. Read [the memory case study](MEMORY_CASE_STUDY.md) and [reproduction instructions](memory/README.md).
+
+**New: [Storage & NFS investigation](https://rahul-luthra.github.io/linux-performance-field-lab/storage.html).** Ten measured two-VM cases follow save latency through Java, NFS RPCs, network delay and server storage. All 1,200 requests passed. Network delay has a clear recovery signal; disk throttling results are inconsistent and the late baseline drift remains unresolved. Read [the case study](STORAGE_CASE_STUDY.md) and [reproduction guide](storage/README.md).
+
+![Local disk and NFS investigation](storage-preview.png)
 
 For offline use, [download the review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2), extract it, and open `app-report.html` with Edge, Chrome or Firefox. The tagged release is a fixed review snapshot; the live site follows the main branch.
 
@@ -25,7 +29,7 @@ Across the three application experiments, all 900 measured requests succeeded at
 - Linux counter interpretation: CPU states, memory availability, pressure stall information, device latency and queues, interface errors and drops.
 - Engineering judgment: competing hypotheses, missing evidence, bounded experiments, and verification after a change.
 - Implementation quality: actual elapsed-time rates, reset handling, missing-data semantics, an unprivileged host collector, and no third-party Python dependencies.
-- Privilege boundaries: the collector and Java application process run without root. The full application experiment uses sudo for package/service management, perf profiling of the application's separate service user, and creation of the transient CPU-quota service.
+- Privilege boundaries: the collector and Java application process run without root. The full application experiment uses sudo for package/service management, perf profiling of the application's separate service user, and creation of the transient CPU-quota service. The storage extension also uses sudo for NFS/firewall/mount configuration, transient I/O controls and scoped network-delay injection.
 - Communication: a reviewer can explore the evidence first, then inspect the code and reasoning.
 
 This is a focused diagnostic prototype. It does not replace fleet monitoring, historical storage, application instrumentation, or production alerting. The current collector uses host scope; run it directly on a Linux VM/host. Container procfs visibility may not match the workload's cgroup entitlement.

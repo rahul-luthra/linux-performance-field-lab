@@ -15,7 +15,12 @@ PUBLIC = ['.gitignore', 'README.md', 'CASE_STUDY.md', 'LIVE_RESULTS.md', 'RUNBOO
           'build_pages.py', 'docs/showcase.html', 'docs/cpu-lab.html', 'docs/cpu-lab-repeat.html', 'docs/smoke-report.html',
           'memory-report.html', 'docs/memory.html', 'MEMORY_CASE_STUDY.md', 'memory-preview.png',
           'memory/MemoryLab.java', 'memory/supervise.py', 'memory/run_memory_lab.py', 'memory/run_pressure_lab.py',
-          'memory/analyze_memory.py', 'memory/test_memory.py', 'memory/README.md', 'memory/report-template.html']
+          'memory/analyze_memory.py', 'memory/test_memory.py', 'memory/README.md', 'memory/report-template.html',
+          'storage-report.html', 'docs/storage.html', 'storage-preview.png', 'STORAGE_CASE_STUDY.md',
+          'storage/StorageLab.java', 'storage/setup_nfs.py', 'storage/telemetry.py', 'storage/noise.py',
+          'storage/network.py', 'storage/run_case.py', 'storage/server_case.py', 'storage/run_all.py',
+          'storage/export_evidence.py', 'storage/check_setup.py', 'storage/analyze_storage.py',
+          'storage/test_storage.py', 'storage/report-template.html', 'storage/README.md']
 EVIDENCE = ['cpu-lab.json', 'cpu-lab.html', 'summary.json', 'unit-tests.txt', 'mpstat.txt', 'vmstat.txt',
             'pidstat.txt', 'smoke-capture.json', 'smoke-report.html']
 
@@ -48,6 +53,12 @@ def package():
                     'application.log', 'gc.log', 'gc.log.0', 'gc.log.1', 'unit-command.txt', 'unit-result.txt'}
     files += [path for path in (ROOT / 'results/memory').rglob('*') if path.is_file() and path.name in memory_names]
     files += [ROOT / 'results/memory-tests.txt']
+    storage_names = {'capture.json', 'host.json', 'unit-result.txt', 'iostat.txt', 'nfsiostat.txt',
+                     'mountstats-before.txt', 'mountstats-after.txt', 'controller.json', 'noise.json',
+                     'network.json', 'network-filter.txt', 'nfsd-before.txt', 'nfsd-after.txt',
+                     'server-verification.json', 'setup.json', 'summary.json'}
+    files += [path for path in (ROOT / 'results/storage').rglob('*') if path.is_file() and path.name in storage_names]
+    files += [ROOT / 'results/storage-tests.txt']
     missing = [p.name for p in files if not p.exists()]
     if missing:
         raise FileNotFoundError(missing)

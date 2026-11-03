@@ -1,0 +1,5 @@
+{
+  "noise": "none",
+  "observer_pid": 3008,
+  "unit": "nfsnoise-local-baseline"
+}

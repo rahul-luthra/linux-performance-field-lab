@@ -1,0 +1,300 @@
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           1.367           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   1.263         157.695         124.809        0 (0.0%)          56.744         152.465          95.578        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)         132.750         133.250           0.750        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)         131.750         132.000           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   5.000         321.562          64.312        0 (0.0%)         193.400         194.400           0.800        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)         106.750         106.750           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   3.000         192.938          64.312        0 (0.0%)         115.333         115.333           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   5.000         321.562          64.312        0 (0.0%)         116.600         117.000           0.400        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   3.000         192.938          64.312        0 (0.0%)          43.000          43.000           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   5.000         321.562          64.312        0 (0.0%)         139.600         140.400           0.800        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          95.000          95.250           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)         111.250         111.500           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)         123.500         123.500           0.250        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          81.250          81.250           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          97.500          97.750           0.250        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)         105.000         105.250           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          74.500          74.750           0.250        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          94.750          94.750           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)         134.000         134.000           0.250        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          59.750          60.000           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          89.250          89.250           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          83.750          83.750           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          85.750          86.500           0.500        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           5.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          83.750          83.750           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          64.000          64.250           0.250        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)         104.000         104.000           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          87.250          87.250           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   5.000         321.562          64.312        0 (0.0%)          95.000          95.400           0.400        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   3.000         192.938          64.312        0 (0.0%)          92.667          93.000           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          90.500          90.500           0.000        0 (0.0%)
+
+lab-nfs-server:/srv/nfs/perf-lab mounted on /mnt/perf-lab-nfs:
+
+           ops/s       rpc bklog
+           4.000           0.000
+
+read:              ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   0.000           0.000           0.000        0 (0.0%)           0.000           0.000           0.000        0 (0.0%)
+write:             ops/s            kB/s           kB/op         retrans    avg RTT (ms)    avg exe (ms)  avg queue (ms)          errors
+                   4.000         257.250          64.312        0 (0.0%)          76.000          76.000           0.000        0 (0.0%)
