@@ -11,7 +11,8 @@ PUBLIC = ['.gitignore', 'README.md', 'CASE_STUDY.md', 'LIVE_RESULTS.md', 'RUNBOO
           'make_demo.py', 'build_release.py', 'report-template.html', 'showcase.html', 'demo-data.json', 'preview.png',
           'app-report.html', 'APP_CASE_STUDY.md', 'PUBLISHING.md', 'app-preview.png', 'docs/index.html', 'docs/.nojekyll',
           'app/QuoteLab.java', 'app/quotelab.service', 'app/install.sh', 'app/run_app_lab.py', 'app/analyze_app.py',
-          'app/test_analysis.py', 'app/README.md', 'app/app-report-template.html', 'VIEWING_REPORTS.md', 'app-latency-preview.png']
+          'app/test_analysis.py', 'app/README.md', 'app/app-report-template.html', 'VIEWING_REPORTS.md', 'app-latency-preview.png',
+          'build_pages.py', 'docs/showcase.html', 'docs/cpu-lab.html', 'docs/cpu-lab-repeat.html', 'docs/smoke-report.html']
 EVIDENCE = ['cpu-lab.json', 'cpu-lab.html', 'summary.json', 'unit-tests.txt', 'mpstat.txt', 'vmstat.txt',
             'pidstat.txt', 'smoke-capture.json', 'smoke-report.html']
 
@@ -29,6 +30,8 @@ def prepare():
         capture = directory / 'cpu-lab.json'
         if capture.exists():
             build_report(json.loads(capture.read_text()), directory / 'cpu-lab.html')
+    from build_pages import build
+    build()
 
 
 def package():

@@ -1,6 +1,6 @@
 # Where and how to showcase this work
 
-**Current review status:** the repository is private and Pages is off. To view the interactive HTML now, follow [VIEWING_REPORTS.md](VIEWING_REPORTS.md). GitHub file links show source code; they are not live website links. The steps below are for when you decide to publish publicly.
+**Current publication:** the repository is public and the interactive reports use [GitHub Pages](https://rahul-luthra.github.io/linux-performance-field-lab/), published from `main` → `/docs`. See [VIEWING_REPORTS.md](VIEWING_REPORTS.md) for live report links and offline alternatives. GitHub file links still show source code. The steps below document how this setup can be reproduced.
 
 ## Recommended home: GitHub repository plus GitHub Pages
 

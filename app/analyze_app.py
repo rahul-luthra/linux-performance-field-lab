@@ -86,10 +86,10 @@ def main():
     template = (ROOT / 'app' / 'app-report-template.html').read_text(encoding='utf-8')
     report = template.replace('__APP_DATA__', payload)
     (ROOT / 'app-report.html').write_text(report, encoding='utf-8')
-    docs = ROOT / 'docs'
-    docs.mkdir(exist_ok=True)
-    (docs / 'index.html').write_text(report, encoding='utf-8')
-    (docs / '.nojekyll').write_text('')
+    import sys
+    sys.path.insert(0, str(ROOT))
+    from build_pages import build
+    build()
 
 
 if __name__ == '__main__':

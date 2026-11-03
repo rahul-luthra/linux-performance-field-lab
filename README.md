@@ -6,15 +6,15 @@ A technical portfolio project combining a read-only Linux collector, offline int
 
 ## Review the reports
 
-**GitHub shows HTML files as source code. It does not run these reports inside the repository file viewer.** The repository is private and GitHub Pages is off.
+**[Open the interactive reports on GitHub Pages](https://rahul-luthra.github.io/linux-performance-field-lab/)** — switch between Java experiments, Linux scenarios and individual host captures directly in your browser. No download or connection to the VM is needed.
 
-**[Download the interactive review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2)** → download `linux-performance-field-lab.zip` under Assets → extract it → open `app-report.html` with Edge, Chrome or Firefox. The report works offline and needs no installation or connection to the VM.
+For offline use, [download the review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2), extract it, and open `app-report.html` with Edge, Chrome or Firefox. The tagged release is a fixed review snapshot; the live site follows the main branch.
 
 For a quick preview directly on GitHub, this is the first measured run:
 
 ![Measured HTTP response time and handler wall/CPU time across baseline, CPU contention and recovery](app-latency-preview.png)
 
-Read [how to view every report](VIEWING_REPORTS.md), [the application case study](APP_CASE_STUDY.md), [installation/reproduction](app/README.md), and [where/how to publish later](PUBLISHING.md). The [application report HTML source](app-report.html) and [CPU showcase HTML source](showcase.html) remain available for code inspection. The prepared `docs/index.html` is for a future Pages deployment.
+Read [how to view every report](VIEWING_REPORTS.md), [the application case study](APP_CASE_STUDY.md), [installation/reproduction](app/README.md), and [publishing guidance](PUBLISHING.md). GitHub's repository viewer still displays [HTML source](app-report.html); use the Pages link above for the rendered report. The site is published from `main` → `/docs`.
 
 Across the three application experiments, all 900 measured requests succeeded at an offered rate of four per second. First-run p95 latency rose from 92 ms baseline to 411 ms under CPU contention. The repeat measured 113 → 306 ms. A single run with the background workload limited to one CPU measured 91 → 177 ms: a partial mitigation with a cost to background CPU availability. See the case study for sample sizes, timing definitions, recovery and limitations.
 
@@ -30,7 +30,7 @@ This is a focused diagnostic prototype. It does not replace fleet monitoring, hi
 
 ## Start here
 
-1. [Download and extract the review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2), then open `app-report.html` in your browser. Open `showcase.html` for the host CPU capture and four simulated teaching scenarios. See [viewing instructions](VIEWING_REPORTS.md).
+1. [Open the Java application investigation](https://rahul-luthra.github.io/linux-performance-field-lab/) or [the Linux host scenarios](https://rahul-luthra.github.io/linux-performance-field-lab/showcase.html). See [viewing instructions](VIEWING_REPORTS.md) for individual captures and offline use.
 2. Read [the measured CPU investigation](LIVE_RESULTS.md), [the illustrative I/O case study](CASE_STUDY.md), and [the investigation runbook](RUNBOOK.md).
 3. On Linux, capture your own measurements and generate the same report.
 
