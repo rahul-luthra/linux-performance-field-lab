@@ -8,7 +8,7 @@ A technical portfolio project combining a read-only Linux collector, offline int
 
 **GitHub shows HTML files as source code. It does not run these reports inside the repository file viewer.** The repository is private and GitHub Pages is off.
 
-**[Download the interactive review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v1)** → download `linux-performance-field-lab.zip` under Assets → extract it → open `app-report.html` with Edge, Chrome or Firefox. The report works offline and needs no installation or connection to the VM.
+**[Download the interactive review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2)** → download `linux-performance-field-lab.zip` under Assets → extract it → open `app-report.html` with Edge, Chrome or Firefox. The report works offline and needs no installation or connection to the VM.
 
 For a quick preview directly on GitHub, this is the first measured run:
 
@@ -22,14 +22,15 @@ Across the three application experiments, all 900 measured requests succeeded at
 
 - Linux counter interpretation: CPU states, memory availability, pressure stall information, device latency and queues, interface errors and drops.
 - Engineering judgment: competing hypotheses, missing evidence, bounded experiments, and verification after a change.
-- Implementation quality: actual elapsed-time rates, reset handling, missing-data semantics, no root requirement, no third-party Python dependencies.
+- Implementation quality: actual elapsed-time rates, reset handling, missing-data semantics, an unprivileged host collector, and no third-party Python dependencies.
+- Privilege boundaries: the collector and Java application process run without root. The full application experiment uses sudo for package/service management, perf profiling of the application's separate service user, and creation of the transient CPU-quota service.
 - Communication: a reviewer can explore the evidence first, then inspect the code and reasoning.
 
 This is a focused diagnostic prototype. It does not replace fleet monitoring, historical storage, application instrumentation, or production alerting. The current collector uses host scope; run it directly on a Linux VM/host. Container procfs visibility may not match the workload's cgroup entitlement.
 
 ## Start here
 
-1. [Download and extract the review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v1), then open `app-report.html` in your browser. Open `showcase.html` for the host CPU capture and four simulated teaching scenarios. See [viewing instructions](VIEWING_REPORTS.md).
+1. [Download and extract the review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2), then open `app-report.html` in your browser. Open `showcase.html` for the host CPU capture and four simulated teaching scenarios. See [viewing instructions](VIEWING_REPORTS.md).
 2. Read [the measured CPU investigation](LIVE_RESULTS.md), [the illustrative I/O case study](CASE_STUDY.md), and [the investigation runbook](RUNBOOK.md).
 3. On Linux, capture your own measurements and generate the same report.
 

@@ -7,7 +7,7 @@ GitHub's repository file viewer displays `.html` files as source. The Raw button
 ## Download once, then open locally
 
 1. Sign in to GitHub with access to this private repository.
-2. Open the [review-v1 release](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v1).
+2. Open the [review-v2 release](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2).
 3. Under **Assets**, download **linux-performance-field-lab.zip**. The release and its assets inherit the repository's private access.
 4. On Windows, right-click the downloaded ZIP and select **Extract All**.
 5. In the extracted `linux-performance-field-lab` folder, right-click `app-report.html`, select **Open with**, and choose **Microsoft Edge**, **Google Chrome** or **Firefox**. If double-clicking opens an editor, use Open with instead.

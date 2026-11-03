@@ -1,6 +1,6 @@
 # When load average hides a short CPU spike
 
-**Measured Linux lab experiment · 3 November 2026 · no root privileges.**
+**Original host-only CPU experiment · 3 November 2026 · collected without root privileges.** The later [Java application experiment](APP_CASE_STUDY.md) uses sudo for installation, service management, cross-user perf profiling and the transient CPU-quota service.
 
 ## The question
 
