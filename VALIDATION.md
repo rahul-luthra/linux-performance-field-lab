@@ -30,8 +30,14 @@ The original collector-only exercises used no sudo, service changes or package i
 
 The application report passed headless Edge checks for all three experiment selections, exact p95 values against the derived summaries, phase/comparison tables, profile counts, 300-request evidence download, identical GitHub Pages export, and page layouts at 320, 375 and 768 pixels, with no JavaScript errors. The desktop screenshot was inspected and saved as `app-preview.png`. These are controlled lab results, not a production capacity or monitoring-overhead benchmark.
 
-## Private review and HTML links
+## Private review and HTML links (before publication)
 
 All six generated HTML files were opened locally in headless Edge: `app-report.html`, `docs/index.html`, `showcase.html`, `results/cpu-lab.html`, `results/repeat/cpu-lab.html`, and `results/smoke-report.html`. Each rendered charts and its experiment/interval controls without JavaScript errors. The two remaining HTML files are authoring templates with unresolved data placeholders, not finished reports.
 
-GitHub's repository viewer displays these HTML files as source. README review links now distinguish source, rendered PNG previews, and the downloadable offline review bundle. `VIEWING_REPORTS.md` inventories every generated report and explains how to open it locally. `app-latency-preview.png` was captured directly from the rendered application chart for inline GitHub review. Repository privacy is retained and Pages remains off.
+GitHub's repository viewer displays these HTML files as source. The private-review update distinguished source, rendered PNG previews, and the downloadable offline review bundle. `VIEWING_REPORTS.md` inventories every generated report. `app-latency-preview.png` was captured directly from the rendered application chart for inline GitHub review. At that stage the repository was private and Pages was off; publication was authorized afterward.
+
+## GitHub Pages publication
+
+The repository is now public and Pages publishes `main` → `/docs` at https://rahul-luthra.github.io/linux-performance-field-lab/ with HTTPS enforced. Five generated pages share relative navigation: the application report, Linux scenarios, first and repeated CPU captures, and collector check. Their root-file counterparts remain usable offline.
+
+`build_pages.py` exports the report copies; application analysis and release preparation invoke it to keep the site in sync. All five hosted URLs returned HTTP 200 in an anonymous Edge browser context. Experiment and interval controls, navigation between application/host reports, 300-request JSON evidence download, and layouts at 320/375/768 pixels passed without JavaScript errors. GitHub reported a successful Pages build. The site visualizes saved measurements and does not connect to the VM.
