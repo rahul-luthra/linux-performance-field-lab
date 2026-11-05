@@ -1,0 +1,408 @@
+Started /usr/sbin/tcpdump -nn -tt -l -i enp0s3 -s 64 -c 400 host lab-client and tcp and (port 8090 or port 5201).
+dropped privs to tcpdump
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 64 bytes
+1793880913.902238 IP lab-client.61720 > lab-server.8090: Flags [S], seq 689325351, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880913.902378 IP lab-server.8090 > lab-client.61720: Flags [S.], seq 1135796126, ack 689325352, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880913.910169 IP lab-client.61720 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880913.910171 IP lab-client.61720 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880913.910280 IP lab-server.8090 > lab-client.61720: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880913.941252 IP lab-server.8090 > lab-client.61720: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880913.980370 IP lab-client.61720 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880913.980442 IP lab-server.8090 > lab-client.61720: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880913.981257 IP lab-client.61720 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880913.992385 IP lab-client.61720 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880913.992388 IP lab-client.61728 > lab-server.8090: Flags [S], seq 3395680080, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880913.992789 IP lab-server.8090 > lab-client.61728: Flags [S.], seq 2822364265, ack 3395680081, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880913.996258 IP lab-client.61728 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880913.996260 IP lab-client.61728 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880913.997146 IP lab-server.8090 > lab-client.61728: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.005483 IP lab-server.8090 > lab-client.61720: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.010810 IP lab-server.8090 > lab-client.61728: Flags [P.], seq 1:199, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.013043 IP lab-client.61720 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880914.013046 IP lab-client.61728 > lab-server.8090: Flags [.], ack 199, win 501, options [nop,nop,TS [|tcp]>
+1793880914.013170 IP lab-server.8090 > lab-client.61728: Flags [P.], seq 199:1223, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.014560 IP lab-client.61728 > lab-server.8090: Flags [.], ack 1223, win 493, options [nop,nop,TS [|tcp]>
+1793880914.015295 IP lab-client.61728 > lab-server.8090: Flags [F.], seq 89, ack 1223, win 493, options [nop,nop,TS [|tcp]>
+1793880914.016117 IP lab-client.61734 > lab-server.8090: Flags [S], seq 1953377642, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.016208 IP lab-server.8090 > lab-client.61734: Flags [S.], seq 447536726, ack 1953377643, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.018477 IP lab-client.61734 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.018479 IP lab-client.61734 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.018581 IP lab-server.8090 > lab-client.61734: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.038306 IP lab-server.8090 > lab-client.61734: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.049523 IP lab-server.8090 > lab-client.61728: Flags [F.], seq 1223, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.069872 IP lab-client.61734 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880914.069982 IP lab-server.8090 > lab-client.61734: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.070494 IP lab-client.61728 > lab-server.8090: Flags [.], ack 1224, win 493, options [nop,nop,TS [|tcp]>
+1793880914.071704 IP lab-client.61734 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.076770 IP lab-client.61734 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.077428 IP lab-client.61736 > lab-server.8090: Flags [S], seq 2649883200, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.077628 IP lab-server.8090 > lab-client.61736: Flags [S.], seq 2670919644, ack 2649883201, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.078931 IP lab-client.61736 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.079165 IP lab-client.61736 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.079207 IP lab-server.8090 > lab-client.61736: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.082580 IP lab-server.8090 > lab-client.61734: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.083204 IP lab-client.61734 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880914.084191 IP lab-server.8090 > lab-client.61736: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.085498 IP lab-client.61736 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880914.085572 IP lab-server.8090 > lab-client.61736: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.086812 IP lab-client.61736 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.087383 IP lab-client.61736 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.087626 IP lab-server.8090 > lab-client.61736: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.087875 IP lab-client.61738 > lab-server.8090: Flags [S], seq 2876059868, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.087961 IP lab-server.8090 > lab-client.61738: Flags [S.], seq 677418230, ack 2876059869, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.088397 IP lab-client.61736 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880914.088398 IP lab-client.61738 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.088832 IP lab-client.61738 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.088872 IP lab-server.8090 > lab-client.61738: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.090187 IP lab-server.8090 > lab-client.61738: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.090790 IP lab-client.61738 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880914.090845 IP lab-server.8090 > lab-client.61738: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.091801 IP lab-client.61738 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880914.092303 IP lab-client.61738 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880914.092524 IP lab-server.8090 > lab-client.61738: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.093114 IP lab-client.61738 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.093344 IP lab-client.61742 > lab-server.8090: Flags [S], seq 1783172690, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.093429 IP lab-server.8090 > lab-client.61742: Flags [S.], seq 785780681, ack 1783172691, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.093857 IP lab-client.61742 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.095908 IP lab-client.61742 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.095980 IP lab-server.8090 > lab-client.61742: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.097793 IP lab-server.8090 > lab-client.61742: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.098440 IP lab-client.61742 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880914.098497 IP lab-server.8090 > lab-client.61742: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.100171 IP lab-client.61742 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.100174 IP lab-client.61742 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.100175 IP lab-client.61754 > lab-server.8090: Flags [S], seq 2416463087, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.100329 IP lab-server.8090 > lab-client.61754: Flags [S.], seq 2979535906, ack 2416463088, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.133132 IP lab-client.61754 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.133134 IP lab-client.61754 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.133246 IP lab-server.8090 > lab-client.61754: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.135935 IP lab-server.8090 > lab-client.61754: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.137950 IP lab-client.61754 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880914.138017 IP lab-server.8090 > lab-client.61754: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.139697 IP lab-client.61754 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.139699 IP lab-client.61754 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.139988 IP lab-client.61764 > lab-server.8090: Flags [S], seq 4163444079, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.140069 IP lab-server.8090 > lab-client.61764: Flags [S.], seq 3477871346, ack 4163444080, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.140194 IP lab-server.8090 > lab-client.61754: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.140655 IP lab-client.61764 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.140656 IP lab-client.61754 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880914.141742 IP lab-client.61764 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.141803 IP lab-server.8090 > lab-client.61764: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.157244 IP lab-server.8090 > lab-client.61764: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.158069 IP lab-client.61764 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880914.158135 IP lab-server.8090 > lab-client.61764: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.158872 IP lab-client.61764 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880914.159573 IP lab-client.61764 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880914.160304 IP lab-server.8090 > lab-client.61764: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.189849 IP lab-client.61764 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.189851 IP lab-client.61778 > lab-server.8090: Flags [S], seq 846920814, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.189981 IP lab-server.8090 > lab-client.61778: Flags [S.], seq 2444365094, ack 846920815, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.190825 IP lab-client.61778 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.191400 IP lab-client.61778 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.191448 IP lab-server.8090 > lab-client.61778: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.193120 IP lab-server.8090 > lab-client.61778: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.193577 IP lab-client.61778 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880914.193621 IP lab-server.8090 > lab-client.61778: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.195046 IP lab-client.61778 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.197655 IP lab-client.61778 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.197901 IP lab-server.8090 > lab-client.61778: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.199186 IP lab-client.61778 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880914.300777 IP lab-server.8090 > lab-client.61742: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.301479 IP lab-client.61742 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880914.360965 IP lab-client.61784 > lab-server.8090: Flags [S], seq 3148795749, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.361080 IP lab-server.8090 > lab-client.61784: Flags [S.], seq 3717085280, ack 3148795750, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.362287 IP lab-client.61784 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.363291 IP lab-client.61784 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.363359 IP lab-server.8090 > lab-client.61784: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.367690 IP lab-server.8090 > lab-client.61784: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.368559 IP lab-client.61784 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880914.368624 IP lab-server.8090 > lab-client.61784: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.369189 IP lab-client.61784 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880914.370584 IP lab-client.61784 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880914.370839 IP lab-server.8090 > lab-client.61784: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.371987 IP lab-client.61784 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.560665 IP lab-client.61794 > lab-server.8090: Flags [S], seq 1638512194, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.560812 IP lab-server.8090 > lab-client.61794: Flags [S.], seq 3244412656, ack 1638512195, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.561781 IP lab-client.61794 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.562475 IP lab-client.61794 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.562539 IP lab-server.8090 > lab-client.61794: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.564300 IP lab-server.8090 > lab-client.61794: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.565463 IP lab-client.61794 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880914.565530 IP lab-server.8090 > lab-client.61794: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.566328 IP lab-client.61794 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.566903 IP lab-client.61794 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.567192 IP lab-server.8090 > lab-client.61794: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.568272 IP lab-client.61794 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880914.772104 IP lab-client.61806 > lab-server.8090: Flags [S], seq 3808849160, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.772431 IP lab-server.8090 > lab-client.61806: Flags [S.], seq 1478543300, ack 3808849161, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.774971 IP lab-client.61806 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.774973 IP lab-client.61806 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.775189 IP lab-server.8090 > lab-client.61806: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.782001 IP lab-server.8090 > lab-client.61806: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.783577 IP lab-client.61806 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880914.783643 IP lab-server.8090 > lab-client.61806: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880914.790995 IP lab-client.61806 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880914.790997 IP lab-client.61806 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880914.792049 IP lab-server.8090 > lab-client.61806: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880914.793316 IP lab-client.61806 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880914.960760 IP lab-client.61810 > lab-server.8090: Flags [S], seq 128070704, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.960868 IP lab-server.8090 > lab-client.61810: Flags [S.], seq 3815615728, ack 128070705, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880914.965296 IP lab-client.61810 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.965298 IP lab-client.61810 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880914.965407 IP lab-server.8090 > lab-client.61810: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.005141 IP lab-server.8090 > lab-client.61810: Flags [P.], seq 1:198, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.005851 IP lab-client.61810 > lab-server.8090: Flags [.], ack 198, win 501, options [nop,nop,TS [|tcp]>
+1793880915.007053 IP lab-server.8090 > lab-client.61810: Flags [P.], seq 198:1222, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.007648 IP lab-client.61810 > lab-server.8090: Flags [.], ack 1222, win 493, options [nop,nop,TS [|tcp]>
+1793880915.008608 IP lab-client.61810 > lab-server.8090: Flags [F.], seq 89, ack 1222, win 493, options [nop,nop,TS [|tcp]>
+1793880915.009005 IP lab-server.8090 > lab-client.61810: Flags [F.], seq 1222, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880915.019646 IP lab-client.61810 > lab-server.8090: Flags [.], ack 1223, win 493, options [nop,nop,TS [|tcp]>
+1793880915.169310 IP lab-client.61812 > lab-server.8090: Flags [S], seq 4228445005, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.169417 IP lab-server.8090 > lab-client.61812: Flags [S.], seq 2853355846, ack 4228445006, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.170006 IP lab-client.61812 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.170991 IP lab-client.61812 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.171049 IP lab-server.8090 > lab-client.61812: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.188550 IP lab-server.8090 > lab-client.61812: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.191670 IP lab-client.61812 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880915.191780 IP lab-server.8090 > lab-client.61812: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.193828 IP lab-client.61812 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880915.193830 IP lab-client.61812 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880915.235100 IP lab-server.8090 > lab-client.61812: Flags [.], ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880915.251868 IP lab-server.8090 > lab-client.61812: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880915.261862 IP lab-client.61812 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880915.360783 IP lab-client.61816 > lab-server.8090: Flags [S], seq 1918924392, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.361132 IP lab-server.8090 > lab-client.61816: Flags [S.], seq 3617030385, ack 1918924393, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.365251 IP lab-client.61816 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.367055 IP lab-client.61816 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.367113 IP lab-server.8090 > lab-client.61816: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.387407 IP lab-server.8090 > lab-client.61816: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.387963 IP lab-client.61816 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880915.388010 IP lab-server.8090 > lab-client.61816: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.393382 IP lab-client.61816 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880915.401760 IP lab-client.61816 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880915.402395 IP lab-server.8090 > lab-client.61816: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880915.404092 IP lab-client.61816 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880915.562739 IP lab-client.61820 > lab-server.8090: Flags [S], seq 2446905092, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.563374 IP lab-server.8090 > lab-client.61820: Flags [S.], seq 2319423062, ack 2446905093, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.565330 IP lab-client.61820 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.565332 IP lab-client.61820 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.565446 IP lab-server.8090 > lab-client.61820: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.765837 IP lab-client.61830 > lab-server.8090: Flags [S], seq 2491974599, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.765979 IP lab-server.8090 > lab-client.61830: Flags [S.], seq 3556083133, ack 2491974600, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.767882 IP lab-client.61830 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.767884 IP lab-client.61830 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.768131 IP lab-server.8090 > lab-client.61830: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.769827 IP lab-server.8090 > lab-client.61830: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.771032 IP lab-client.61830 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880915.771089 IP lab-server.8090 > lab-client.61830: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.772215 IP lab-client.61830 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880915.774105 IP lab-client.61830 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880915.774334 IP lab-server.8090 > lab-client.61830: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880915.775348 IP lab-client.61830 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880915.788715 IP lab-server.8090 > lab-client.61820: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.791015 IP lab-client.61820 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.791082 IP lab-server.8090 > lab-client.61820: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.792271 IP lab-client.61820 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880915.792898 IP lab-client.61820 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880915.793122 IP lab-server.8090 > lab-client.61820: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880915.795208 IP lab-client.61820 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880915.967504 IP lab-client.61836 > lab-server.8090: Flags [S], seq 2713770523, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.967652 IP lab-server.8090 > lab-client.61836: Flags [S.], seq 3024112936, ack 2713770524, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880915.969982 IP lab-client.61836 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.969984 IP lab-client.61836 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880915.970266 IP lab-server.8090 > lab-client.61836: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.982820 IP lab-server.8090 > lab-client.61836: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.983752 IP lab-client.61836 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880915.986823 IP lab-server.8090 > lab-client.61836: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880915.987407 IP lab-client.61836 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880915.988013 IP lab-client.61836 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880915.997866 IP lab-server.8090 > lab-client.61836: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880916.001072 IP lab-client.61836 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880916.161327 IP lab-client.61840 > lab-server.8090: Flags [S], seq 345126742, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.161451 IP lab-server.8090 > lab-client.61840: Flags [S.], seq 4246988976, ack 345126743, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.162200 IP lab-client.61840 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880916.163036 IP lab-client.61840 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880916.163105 IP lab-server.8090 > lab-client.61840: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.164391 IP lab-server.8090 > lab-client.61840: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.165556 IP lab-client.61840 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880916.165706 IP lab-server.8090 > lab-client.61840: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.166213 IP lab-client.61840 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880916.167950 IP lab-client.61840 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880916.168159 IP lab-server.8090 > lab-client.61840: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880916.168874 IP lab-client.61840 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880916.367057 IP lab-client.61850 > lab-server.8090: Flags [S], seq 3232912329, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.367172 IP lab-server.8090 > lab-client.61850: Flags [S.], seq 3989204378, ack 3232912330, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.369085 IP lab-client.61850 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880916.369892 IP lab-client.61850 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880916.369935 IP lab-server.8090 > lab-client.61850: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.380581 IP lab-server.8090 > lab-client.61850: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.401903 IP lab-client.61850 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880916.402080 IP lab-server.8090 > lab-client.61850: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.402878 IP lab-client.61850 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880916.408011 IP lab-client.61850 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880916.410205 IP lab-server.8090 > lab-client.61850: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880916.412375 IP lab-client.61850 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880916.562407 IP lab-client.61854 > lab-server.8090: Flags [S], seq 85348631, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.765207 IP lab-client.61862 > lab-server.8090: Flags [S], seq 2826080013, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.765341 IP lab-server.8090 > lab-client.61862: Flags [S.], seq 1717506788, ack 2826080014, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.766255 IP lab-client.61862 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880916.767649 IP lab-client.61862 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880916.767705 IP lab-server.8090 > lab-client.61862: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.768987 IP lab-server.8090 > lab-client.61862: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.770009 IP lab-client.61862 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880916.770071 IP lab-server.8090 > lab-client.61862: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.771090 IP lab-client.61862 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880916.771092 IP lab-client.61862 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880916.771513 IP lab-server.8090 > lab-client.61862: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880916.772605 IP lab-client.61862 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880916.964445 IP lab-client.61864 > lab-server.8090: Flags [S], seq 2646622456, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.964641 IP lab-server.8090 > lab-client.61864: Flags [S.], seq 2255661255, ack 2646622457, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880916.966219 IP lab-client.61864 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880916.969244 IP lab-client.61864 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880916.969340 IP lab-server.8090 > lab-client.61864: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.974230 IP lab-server.8090 > lab-client.61864: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.975952 IP lab-client.61864 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880916.976029 IP lab-server.8090 > lab-client.61864: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880916.977227 IP lab-client.61864 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880916.978094 IP lab-client.61864 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880916.985111 IP lab-server.8090 > lab-client.61864: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880916.986881 IP lab-client.61864 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880917.163305 IP lab-client.61866 > lab-server.8090: Flags [S], seq 530308621, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.164853 IP lab-server.8090 > lab-client.61866: Flags [S.], seq 2667555617, ack 530308622, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.166585 IP lab-client.61866 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.166587 IP lab-client.61866 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.167052 IP lab-server.8090 > lab-client.61866: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.169270 IP lab-server.8090 > lab-client.61866: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.170139 IP lab-client.61866 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880917.170197 IP lab-server.8090 > lab-client.61866: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.171929 IP lab-client.61866 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880917.172834 IP lab-client.61866 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880917.173817 IP lab-server.8090 > lab-client.61866: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880917.174945 IP lab-client.61866 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.373663 IP lab-client.61868 > lab-server.8090: Flags [S], seq 1712546790, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.373765 IP lab-server.8090 > lab-client.61868: Flags [S.], seq 4136232769, ack 1712546791, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.374897 IP lab-client.61868 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.376412 IP lab-client.61868 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.376524 IP lab-server.8090 > lab-client.61868: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.381137 IP lab-server.8090 > lab-client.61868: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.383825 IP lab-client.61868 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880917.383950 IP lab-server.8090 > lab-client.61868: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.385423 IP lab-client.61868 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.405914 IP lab-client.61868 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.407010 IP lab-server.8090 > lab-client.61868: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880917.407925 IP lab-client.61868 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880917.561711 IP lab-client.61876 > lab-server.8090: Flags [S], seq 3444072182, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.561828 IP lab-server.8090 > lab-client.61876: Flags [S.], seq 267259986, ack 3444072183, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.566639 IP lab-client.61876 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.567593 IP lab-client.61876 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.567724 IP lab-server.8090 > lab-client.61876: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.568813 IP lab-server.8090 > lab-client.61876: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.570610 IP lab-client.61876 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880917.570689 IP lab-server.8090 > lab-client.61876: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.571816 IP lab-client.61876 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.571818 IP lab-client.61876 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.572052 IP lab-server.8090 > lab-client.61876: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880917.573414 IP lab-client.61876 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880917.573877 IP lab-server.8090 > lab-client.61854: Flags [S.], seq 472177904, ack 85348632, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.576052 IP lab-client.61854 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.585405 IP lab-client.61854 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.585476 IP lab-server.8090 > lab-client.61854: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.586486 IP lab-server.8090 > lab-client.61854: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.587862 IP lab-client.61854 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880917.587922 IP lab-server.8090 > lab-client.61854: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.589937 IP lab-client.61854 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.589939 IP lab-client.61854 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.590189 IP lab-server.8090 > lab-client.61854: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880917.590882 IP lab-client.61854 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880917.766201 IP lab-client.61892 > lab-server.8090: Flags [S], seq 3417485483, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.766327 IP lab-server.8090 > lab-client.61892: Flags [S.], seq 3102270295, ack 3417485484, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.769383 IP lab-client.61892 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.769390 IP lab-client.61892 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.770051 IP lab-server.8090 > lab-client.61892: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.777034 IP lab-server.8090 > lab-client.61892: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.778649 IP lab-client.61892 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880917.779372 IP lab-server.8090 > lab-client.61892: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.781147 IP lab-client.61892 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.781149 IP lab-client.61892 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.781400 IP lab-server.8090 > lab-client.61892: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880917.782468 IP lab-client.61892 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880917.961386 IP lab-client.61902 > lab-server.8090: Flags [S], seq 1650016861, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.961659 IP lab-server.8090 > lab-client.61902: Flags [S.], seq 1619134047, ack 1650016862, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880917.965099 IP lab-client.61902 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.965101 IP lab-client.61902 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880917.965226 IP lab-server.8090 > lab-client.61902: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.968669 IP lab-server.8090 > lab-client.61902: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.984278 IP lab-client.61902 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880917.984625 IP lab-server.8090 > lab-client.61902: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880917.985936 IP lab-client.61902 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.986668 IP lab-client.61902 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880917.998895 IP lab-server.8090 > lab-client.61902: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880918.000166 IP lab-client.61902 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880918.167653 IP lab-client.61912 > lab-server.8090: Flags [S], seq 2446647890, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.168126 IP lab-server.8090 > lab-client.61912: Flags [S.], seq 2536505080, ack 2446647891, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.169945 IP lab-client.61912 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.169946 IP lab-client.61912 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.170057 IP lab-server.8090 > lab-client.61912: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.172036 IP lab-server.8090 > lab-client.61912: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.173236 IP lab-client.61912 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880918.173304 IP lab-server.8090 > lab-client.61912: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.174097 IP lab-client.61912 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880918.175135 IP lab-client.61912 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880918.175970 IP lab-server.8090 > lab-client.61912: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880918.178300 IP lab-client.61912 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880918.363484 IP lab-client.61924 > lab-server.8090: Flags [S], seq 1019749739, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.363599 IP lab-server.8090 > lab-client.61924: Flags [S.], seq 4177113607, ack 1019749740, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.366177 IP lab-client.61924 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.366180 IP lab-client.61924 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.366364 IP lab-server.8090 > lab-client.61924: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.368932 IP lab-server.8090 > lab-client.61924: Flags [P.], seq 1:198, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.371621 IP lab-client.61924 > lab-server.8090: Flags [.], ack 198, win 501, options [nop,nop,TS [|tcp]>
+1793880918.371696 IP lab-server.8090 > lab-client.61924: Flags [P.], seq 198:1222, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.373093 IP lab-client.61924 > lab-server.8090: Flags [.], ack 1222, win 493, options [nop,nop,TS [|tcp]>
+1793880918.373095 IP lab-client.61924 > lab-server.8090: Flags [F.], seq 89, ack 1222, win 493, options [nop,nop,TS [|tcp]>
+1793880918.373343 IP lab-server.8090 > lab-client.61924: Flags [F.], seq 1222, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880918.374082 IP lab-client.61924 > lab-server.8090: Flags [.], ack 1223, win 493, options [nop,nop,TS [|tcp]>
+1793880918.563652 IP lab-client.61940 > lab-server.8090: Flags [S], seq 3051645855, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.563801 IP lab-server.8090 > lab-client.61940: Flags [S.], seq 3899561268, ack 3051645856, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.565493 IP lab-client.61940 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.565780 IP lab-client.61940 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.565822 IP lab-server.8090 > lab-client.61940: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.590420 IP lab-server.8090 > lab-client.61940: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.592316 IP lab-client.61940 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880918.592423 IP lab-server.8090 > lab-client.61940: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.596298 IP lab-client.61940 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880918.596300 IP lab-client.61940 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880918.599099 IP lab-server.8090 > lab-client.61940: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880918.600069 IP lab-client.61940 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880918.774352 IP lab-client.61944 > lab-server.8090: Flags [S], seq 483776518, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.774476 IP lab-server.8090 > lab-client.61944: Flags [S.], seq 1710796469, ack 483776519, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.780862 IP lab-client.61944 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.791903 IP lab-client.61944 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.791987 IP lab-server.8090 > lab-client.61944: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.803825 IP lab-server.8090 > lab-client.61944: Flags [P.], seq 1:209, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.805550 IP lab-client.61944 > lab-server.8090: Flags [.], ack 209, win 501, options [nop,nop,TS [|tcp]>
+1793880918.805654 IP lab-server.8090 > lab-client.61944: Flags [P.], seq 209:1233, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.843153 IP lab-client.61944 > lab-server.8090: Flags [.], ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880918.843155 IP lab-client.61944 > lab-server.8090: Flags [F.], seq 89, ack 1233, win 493, options [nop,nop,TS [|tcp]>
+1793880918.851150 IP lab-server.8090 > lab-client.61944: Flags [F.], seq 1233, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880918.854479 IP lab-client.61944 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880918.962007 IP lab-client.31090 > lab-server.8090: Flags [S], seq 3974613983, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.962163 IP lab-server.8090 > lab-client.31090: Flags [S.], seq 2357992182, ack 3974613984, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880918.963816 IP lab-client.31090 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.965730 IP lab-client.31090 > lab-server.8090: Flags [P.], seq 1:89, ack 1, win 502, options [nop,nop,TS [|tcp]>
+1793880918.965794 IP lab-server.8090 > lab-client.31090: Flags [.], ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.972038 IP lab-server.8090 > lab-client.31090: Flags [P.], seq 1:210, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.972585 IP lab-client.31090 > lab-server.8090: Flags [.], ack 210, win 501, options [nop,nop,TS [|tcp]>
+1793880918.972643 IP lab-server.8090 > lab-client.31090: Flags [P.], seq 210:1234, ack 89, win 509, options [nop,nop,TS [|tcp]>
+1793880918.973199 IP lab-client.31090 > lab-server.8090: Flags [.], ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880918.973986 IP lab-client.31090 > lab-server.8090: Flags [F.], seq 89, ack 1234, win 493, options [nop,nop,TS [|tcp]>
+1793880918.974219 IP lab-server.8090 > lab-client.31090: Flags [F.], seq 1234, ack 90, win 509, options [nop,nop,TS [|tcp]>
+1793880918.976252 IP lab-client.31090 > lab-server.8090: Flags [.], ack 1235, win 493, options [nop,nop,TS [|tcp]>
+1793880919.165451 IP lab-client.31098 > lab-server.8090: Flags [S], seq 2897457831, win 64240, options [mss 1460,sackOK,TS [|tcp]>
+1793880919.165587 IP lab-server.8090 > lab-client.31098: Flags [S.], seq 2873669193, ack 2897457832, win 65160, options [mss 1460,sackOK,TS [|tcp]>
+1793880919.166045 IP lab-client.31098 > lab-server.8090: Flags [.], ack 1, win 502, options [nop,nop,TS [|tcp]>
+400 packets captured
+411 packets received by filter
+0 packets dropped by kernel
+networkcap-06-loss-b.service: Deactivated successfully.

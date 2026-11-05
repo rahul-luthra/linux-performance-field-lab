@@ -20,7 +20,11 @@ PUBLIC = ['.gitignore', 'README.md', 'CASE_STUDY.md', 'LIVE_RESULTS.md', 'RUNBOO
           'storage/StorageLab.java', 'storage/setup_nfs.py', 'storage/telemetry.py', 'storage/noise.py',
           'storage/network.py', 'storage/run_case.py', 'storage/server_case.py', 'storage/run_all.py',
           'storage/export_evidence.py', 'storage/check_setup.py', 'storage/analyze_storage.py',
-          'storage/test_storage.py', 'storage/report-template.html', 'storage/README.md']
+          'storage/test_storage.py', 'storage/report-template.html', 'storage/README.md',
+          'NETWORK_CASE_STUDY.md', 'network-report.html', 'docs/network.html', 'network-preview.png',
+          'network/serve.py', 'network/client.py', 'network/impair.py', 'network/preflight.py',
+          'network/observe.py', 'network/run_lab.py', 'network/analyze_network.py', 'network/test_network.py',
+          'network/export_evidence.py', 'network/finish.py', 'network/report-template.html', 'network/README.md']
 EVIDENCE = ['cpu-lab.json', 'cpu-lab.html', 'summary.json', 'unit-tests.txt', 'mpstat.txt', 'vmstat.txt',
             'pidstat.txt', 'smoke-capture.json', 'smoke-report.html']
 
@@ -59,6 +63,11 @@ def package():
                      'server-verification.json', 'setup.json', 'summary.json'}
     files += [path for path in (ROOT / 'results/storage').rglob('*') if path.is_file() and path.name in storage_names]
     files += [ROOT / 'results/storage-tests.txt']
+    network_names = {'requests.json', 'iperf.json', 'ping.txt', 'packet-headers.txt', 'qdisc.txt',
+                     'qdisc-before.txt', 'filter.txt', 'host.json', 'sockets.txt', 'observer.log',
+                     'preflight-client.json', 'preflight-server.json', 'cleanup-client.json', 'cleanup-server.json', 'summary.json'}
+    files += [path for path in (ROOT / 'results/network').rglob('*') if path.is_file() and path.name in network_names]
+    files += [ROOT / 'results/network-tests.txt']
     missing = [p.name for p in files if not p.exists()]
     if missing:
         raise FileNotFoundError(missing)

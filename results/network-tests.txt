@@ -1,0 +1,14 @@
+test_boundary_selection (test_network.NetworkTests) ... ok
+test_failure_denominators_and_missing_iperf (test_network.NetworkTests) ... ok
+test_iperf_errors_are_preserved (test_network.NetworkTests) ... ok
+test_iperf_receiver_rate_and_sender_retries (test_network.NetworkTests) ... ok
+test_loopback_integrity_and_slow_handler (test_network.NetworkTests) ... ok
+test_netem_counter_scope (test_network.NetworkTests) ... ok
+test_percentiles_missing_and_nearest_rank (test_network.NetworkTests) ... ok
+test_ping_is_independent_and_missing_is_unknown (test_network.NetworkTests) ... ok
+test_socket_scope_omits_ssh_and_keeps_test_rtt (test_network.NetworkTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.560s
+
+OK

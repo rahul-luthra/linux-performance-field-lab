@@ -1,0 +1,3258 @@
+[
+  {
+    "time": "2026-11-05T12:22:34.477248+00:00",
+    "interval_s": 1.0271,
+    "cores": 2,
+    "cpu_busy_pct": 3.47,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.52,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 65.91,
+    "cached_mib": 566.73,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.001,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:35.502757+00:00",
+    "interval_s": 1.0258,
+    "cores": 2,
+    "cpu_busy_pct": 8.25,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.52,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 65.9,
+    "cached_mib": 566.74,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.001,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:36.527291+00:00",
+    "interval_s": 1.0246,
+    "cores": 2,
+    "cpu_busy_pct": 34.16,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.52,
+    "procs_running": 5,
+    "procs_blocked": 0,
+    "mem_available_pct": 65.22,
+    "cached_mib": 566.74,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.008,
+        "write_mib_s": 0.031,
+        "rw_iops": 5.86,
+        "rw_await_ms": 1.17,
+        "busy_pct": 0.68,
+        "avg_queue": 0.012
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.008,
+        "write_mib_s": 0.031,
+        "rw_iops": 5.86,
+        "rw_await_ms": 1.17,
+        "busy_pct": 0.68,
+        "avg_queue": 0.008
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.031,
+        "rw_iops": 3.9,
+        "rw_await_ms": 1.0,
+        "busy_pct": 0.39,
+        "avg_queue": 0.004
+      },
+      "dm-1": {
+        "read_mib_s": 0.008,
+        "write_mib_s": 0.0,
+        "rw_iops": 1.95,
+        "rw_await_ms": 1.5,
+        "busy_pct": 0.29,
+        "avg_queue": 0.003
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.004,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:37.561763+00:00",
+    "interval_s": 1.0345,
+    "cores": 2,
+    "cpu_busy_pct": 70.65,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.52,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.06,
+    "cached_mib": 566.77,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.011,
+        "write_mib_s": 0.023,
+        "rw_iops": 5.8,
+        "rw_await_ms": 1.33,
+        "busy_pct": 0.39,
+        "avg_queue": 0.008
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.011,
+        "write_mib_s": 0.023,
+        "rw_iops": 5.8,
+        "rw_await_ms": 1.33,
+        "busy_pct": 0.39,
+        "avg_queue": 0.008
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.023,
+        "rw_iops": 5.8,
+        "rw_await_ms": 0.5,
+        "busy_pct": 0.1,
+        "avg_queue": 0.003
+      },
+      "dm-1": {
+        "read_mib_s": 0.011,
+        "write_mib_s": 0.0,
+        "rw_iops": 2.9,
+        "rw_await_ms": 3.0,
+        "busy_pct": 0.29,
+        "avg_queue": 0.009
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.001,
+        "tx_mib_s": 0.002,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:38.580178+00:00",
+    "interval_s": 1.0184,
+    "cores": 2,
+    "cpu_busy_pct": 55.0,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.56,
+    "procs_running": 3,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.06,
+    "cached_mib": 566.77,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.001,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:39.602697+00:00",
+    "interval_s": 1.0225,
+    "cores": 2,
+    "cpu_busy_pct": 57.5,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.56,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 62.49,
+    "cached_mib": 566.77,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.132,
+        "rw_iops": 15.65,
+        "rw_await_ms": 3.31,
+        "busy_pct": 0.49,
+        "avg_queue": 0.058
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.132,
+        "rw_iops": 15.65,
+        "rw_await_ms": 3.38,
+        "busy_pct": 0.59,
+        "avg_queue": 0.053
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.132,
+        "rw_iops": 23.47,
+        "rw_await_ms": 3.83,
+        "busy_pct": 0.59,
+        "avg_queue": 0.09
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.001,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:40.627585+00:00",
+    "interval_s": 1.0249,
+    "cores": 2,
+    "cpu_busy_pct": 69.54,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.56,
+    "procs_running": 3,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.29,
+    "cached_mib": 566.76,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.038,
+        "write_mib_s": 0.034,
+        "rw_iops": 9.76,
+        "rw_await_ms": 2.0,
+        "busy_pct": 1.27,
+        "avg_queue": 0.019
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.038,
+        "write_mib_s": 0.034,
+        "rw_iops": 9.76,
+        "rw_await_ms": 1.9,
+        "busy_pct": 1.27,
+        "avg_queue": 0.019
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.034,
+        "rw_iops": 2.93,
+        "rw_await_ms": 0.33,
+        "busy_pct": 0.1,
+        "avg_queue": 0.001
+      },
+      "dm-1": {
+        "read_mib_s": 0.038,
+        "write_mib_s": 0.0,
+        "rw_iops": 9.76,
+        "rw_await_ms": 2.9,
+        "busy_pct": 1.17,
+        "avg_queue": 0.028
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.004,
+        "tx_mib_s": 0.005,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:41.776349+00:00",
+    "interval_s": 1.1488,
+    "cores": 2,
+    "cpu_busy_pct": 28.19,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.56,
+    "procs_running": 3,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.62,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.014,
+        "tx_mib_s": 0.005,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:42.799611+00:00",
+    "interval_s": 1.0233,
+    "cores": 2,
+    "cpu_busy_pct": 5.85,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.56,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.62,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.98,
+        "rw_await_ms": 1.0,
+        "busy_pct": 0.1,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.98,
+        "rw_await_ms": 0.0,
+        "busy_pct": 0.1,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.98,
+        "rw_await_ms": 1.0,
+        "busy_pct": 0.1,
+        "avg_queue": 0.001
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.008,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:43.845525+00:00",
+    "interval_s": 1.0459,
+    "cores": 2,
+    "cpu_busy_pct": 5.29,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.59,
+    "procs_running": 3,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.6,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.008,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:44.911913+00:00",
+    "interval_s": 1.0664,
+    "cores": 2,
+    "cpu_busy_pct": 5.63,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.59,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.54,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.009,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:45.971597+00:00",
+    "interval_s": 1.0597,
+    "cores": 2,
+    "cpu_busy_pct": 4.76,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.59,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.54,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.026,
+        "rw_iops": 4.72,
+        "rw_await_ms": 0.4,
+        "busy_pct": 0.0,
+        "avg_queue": 0.003
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.026,
+        "rw_iops": 4.72,
+        "rw_await_ms": 0.6,
+        "busy_pct": 0.0,
+        "avg_queue": 0.003
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.026,
+        "rw_iops": 5.66,
+        "rw_await_ms": 0.0,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.007,
+        "tx_mib_s": 0.003,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:46.999002+00:00",
+    "interval_s": 1.0274,
+    "cores": 2,
+    "cpu_busy_pct": 5.83,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.59,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.54,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.008,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:48.022285+00:00",
+    "interval_s": 1.0233,
+    "cores": 2,
+    "cpu_busy_pct": 6.37,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.53,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.009,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:49.128469+00:00",
+    "interval_s": 1.1062,
+    "cores": 2,
+    "cpu_busy_pct": 4.55,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 3,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.51,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.007,
+        "tx_mib_s": 0.003,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:50.162404+00:00",
+    "interval_s": 1.0339,
+    "cores": 2,
+    "cpu_busy_pct": 5.34,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.51,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.007,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:51.204223+00:00",
+    "interval_s": 1.0418,
+    "cores": 2,
+    "cpu_busy_pct": 7.69,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.51,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.96,
+        "rw_await_ms": 1.0,
+        "busy_pct": 0.1,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.96,
+        "rw_await_ms": 0.0,
+        "busy_pct": 0.1,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.96,
+        "rw_await_ms": 1.0,
+        "busy_pct": 0.1,
+        "avg_queue": 0.001
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.008,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:52.285855+00:00",
+    "interval_s": 1.0816,
+    "cores": 2,
+    "cpu_busy_pct": 6.48,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.51,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.009,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:53.391665+00:00",
+    "interval_s": 1.1058,
+    "cores": 2,
+    "cpu_busy_pct": 5.45,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.5,
+    "procs_running": 3,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.49,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.007,
+        "tx_mib_s": 0.003,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:54.413380+00:00",
+    "interval_s": 1.0217,
+    "cores": 2,
+    "cpu_busy_pct": 5.88,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.5,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.44,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.009,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:55.433351+00:00",
+    "interval_s": 1.02,
+    "cores": 2,
+    "cpu_busy_pct": 5.88,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.5,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.44,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.008,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:56.598793+00:00",
+    "interval_s": 1.1654,
+    "cores": 2,
+    "cpu_busy_pct": 4.72,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.5,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.43,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.007,
+        "tx_mib_s": 0.003,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:57.627910+00:00",
+    "interval_s": 1.0291,
+    "cores": 2,
+    "cpu_busy_pct": 4.9,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.5,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.39,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.97,
+        "rw_await_ms": 0.0,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.97,
+        "rw_await_ms": 0.0,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.97,
+        "rw_await_ms": 0.0,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.009,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:58.645595+00:00",
+    "interval_s": 1.0177,
+    "cores": 2,
+    "cpu_busy_pct": 4.95,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.46,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.35,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.008,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:22:59.781482+00:00",
+    "interval_s": 1.1359,
+    "cores": 2,
+    "cpu_busy_pct": 6.22,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.46,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.35,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.007,
+        "tx_mib_s": 0.003,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:00.802840+00:00",
+    "interval_s": 1.0214,
+    "cores": 2,
+    "cpu_busy_pct": 8.46,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.46,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 63.35,
+    "cached_mib": 566.78,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.008,
+        "tx_mib_s": 0.004,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:01.824905+00:00",
+    "interval_s": 1.0221,
+    "cores": 2,
+    "cpu_busy_pct": 39.01,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.46,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.85,
+    "cached_mib": 566.82,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.011,
+        "write_mib_s": 0.016,
+        "rw_iops": 5.87,
+        "rw_await_ms": 1.5,
+        "busy_pct": 1.08,
+        "avg_queue": 0.014
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.011,
+        "write_mib_s": 0.016,
+        "rw_iops": 5.87,
+        "rw_await_ms": 1.67,
+        "busy_pct": 1.08,
+        "avg_queue": 0.01
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.016,
+        "rw_iops": 3.91,
+        "rw_await_ms": 1.5,
+        "busy_pct": 0.49,
+        "avg_queue": 0.006
+      },
+      "dm-1": {
+        "read_mib_s": 0.011,
+        "write_mib_s": 0.0,
+        "rw_iops": 2.94,
+        "rw_await_ms": 2.67,
+        "busy_pct": 0.59,
+        "avg_queue": 0.008
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 2.565,
+        "tx_mib_s": 0.013,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:02.847958+00:00",
+    "interval_s": 1.023,
+    "cores": 2,
+    "cpu_busy_pct": 45.5,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.46,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 65.0,
+    "cached_mib": 566.96,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.015,
+        "write_mib_s": 0.004,
+        "rw_iops": 4.89,
+        "rw_await_ms": 1.4,
+        "busy_pct": 0.78,
+        "avg_queue": 0.007
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.015,
+        "write_mib_s": 0.004,
+        "rw_iops": 4.89,
+        "rw_await_ms": 1.4,
+        "busy_pct": 0.78,
+        "avg_queue": 0.007
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.004,
+        "rw_iops": 0.98,
+        "rw_await_ms": 1.0,
+        "busy_pct": 0.1,
+        "avg_queue": 0.001
+      },
+      "dm-1": {
+        "read_mib_s": 0.015,
+        "write_mib_s": 0.0,
+        "rw_iops": 3.91,
+        "rw_await_ms": 1.75,
+        "busy_pct": 0.68,
+        "avg_queue": 0.007
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 2.539,
+        "tx_mib_s": 0.008,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:03.872698+00:00",
+    "interval_s": 1.0248,
+    "cores": 2,
+    "cpu_busy_pct": 15.42,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.42,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.9,
+    "cached_mib": 566.97,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 12.501,
+        "tx_mib_s": 0.016,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:04.901243+00:00",
+    "interval_s": 1.0285,
+    "cores": 2,
+    "cpu_busy_pct": 13.73,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.42,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.88,
+    "cached_mib": 566.97,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 12.456,
+        "tx_mib_s": 0.016,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:05.929240+00:00",
+    "interval_s": 1.028,
+    "cores": 2,
+    "cpu_busy_pct": 16.67,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.42,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.91,
+    "cached_mib": 566.97,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 12.463,
+        "tx_mib_s": 0.017,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:06.964320+00:00",
+    "interval_s": 1.0351,
+    "cores": 2,
+    "cpu_busy_pct": 14.78,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.42,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.89,
+    "cached_mib": 566.97,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.06,
+        "rw_iops": 4.83,
+        "rw_await_ms": 0.8,
+        "busy_pct": 0.29,
+        "avg_queue": 0.004
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.06,
+        "rw_iops": 4.83,
+        "rw_await_ms": 0.8,
+        "busy_pct": 0.39,
+        "avg_queue": 0.004
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.06,
+        "rw_iops": 6.76,
+        "rw_await_ms": 1.0,
+        "busy_pct": 0.39,
+        "avg_queue": 0.007
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 12.504,
+        "tx_mib_s": 0.017,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:08.003357+00:00",
+    "interval_s": 1.039,
+    "cores": 2,
+    "cpu_busy_pct": 13.59,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 1,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.89,
+    "cached_mib": 566.97,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.011,
+        "rw_iops": 0.96,
+        "rw_await_ms": 0.0,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.011,
+        "rw_iops": 0.96,
+        "rw_await_ms": 1.0,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.011,
+        "rw_iops": 1.92,
+        "rw_await_ms": 0.0,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 12.456,
+        "tx_mib_s": 0.015,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:09.025366+00:00",
+    "interval_s": 1.022,
+    "cores": 2,
+    "cpu_busy_pct": 13.59,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 3,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.88,
+    "cached_mib": 566.97,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.044,
+        "rw_iops": 4.89,
+        "rw_await_ms": 2.4,
+        "busy_pct": 0.39,
+        "avg_queue": 0.016
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.044,
+        "rw_iops": 4.89,
+        "rw_await_ms": 2.4,
+        "busy_pct": 0.39,
+        "avg_queue": 0.013
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.044,
+        "rw_iops": 4.89,
+        "rw_await_ms": 2.6,
+        "busy_pct": 0.39,
+        "avg_queue": 0.013
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 12.408,
+        "tx_mib_s": 0.016,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:10.055365+00:00",
+    "interval_s": 1.03,
+    "cores": 2,
+    "cpu_busy_pct": 12.75,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 64.87,
+    "cached_mib": 566.98,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 12.565,
+        "tx_mib_s": 0.016,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:11.077529+00:00",
+    "interval_s": 1.0222,
+    "cores": 2,
+    "cpu_busy_pct": 24.75,
+    "cpu_iowait_pct": 0.0,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 4,
+    "procs_blocked": 0,
+    "mem_available_pct": 65.66,
+    "cached_mib": 566.86,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.008,
+        "write_mib_s": 0.0,
+        "rw_iops": 1.96,
+        "rw_await_ms": 5.0,
+        "busy_pct": 0.98,
+        "avg_queue": 0.01
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.008,
+        "write_mib_s": 0.0,
+        "rw_iops": 1.96,
+        "rw_await_ms": 5.0,
+        "busy_pct": 0.98,
+        "avg_queue": 0.009
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-1": {
+        "read_mib_s": 0.008,
+        "write_mib_s": 0.0,
+        "rw_iops": 1.96,
+        "rw_await_ms": 5.0,
+        "busy_pct": 0.98,
+        "avg_queue": 0.01
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 7.679,
+        "tx_mib_s": 0.014,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  },
+  {
+    "time": "2026-11-05T12:23:12.105381+00:00",
+    "interval_s": 1.0278,
+    "cores": 2,
+    "cpu_busy_pct": 28.86,
+    "cpu_iowait_pct": 0.5,
+    "cpu_steal_pct": 0.0,
+    "load1": 0.55,
+    "procs_running": 2,
+    "procs_blocked": 0,
+    "mem_available_pct": 65.95,
+    "cached_mib": 566.87,
+    "swap_used_mib": 528.36,
+    "psi": {
+      "cpu": {},
+      "memory": {},
+      "io": {}
+    },
+    "disk": {
+      "sda": {
+        "read_mib_s": 0.03,
+        "write_mib_s": 0.024,
+        "rw_iops": 10.7,
+        "rw_await_ms": 2.27,
+        "busy_pct": 1.85,
+        "avg_queue": 0.028
+      },
+      "sda1": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "sda2": {
+        "read_mib_s": 0.03,
+        "write_mib_s": 0.024,
+        "rw_iops": 10.7,
+        "rw_await_ms": 2.18,
+        "busy_pct": 1.85,
+        "avg_queue": 0.024
+      },
+      "sr0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.0,
+        "rw_iops": 0.0,
+        "rw_await_ms": null,
+        "busy_pct": 0.0,
+        "avg_queue": 0.0
+      },
+      "dm-0": {
+        "read_mib_s": 0.0,
+        "write_mib_s": 0.024,
+        "rw_iops": 3.89,
+        "rw_await_ms": 4.25,
+        "busy_pct": 1.07,
+        "avg_queue": 0.017
+      },
+      "dm-1": {
+        "read_mib_s": 0.03,
+        "write_mib_s": 0.0,
+        "rw_iops": 7.78,
+        "rw_await_ms": 1.5,
+        "busy_pct": 0.88,
+        "avg_queue": 0.012
+      }
+    },
+    "net": {
+      "lo": {
+        "rx_mib_s": 0.0,
+        "tx_mib_s": 0.0,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      },
+      "enp0s3": {
+        "rx_mib_s": 0.001,
+        "tx_mib_s": 0.003,
+        "errors_s": 0.0,
+        "drops_s": 0.0
+      }
+    },
+    "warnings": [
+      "pressure/cpu: unavailable (No such file or directory)",
+      "pressure/memory: unavailable (No such file or directory)",
+      "pressure/io: unavailable (No such file or directory)"
+    ]
+  }
+]

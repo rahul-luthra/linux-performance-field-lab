@@ -30,13 +30,14 @@ Use the live links for rendered reports. The source links intentionally open cod
 | Java application: all three measured runs and mitigation | [Open report](https://rahul-luthra.github.io/linux-performance-field-lab/) | `app-report.html` | [HTML source](app-report.html) |
 | Memory: six fault/correction tests and three HTTP/GC experiments | [Open investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html) | `memory-report.html` | [HTML source](memory-report.html) |
 | Storage/NFS: ten measured local/network/server-I/O cases | [Open investigation](https://rahul-luthra.github.io/linux-performance-field-lab/storage.html) | `storage-report.html` | [HTML source](storage-report.html) |
+| Network: delay, loss, bandwidth and application-wait experiments | [Open investigation](https://rahul-luthra.github.io/linux-performance-field-lab/network.html) | `network-report.html` | [HTML source](network-report.html) |
 | Linux host capture plus four simulated teaching scenarios | [Open scenarios](https://rahul-luthra.github.io/linux-performance-field-lab/showcase.html) | `showcase.html` | [HTML source](showcase.html) |
 | First measured host CPU experiment | [Open capture](https://rahul-luthra.github.io/linux-performance-field-lab/cpu-lab.html) | `results/cpu-lab.html` | [HTML source](results/cpu-lab.html) |
 | Repeated host CPU experiment | [Open capture](https://rahul-luthra.github.io/linux-performance-field-lab/cpu-lab-repeat.html) | `results/repeat/cpu-lab.html` | [HTML source](results/repeat/cpu-lab.html) |
 | Three-interval collector smoke test | [Open check](https://rahul-luthra.github.io/linux-performance-field-lab/smoke-report.html) | `results/smoke-report.html` | [HTML source](results/smoke-report.html) |
 | Published Pages entry point with shared navigation | [Open report](https://rahul-luthra.github.io/linux-performance-field-lab/) | `docs/index.html` | [HTML source](docs/index.html) |
 
-`report-template.html`, `app/app-report-template.html` `memory/report-template.html` and `storage/report-template.html` are authoring templates with data placeholders. They are not generated reports; opening them directly will not produce a working interactive report.
+`report-template.html`, `app/app-report-template.html` `memory/report-template.html` `storage/report-template.html` and `network/report-template.html` are authoring templates with data placeholders. They are not generated reports; opening them directly will not produce a working interactive report.
 
 ## Previews that render directly on GitHub
 
@@ -48,6 +49,6 @@ Use the live links for rendered reports. The source links intentionally open cod
 
 ## Publishing and updates
 
-Pages publishes the `docs` folder on `main`. The root HTML reports remain self-contained offline copies. Run `python3 build_pages.py` to export all seven reports with shared navigation after changing their source outputs, then commit the generated docs files. `python3 app/analyze_app.py` also rebuilds the Pages export after updating application analysis.
+Pages publishes the `docs` folder on `main`. The root HTML reports remain self-contained offline copies. Run `python3 build_pages.py` to export all eight reports with shared navigation after changing their source outputs, then commit the generated docs files. `python3 app/analyze_app.py` also rebuilds the Pages export after updating application analysis.
 
 See [PUBLISHING.md](PUBLISHING.md) and [GitHub's Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site). No external HTML-preview proxy is used.

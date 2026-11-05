@@ -1,0 +1,39 @@
+{
+  "role": "server",
+  "disk": {
+    "status": 0,
+    "stdout": "Filesystem           Size  Used Avail Use% Mounted on\n/dev/mapper/ol-root   22G   21G  1.8G  93% /",
+    "stderr": ""
+  },
+  "qdisc": {
+    "status": 0,
+    "stdout": "[{\"kind\":\"fq_codel\",\"handle\":\"8002:\",\"root\":true,\"refcnt\":2,\"options\":{\"limit\":10240,\"flows\":1024,\"quantum\":1514,\"target\":4999,\"interval\":99999,\"memory_limit\":33554432,\"ecn\":true,\"drop_batch\":64}}]",
+    "stderr": ""
+  },
+  "listeners": {
+    "status": 0,
+    "stdout": "State Recv-Q Send-Q Local Address:Port Peer Address:Port",
+    "stderr": ""
+  },
+  "lab_processes": {
+    "status": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "selinux": {
+    "status": 0,
+    "stdout": "Enforcing",
+    "stderr": ""
+  },
+  "units": {
+    "status": 3,
+    "stdout": "inactive\ninactive\ninactive",
+    "stderr": ""
+  },
+  "temporary_state_removed": true,
+  "firewall": {
+    "status": 0,
+    "stdout": "rule family=\"ipv4\" source address=\"lab-client/32\" port port=\"2049\" protocol=\"tcp\" accept",
+    "stderr": ""
+  }
+}

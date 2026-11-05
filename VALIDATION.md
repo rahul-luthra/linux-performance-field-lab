@@ -64,3 +64,17 @@ Ten additional storage-analysis tests pass on Windows and Linux; Linux output is
 Final setup evidence records SELinux enforcing, NFSv4-only server service enabled/active, a single-client export and TCP-2049 firewall rule, a hard NFSv4.2 mount, ordinary-user access and denied direct root writes. The original fq_codel policy was restored (quantum 1464), the rollback timer was inactive and its temporary state removed. Bounded synthetic files removed: 16 MiB client-local and 208 MiB server-side. The persistent share/mount remain available. No test application/background writer remains running. The cloned server received a unique machine ID and SSH host keys and now boots headlessly; private identity backups remain only in its root directory.
 
 Public evidence exports replace lab addresses and sysstat hostname headers with role labels. Named release allowlists exclude SSH files, compiled classes, synthetic binary data, JVM dumps and credentials. The static site does not connect to the VMs.
+
+
+## Linux network extension — 5 November 2026
+
+Both moved VMs' SSH host keys matched the saved identities. Disk preflight recorded about 1.3 GiB client / 1.8 GiB server free (95%/93% used), exceeding the lab's 512-MiB floor. The old NFS export/firewall/fstab addresses were updated with backups; final ordinary-user share read/write passed. iperf3 3.9 was installed from Oracle repositories; tcpdump was already present. No old user data was deleted.
+
+Twelve measured runs recorded 1,200 small responses and 60 separate bulk downloads, all passing known-content/size/CRC checks. Ten runs support the single-factor protocol; two retained audit runs had an unintended residual rate limit and are visibly excluded from that attribution. Queue snapshots caught the reset issue; final code deletes/recreates the isolated leaf, and two corrected runs preserve before/after proof. The corrected pause/recovery HTTP p95 was 110.21 / 8.83 ms. No failed initial rerun-launch outcome is counted as a measured request run.
+
+Nine network tests pass on Windows and Linux, covering percentiles/window boundaries, failure denominators, missing iperf data, receiver rate/sender retries, socket and netem scope, ping parsing and loopback small/bulk/handler-pause integrity. Linux output is `results/network-tests.txt`. Client CPU background variation and retries in baseline/delay-only runs are retained and discussed; no natural network root cause or exact physical-packet loss percentage is claimed.
+
+Final checks record no test processes or listeners on TCP 8090/5201, inactive HTTP/iperf/rollback units, no temporary state file, restored fq_codel quantum 1514, SELinux enforcing and only the existing single-client NFS rule in the firewall. iperf's nonzero stop status was cleared after verifying process exit. The existing NFS mount remains configured and accessible. Public evidence uses named text allowlists, role labels and only test-port socket records. No keys, tokens, payload files or raw packet captures are distributed.
+
+
+Local Edge checks passed for all eight Pages routes, nine navigation links per page, all twelve network selections, visible audit flags, the corrected 110.2-ms handler-pause result, three plotted timing series and a 100-small/5-bulk evidence download. Existing CPU/application/memory/storage controls also passed. Mobile widths 320/375/768 showed no page overflow or JavaScript errors. The rendered report screenshot was inspected and saved as `network-preview.png`.

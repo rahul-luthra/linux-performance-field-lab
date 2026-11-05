@@ -1,0 +1,40 @@
+{
+  "role": "client",
+  "disk": {
+    "status": 0,
+    "stdout": "Filesystem           Size  Used Avail Use% Mounted on\n/dev/mapper/ol-root   22G   21G  1.3G  95% /",
+    "stderr": ""
+  },
+  "qdisc": {
+    "status": 0,
+    "stdout": "[{\"kind\":\"fq_codel\",\"handle\":\"0:\",\"root\":true,\"refcnt\":2,\"options\":{\"limit\":10240,\"flows\":1024,\"quantum\":1514,\"target\":4999,\"interval\":99999,\"memory_limit\":33554432,\"ecn\":true,\"drop_batch\":64}}]",
+    "stderr": ""
+  },
+  "listeners": {
+    "status": 0,
+    "stdout": "State Recv-Q Send-Q Local Address:Port Peer Address:Port",
+    "stderr": ""
+  },
+  "lab_processes": {
+    "status": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "selinux": {
+    "status": 0,
+    "stdout": "Enforcing",
+    "stderr": ""
+  },
+  "units": {
+    "status": 3,
+    "stdout": "inactive\ninactive\ninactive",
+    "stderr": ""
+  },
+  "temporary_state_removed": true,
+  "nfs_mount": {
+    "status": 0,
+    "stdout": "/mnt/perf-lab-nfs lab-server:/srv/nfs/perf-lab nfs4 rw,nosuid,nodev,noexec,relatime,vers=4.2,rsize=262144,wsize=262144,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=lab-client,local_lock=none,addr=lab-server",
+    "stderr": ""
+  },
+  "nfs_user_access_ok": true
+}

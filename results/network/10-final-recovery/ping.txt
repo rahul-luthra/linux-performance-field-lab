@@ -1,0 +1,9 @@
+PING lab-server (lab-server) 56(84) bytes of data.
+64 bytes from lab-server: icmp_seq=1 ttl=64 time=0.649 ms
+64 bytes from lab-server: icmp_seq=2 ttl=64 time=0.870 ms
+64 bytes from lab-server: icmp_seq=3 ttl=64 time=0.453 ms
+64 bytes from lab-server: icmp_seq=4 ttl=64 time=0.679 ms
+
+--- lab-server ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3175ms
+rtt min/avg/max/mdev = 0.453/0.662/0.870/0.147 ms

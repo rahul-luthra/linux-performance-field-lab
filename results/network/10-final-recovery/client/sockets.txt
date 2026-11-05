@@ -1,0 +1,152 @@
+2026-11-05T12:19:03.737952+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:04.761216+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:05.786952+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:06.805689+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:07.822567+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:08.845090+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:09.900117+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:11.080764+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:12.110144+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:13.137173+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:14.258604+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:15.288192+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port
+ESTAB 0      0      lab-client:35180 lab-server:8090
+	 cubic wscale:7,7 rto:205 rtt:1.617/0.808 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_acked:1 segs_out:2 segs_in:1 send 71638837bps pacing_rate 143277672bps delivered:1 app_limited rcv_space:14480 rcv_ssthresh:64088 minrtt:1.617 snd_wnd:65160 rcv_wnd:64256
+2026-11-05T12:19:16.312685+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:17.429321+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:18.452829+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:19.522556+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port
+ESTAB 0      0      lab-client:21850 lab-server:8090
+	 cubic wscale:7,7 rto:202 rtt:1.043/0.521 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_acked:1 segs_out:2 segs_in:1 send 111064238bps lastsnd:17 lastrcv:17 lastack:17 pacing_rate 222128472bps delivered:1 app_limited rcv_space:14480 rcv_ssthresh:64088 minrtt:1.043 snd_wnd:65160 rcv_wnd:64256
+2026-11-05T12:19:20.546416+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:21.580585+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:22.604926+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:23.634802+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:24.662516+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:25.687584+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port
+ESTAB 0      0      lab-client:22150 lab-server:8090
+	 cubic wscale:7,7 rto:202 rtt:1.012/0.492 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:88 bytes_acked:89 bytes_received:209 segs_out:4 segs_in:3 data_segs_out:1 data_segs_in:1 send 114466403bps lastsnd:5 lastrcv:2 lastack:2 pacing_rate 228848000bps delivery_rate 7732976bps delivered:2 app_limited busy:1ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.943 snd_wnd:65152 rcv_wnd:64128
+2026-11-05T12:19:26.717108+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:27.753667+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:28.781901+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:29.804155+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port
+ESTAB 0      0      lab-client:12124 lab-server:8090
+	 cubic wscale:7,7 rto:201 rtt:0.834/0.369 ato:48 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:77 bytes_acked:78 bytes_received:155145 segs_out:17 segs_in:110 data_segs_out:1 data_segs_in:108 send 138896882bps lastsnd:305 lastrcv:40 lastack:40 pacing_rate 277502616bps delivery_rate 10735864bps delivered:2 app_limited busy:2ms rcv_rtt:71.548 rcv_space:43440 rcv_ssthresh:162109 minrtt:0.8 snd_wnd:65152 rcv_wnd:130944
+2026-11-05T12:19:30.855765+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port
+ESTAB 0      0      lab-client:12126 lab-server:8090
+	 cubic wscale:7,7 rto:202 rtt:1.261/0.477 ato:46 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:77 bytes_acked:78 bytes_received:272423 segs_out:34 segs_in:191 data_segs_out:1 data_segs_in:189 send 91863600bps lastsnd:476 lastrcv:9 lastack:9 pacing_rate 183617984bps delivery_rate 9042928bps delivered:2 app_limited busy:1ms rcv_rtt:64.536 rcv_space:41992 rcv_ssthresh:166493 minrtt:1.259 snd_wnd:65152 rcv_wnd:166528
+2026-11-05T12:19:31.903347+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port
+ESTAB 0      0      lab-client:12134 lab-server:8090
+	 cubic wscale:7,7 rto:202 rtt:1.666/0.706 ato:40 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:77 bytes_acked:78 bytes_received:360751 segs_out:37 segs_in:252 data_segs_out:1 data_segs_in:250 send 69531813bps lastsnd:625 lastrcv:17 lastack:17 pacing_rate 138990624bps delivery_rate 8112040bps delivered:2 app_limited busy:1ms rcv_rtt:170.863 rcv_space:104256 rcv_ssthresh:252389 minrtt:1.428 snd_wnd:65152 rcv_wnd:252416
+2026-11-05T12:19:32.969577+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port
+ESTAB 0      0      lab-client:12142 lab-server:8090
+	 cubic wscale:7,7 rto:202 rtt:1.114/0.466 ato:115 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:77 bytes_acked:78 bytes_received:468537 segs_out:27 segs_in:327 data_segs_out:1 data_segs_in:325 send 103985637bps lastsnd:803 lastrcv:15 lastack:15 pacing_rate 207947936bps delivery_rate 8742640bps delivered:2 app_limited busy:1ms rcv_rtt:191.222 rcv_space:108600 rcv_ssthresh:521213 minrtt:1.084 snd_wnd:65152 rcv_wnd:521216
+2026-11-05T12:19:34.033575+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:35.073075+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:36.122256+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:124 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:390960 segs_out:20 segs_in:274 data_segs_out:1 data_segs_in:272 send 132237443bps lastsnd:715 lastrcv:55 lastack:55 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:105.136 rcv_space:78192 rcv_ssthresh:672977 minrtt:0.832 snd_wnd:65152 rcv_wnd:673024
+ESTAB 0      0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:206 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:199 bytes_acked:200 bytes_received:4 segs_out:8 segs_in:7 data_segs_out:3 data_segs_in:3 send 21424080bps lastsnd:718 lastrcv:633 lastack:633 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:43ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256                                      
+2026-11-05T12:19:37.152749+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:99 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:1015048 segs_out:42 segs_in:705 data_segs_out:1 data_segs_in:703 send 132237443bps lastsnd:1745 lastrcv:43 lastack:43 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:507.395 rcv_space:220096 rcv_ssthresh:1320146 minrtt:0.832 snd_wnd:65152 rcv_wnd:1294592
+ESTAB 0      0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:206 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:199 bytes_acked:200 bytes_received:4 segs_out:8 segs_in:7 data_segs_out:3 data_segs_in:3 send 21424080bps lastsnd:1749 lastrcv:1664 lastack:1664 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:43ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256                                       
+2026-11-05T12:19:38.193560+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:40 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:1647824 segs_out:64 segs_in:1142 data_segs_out:1 data_segs_in:1140 send 132237443bps lastsnd:2789 lastrcv:24 lastack:24 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:940.716 rcv_space:511144 rcv_ssthresh:1874692 minrtt:0.832 snd_wnd:65152 rcv_wnd:1874816
+ESTAB 0      0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:206 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:199 bytes_acked:200 bytes_received:4 segs_out:8 segs_in:7 data_segs_out:3 data_segs_in:3 send 21424080bps lastsnd:2792 lastrcv:2707 lastack:2707 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:43ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256                                         
+2026-11-05T12:19:39.233542+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:40 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:2282048 segs_out:94 segs_in:1580 data_segs_out:1 data_segs_in:1578 send 132237443bps lastsnd:3824 lastrcv:1 lastack:1 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1038.74 rcv_space:571352 rcv_ssthresh:3114180 minrtt:0.832 snd_wnd:65152 rcv_wnd:3114240
+ESTAB 0      0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:206 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:199 bytes_acked:200 bytes_received:4 segs_out:8 segs_in:7 data_segs_out:3 data_segs_in:3 send 21424080bps lastsnd:3828 lastrcv:3743 lastack:3743 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:43ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256                                       
+2026-11-05T12:19:40.256216+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:59 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:2877176 segs_out:125 segs_in:1991 data_segs_out:1 data_segs_in:1989 send 132237443bps lastsnd:4848 lastrcv:30 lastack:30 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1064.39 rcv_space:635648 rcv_ssthresh:3793303 minrtt:0.832 snd_wnd:65152 rcv_wnd:3787776
+ESTAB 0      0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:206 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:199 bytes_acked:200 bytes_received:4 segs_out:8 segs_in:7 data_segs_out:3 data_segs_in:3 send 21424080bps lastsnd:4851 lastrcv:4766 lastack:4766 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:43ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256                                          
+2026-11-05T12:19:41.291613+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:52 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:3512848 segs_out:159 segs_in:2430 data_segs_out:1 data_segs_in:2428 send 132237443bps lastsnd:5882 lastrcv:1 lastack:1 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1133.31 rcv_space:703168 rcv_ssthresh:3803177 minrtt:0.832 snd_wnd:65152 rcv_wnd:3803264
+ESTAB 0      0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:206 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:199 bytes_acked:200 bytes_received:4 segs_out:8 segs_in:7 data_segs_out:3 data_segs_in:3 send 21424080bps lastsnd:5886 lastrcv:5801 lastack:5801 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:43ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256                                        
+2026-11-05T12:19:42.331236+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:45 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:4125352 segs_out:190 segs_in:2853 data_segs_out:1 data_segs_in:2851 send 132237443bps lastsnd:6920 lastrcv:12 lastack:12 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1196.05 rcv_space:718208 rcv_ssthresh:3803177 minrtt:0.832 snd_wnd:65152 rcv_wnd:3803264
+ESTAB 0      0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:206 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:199 bytes_acked:200 bytes_received:4 segs_out:8 segs_in:7 data_segs_out:3 data_segs_in:3 send 21424080bps lastsnd:6923 lastrcv:6838 lastack:6838 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:43ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256                                          
+2026-11-05T12:19:43.383532+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:63 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:4762472 segs_out:222 segs_in:3293 data_segs_out:1 data_segs_in:3291 send 132237443bps lastsnd:7974 lastrcv:2 lastack:2 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1249.26 rcv_space:718208 rcv_ssthresh:3803177 minrtt:0.832 snd_wnd:65152 rcv_wnd:3803264
+ESTAB 0      0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:206 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:199 bytes_acked:200 bytes_received:4 segs_out:8 segs_in:7 data_segs_out:3 data_segs_in:3 send 21424080bps lastsnd:7977 lastrcv:7892 lastack:7892 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:43ms rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256                                        
+2026-11-05T12:19:44.406414+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+ESTAB 0      0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:68 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:5370632 segs_out:251 segs_in:3713 data_segs_out:1 data_segs_in:3711 send 132237443bps lastsnd:8996 lastrcv:7 lastack:7 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1291.9 rcv_space:752960 rcv_ssthresh:3803177 minrtt:0.832 snd_wnd:65152 rcv_wnd:3803264
+ESTAB 0      1      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:412 backoff:1 rtt:5.407/9.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:1 ssthresh:7 bytes_sent:202 bytes_retrans:2 bytes_acked:200 bytes_received:4 segs_out:11 segs_in:7 data_segs_out:6 data_segs_in:3 send 2142408bps lastsnd:364 lastrcv:8915 lastack:8915 pacing_rate 42846176bps delivery_rate 13660376bps delivered:4 busy:867ms unacked:1 retrans:1/2 lost:1 rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256 rehash:1
+2026-11-05T12:19:45.469731+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+ESTAB 240584 0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:65 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:6007752 segs_out:277 segs_in:4153 data_segs_out:1 data_segs_in:4151 send 132237443bps lastsnd:10059 lastrcv:4 lastack:4 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1341.73 rcv_space:790608 rcv_ssthresh:3803177 minrtt:0.832 snd_wnd:65152 rcv_wnd:3576192
+ESTAB 0      292    lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:1524 rtt:170.981/338.015 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:207 bytes_retrans:3 bytes_acked:201 bytes_received:5 segs_out:14 segs_in:10 data_segs_out:8 data_segs_in:4 send 677502bps lastsnd:355 lastrcv:557 lastack:82 pacing_rate 1355000bps delivery_rate 13660376bps delivered:7 busy:1728ms unacked:1 retrans:0/3 dsack_dups:2 rcv_space:14480 rcv_ssthresh:64088 notsent:288 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256 rehash:2
+2026-11-05T12:19:46.511501+00:00
+State Recv-Q Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+ESTAB 860328 0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:97 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:6627496 segs_out:291 segs_in:4581 data_segs_out:1 data_segs_in:4579 send 132237443bps lastsnd:11101 lastrcv:8 lastack:8 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1408.68 rcv_space:790608 rcv_ssthresh:3803177 minrtt:0.832 snd_wnd:65152 rcv_wnd:2995968
+ESTAB 0      292    lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:1524 rtt:170.981/338.015 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:10 bytes_sent:495 bytes_retrans:3 bytes_acked:201 bytes_received:5 segs_out:15 segs_in:11 data_segs_out:9 data_segs_in:4 send 677502bps lastsnd:793 lastrcv:1598 lastack:687 pacing_rate 1355000bps delivery_rate 13660376bps delivered:8 busy:2769ms unacked:2 retrans:0/3 dsack_dups:3 rcv_space:14480 rcv_ssthresh:64088 minrtt:0.848 snd_wnd:65024 rcv_wnd:64256 rehash:2
+2026-11-05T12:19:47.535478+00:00
+State Recv-Q  Send-Q  Local Address:Port    Peer Address:Port                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+ESTAB 1474280 0      lab-client:22196 lab-server:5201
+	 cubic wscale:7,7 rto:201 rtt:0.876/0.401 ato:80 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:37 bytes_acked:38 bytes_received:7241448 segs_out:306 segs_in:5005 data_segs_out:1 data_segs_in:5003 send 132237443bps lastsnd:12129 lastrcv:7 lastack:7 pacing_rate 264324008bps delivery_rate 9750840bps delivered:2 app_limited busy:1ms rcv_rtt:1462.84 rcv_space:790608 rcv_ssthresh:3803177 minrtt:0.832 snd_wnd:65152 rcv_wnd:2393600
+ESTAB 0       0      lab-client:22190 lab-server:5201
+	 cubic wscale:7,7 rto:3335 rtt:473.321/715.257 ato:40 mss:1448 pmtu:1500 rcvmss:1448 advmss:1448 cwnd:10 bytes_sent:495 bytes_retrans:3 bytes_acked:493 bytes_received:1457 segs_out:17 segs_in:15 data_segs_out:9 data_segs_in:6 send 244739bps lastsnd:1821 lastrcv:344 lastack:344 pacing_rate 489472bps delivery_rate 19240bps delivered:10 busy:3452ms retrans:0/3 dsack_dups:3 rcv_space:14480 rcv_ssthresh:67152 minrtt:0.848 snd_wnd:64768 rcv_wnd:67200 rehash:2
+2026-11-05T12:19:48.560040+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port
+2026-11-05T12:19:49.594719+00:00
+State Recv-Q Send-Q Local Address:Port Peer Address:Port

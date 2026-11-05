@@ -10,9 +10,13 @@ A technical portfolio project combining a read-only Linux collector, offline int
 
 **[Memory investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html).** Six measured allocation/failure/correction tests distinguish JVM heap exhaustion from Linux cgroup OOM kills while the host still has available RAM. Three HTTP experiments compare temporary allocation churn with reusable buffers. Read [the memory case study](MEMORY_CASE_STUDY.md) and [reproduction instructions](memory/README.md).
 
-**New: [Storage & NFS investigation](https://rahul-luthra.github.io/linux-performance-field-lab/storage.html).** Ten measured two-VM cases follow save latency through Java, NFS RPCs, network delay and server storage. All 1,200 requests passed. Network delay has a clear recovery signal; disk throttling results are inconsistent and the late baseline drift remains unresolved. Read [the case study](STORAGE_CASE_STUDY.md) and [reproduction guide](storage/README.md).
+**[Storage & NFS investigation](https://rahul-luthra.github.io/linux-performance-field-lab/storage.html).** Ten measured two-VM cases follow save latency through Java, NFS RPCs, network delay and server storage. All 1,200 requests passed. Network delay has a clear recovery signal; disk throttling results are inconsistent and the late baseline drift remains unresolved. Read [the case study](STORAGE_CASE_STUDY.md) and [reproduction guide](storage/README.md).
 
 ![Local disk and NFS investigation](storage-preview.png)
+
+**New: [Linux network troubleshooting](https://rahul-luthra.github.io/linux-performance-field-lab/network.html).** Distinguish delay, loss, bandwidth limits and application waiting using HTTP timings, TCP observations, iperf3, queue counters and recovery. Twelve measured runs retain two clearly marked protocol deviations; corrected reruns verify the final result. All 1,200 small responses and 60 bulk downloads passed integrity checks. Read [the case study](NETWORK_CASE_STUDY.md) and [reproduction guide](network/README.md).
+
+![Measured Linux network investigation](network-preview.png)
 
 For offline use, [download the review bundle](https://github.com/rahul-luthra/linux-performance-field-lab/releases/tag/review-v2), extract it, and open `app-report.html` with Edge, Chrome or Firefox. The tagged release is a fixed review snapshot; the live site follows the main branch.
 

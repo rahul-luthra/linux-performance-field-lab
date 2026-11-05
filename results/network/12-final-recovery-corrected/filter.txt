@@ -1,0 +1,12 @@
+filter protocol ip pref 1 u32 chain 0 
+filter protocol ip pref 1 u32 chain 0 fh 800: ht divisor 1 
+filter protocol ip pref 1 u32 chain 0 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:3 not_in_hw (rule hit 6442 success 1363)
+  match 00060000/00ff0000 at 8 (success 6434 ) 
+  match c0a8567d/ffffffff at 16 (success 6021 ) 
+  match 1f9a0000/ffff0000 at 20 (success 1363 ) 
+filter protocol ip pref 2 u32 chain 0 
+filter protocol ip pref 2 u32 chain 0 fh 801: ht divisor 1 
+filter protocol ip pref 2 u32 chain 0 fh 801::800 order 2048 key ht 801 bkt 0 flowid 1:3 not_in_hw (rule hit 5079 success 4657)
+  match 00060000/00ff0000 at 8 (success 5071 ) 
+  match c0a8567d/ffffffff at 16 (success 4658 ) 
+  match 14510000/ffff0000 at 20 (success 4657 ) 
