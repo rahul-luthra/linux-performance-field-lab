@@ -24,7 +24,11 @@ PUBLIC = ['.gitignore', 'README.md', 'CASE_STUDY.md', 'LIVE_RESULTS.md', 'RUNBOO
           'NETWORK_CASE_STUDY.md', 'network-report.html', 'docs/network.html', 'network-preview.png',
           'network/serve.py', 'network/client.py', 'network/impair.py', 'network/preflight.py',
           'network/observe.py', 'network/run_lab.py', 'network/analyze_network.py', 'network/test_network.py',
-          'network/export_evidence.py', 'network/finish.py', 'network/report-template.html', 'network/README.md']
+          'network/export_evidence.py', 'network/finish.py', 'network/report-template.html', 'network/README.md',
+          'RELIABILITY_CASE_STUDY.md', 'reliability-report.html', 'docs/reliability.html',
+          'reliability/service.py', 'reliability/probe.py', 'reliability/run_lab.py',
+          'reliability/build_report.py', 'reliability/report-template.html', 'reliability/README.md',
+          'results/reliability/capture.json']
 EVIDENCE = ['cpu-lab.json', 'cpu-lab.html', 'summary.json', 'unit-tests.txt', 'mpstat.txt', 'vmstat.txt',
             'pidstat.txt', 'smoke-capture.json', 'smoke-report.html']
 

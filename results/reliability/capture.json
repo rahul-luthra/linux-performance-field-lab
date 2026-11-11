@@ -1,0 +1,1784 @@
+{
+  "phases": [
+    {
+      "name": "healthy",
+      "delay_ms": 0,
+      "timeout_ms": 1500,
+      "frontend_before": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "frontend_after": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "dependency": {
+        "active_state": "active",
+        "main_pid": 242669
+      },
+      "started_utc": "2026-11-11T20:46:18.063+00:00",
+      "finished_utc": "2026-11-11T20:46:23.926+00:00",
+      "requests": [
+        {
+          "request_id": "healthy-00",
+          "scheduled_s": 0.0,
+          "started_utc": "2026-11-11T20:46:18.064+00:00",
+          "lag_ms": 0.799,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 19.725,
+          "error": null
+        },
+        {
+          "request_id": "healthy-01",
+          "scheduled_s": 0.25,
+          "started_utc": "2026-11-11T20:46:18.315+00:00",
+          "lag_ms": 1.666,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.528,
+          "error": null
+        },
+        {
+          "request_id": "healthy-02",
+          "scheduled_s": 0.5,
+          "started_utc": "2026-11-11T20:46:18.573+00:00",
+          "lag_ms": 9.512,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.65,
+          "error": null
+        },
+        {
+          "request_id": "healthy-03",
+          "scheduled_s": 0.75,
+          "started_utc": "2026-11-11T20:46:18.834+00:00",
+          "lag_ms": 20.147,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.46,
+          "error": null
+        },
+        {
+          "request_id": "healthy-04",
+          "scheduled_s": 1.0,
+          "started_utc": "2026-11-11T20:46:19.071+00:00",
+          "lag_ms": 7.52,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 14.665,
+          "error": null
+        },
+        {
+          "request_id": "healthy-05",
+          "scheduled_s": 1.25,
+          "started_utc": "2026-11-11T20:46:19.316+00:00",
+          "lag_ms": 2.637,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 13.698,
+          "error": null
+        },
+        {
+          "request_id": "healthy-06",
+          "scheduled_s": 1.5,
+          "started_utc": "2026-11-11T20:46:19.567+00:00",
+          "lag_ms": 3.302,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.284,
+          "error": null
+        },
+        {
+          "request_id": "healthy-07",
+          "scheduled_s": 1.75,
+          "started_utc": "2026-11-11T20:46:19.817+00:00",
+          "lag_ms": 3.276,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.614,
+          "error": null
+        },
+        {
+          "request_id": "healthy-08",
+          "scheduled_s": 2.0,
+          "started_utc": "2026-11-11T20:46:20.319+00:00",
+          "lag_ms": 255.293,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 15.3,
+          "error": null
+        },
+        {
+          "request_id": "healthy-09",
+          "scheduled_s": 2.25,
+          "started_utc": "2026-11-11T20:46:20.320+00:00",
+          "lag_ms": 6.182,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 11.642,
+          "error": null
+        },
+        {
+          "request_id": "healthy-10",
+          "scheduled_s": 2.5,
+          "started_utc": "2026-11-11T20:46:20.619+00:00",
+          "lag_ms": 55.112,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.3,
+          "error": null
+        },
+        {
+          "request_id": "healthy-11",
+          "scheduled_s": 2.75,
+          "started_utc": "2026-11-11T20:46:20.838+00:00",
+          "lag_ms": 24.013,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.559,
+          "error": null
+        },
+        {
+          "request_id": "healthy-12",
+          "scheduled_s": 3.0,
+          "started_utc": "2026-11-11T20:46:21.425+00:00",
+          "lag_ms": 361.541,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 19.127,
+          "error": null
+        },
+        {
+          "request_id": "healthy-13",
+          "scheduled_s": 3.25,
+          "started_utc": "2026-11-11T20:46:21.426+00:00",
+          "lag_ms": 112.182,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 16.533,
+          "error": null
+        },
+        {
+          "request_id": "healthy-14",
+          "scheduled_s": 3.5,
+          "started_utc": "2026-11-11T20:46:21.575+00:00",
+          "lag_ms": 11.083,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.231,
+          "error": null
+        },
+        {
+          "request_id": "healthy-15",
+          "scheduled_s": 3.75,
+          "started_utc": "2026-11-11T20:46:21.816+00:00",
+          "lag_ms": 2.667,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.472,
+          "error": null
+        },
+        {
+          "request_id": "healthy-16",
+          "scheduled_s": 4.0,
+          "started_utc": "2026-11-11T20:46:22.071+00:00",
+          "lag_ms": 7.262,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.36,
+          "error": null
+        },
+        {
+          "request_id": "healthy-17",
+          "scheduled_s": 4.25,
+          "started_utc": "2026-11-11T20:46:22.320+00:00",
+          "lag_ms": 6.691,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.66,
+          "error": null
+        },
+        {
+          "request_id": "healthy-18",
+          "scheduled_s": 4.5,
+          "started_utc": "2026-11-11T20:46:22.572+00:00",
+          "lag_ms": 8.737,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.292,
+          "error": null
+        },
+        {
+          "request_id": "healthy-19",
+          "scheduled_s": 4.75,
+          "started_utc": "2026-11-11T20:46:22.911+00:00",
+          "lag_ms": 97.476,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.234,
+          "error": null
+        },
+        {
+          "request_id": "healthy-20",
+          "scheduled_s": 5.0,
+          "started_utc": "2026-11-11T20:46:23.067+00:00",
+          "lag_ms": 3.657,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.171,
+          "error": null
+        },
+        {
+          "request_id": "healthy-21",
+          "scheduled_s": 5.25,
+          "started_utc": "2026-11-11T20:46:23.320+00:00",
+          "lag_ms": 6.639,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.317,
+          "error": null
+        },
+        {
+          "request_id": "healthy-22",
+          "scheduled_s": 5.5,
+          "started_utc": "2026-11-11T20:46:23.614+00:00",
+          "lag_ms": 50.439,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.969,
+          "error": null
+        },
+        {
+          "request_id": "healthy-23",
+          "scheduled_s": 5.75,
+          "started_utc": "2026-11-11T20:46:23.918+00:00",
+          "lag_ms": 104.32,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.414,
+          "error": null
+        }
+      ],
+      "liveness": [
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 10.309
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.134
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 4.468
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.84
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 2.079
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 1.779
+        }
+      ]
+    },
+    {
+      "name": "slow-dependency",
+      "delay_ms": 650,
+      "timeout_ms": 1500,
+      "frontend_before": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "frontend_after": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "dependency": {
+        "active_state": "active",
+        "main_pid": 242669
+      },
+      "started_utc": "2026-11-11T20:46:28.492+00:00",
+      "finished_utc": "2026-11-11T20:46:34.916+00:00",
+      "requests": [
+        {
+          "request_id": "slow-dependency-00",
+          "scheduled_s": 0.0,
+          "started_utc": "2026-11-11T20:46:28.494+00:00",
+          "lag_ms": 1.235,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 668.161,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-01",
+          "scheduled_s": 0.25,
+          "started_utc": "2026-11-11T20:46:28.945+00:00",
+          "lag_ms": 202.555,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 658.906,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-02",
+          "scheduled_s": 0.5,
+          "started_utc": "2026-11-11T20:46:29.159+00:00",
+          "lag_ms": 166.997,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 660.503,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-03",
+          "scheduled_s": 0.75,
+          "started_utc": "2026-11-11T20:46:29.431+00:00",
+          "lag_ms": 188.83,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 659.292,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-04",
+          "scheduled_s": 1.0,
+          "started_utc": "2026-11-11T20:46:29.494+00:00",
+          "lag_ms": 1.226,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 662.211,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-05",
+          "scheduled_s": 1.25,
+          "started_utc": "2026-11-11T20:46:29.744+00:00",
+          "lag_ms": 1.0,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 662.067,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-06",
+          "scheduled_s": 1.5,
+          "started_utc": "2026-11-11T20:46:29.993+00:00",
+          "lag_ms": 0.691,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 660.839,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-07",
+          "scheduled_s": 1.75,
+          "started_utc": "2026-11-11T20:46:30.244+00:00",
+          "lag_ms": 1.518,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 659.314,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-08",
+          "scheduled_s": 2.0,
+          "started_utc": "2026-11-11T20:46:30.493+00:00",
+          "lag_ms": 0.773,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 660.803,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-09",
+          "scheduled_s": 2.25,
+          "started_utc": "2026-11-11T20:46:30.744+00:00",
+          "lag_ms": 1.263,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 658.534,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-10",
+          "scheduled_s": 2.5,
+          "started_utc": "2026-11-11T20:46:30.995+00:00",
+          "lag_ms": 2.358,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 660.285,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-11",
+          "scheduled_s": 2.75,
+          "started_utc": "2026-11-11T20:46:31.243+00:00",
+          "lag_ms": 0.642,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 658.663,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-12",
+          "scheduled_s": 3.0,
+          "started_utc": "2026-11-11T20:46:31.494+00:00",
+          "lag_ms": 1.42,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 660.23,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-13",
+          "scheduled_s": 3.25,
+          "started_utc": "2026-11-11T20:46:31.744+00:00",
+          "lag_ms": 1.448,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 658.307,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-14",
+          "scheduled_s": 3.5,
+          "started_utc": "2026-11-11T20:46:31.996+00:00",
+          "lag_ms": 3.317,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 659.478,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-15",
+          "scheduled_s": 3.75,
+          "started_utc": "2026-11-11T20:46:32.245+00:00",
+          "lag_ms": 2.231,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 661.609,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-16",
+          "scheduled_s": 4.0,
+          "started_utc": "2026-11-11T20:46:32.494+00:00",
+          "lag_ms": 1.352,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 660.984,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-17",
+          "scheduled_s": 4.25,
+          "started_utc": "2026-11-11T20:46:32.744+00:00",
+          "lag_ms": 1.002,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 658.79,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-18",
+          "scheduled_s": 4.5,
+          "started_utc": "2026-11-11T20:46:32.996+00:00",
+          "lag_ms": 4.062,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 659.251,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-19",
+          "scheduled_s": 4.75,
+          "started_utc": "2026-11-11T20:46:33.245+00:00",
+          "lag_ms": 2.253,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 658.932,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-20",
+          "scheduled_s": 5.0,
+          "started_utc": "2026-11-11T20:46:33.501+00:00",
+          "lag_ms": 8.831,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 662.882,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-21",
+          "scheduled_s": 5.25,
+          "started_utc": "2026-11-11T20:46:33.749+00:00",
+          "lag_ms": 6.816,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 661.532,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-22",
+          "scheduled_s": 5.5,
+          "started_utc": "2026-11-11T20:46:34.052+00:00",
+          "lag_ms": 59.338,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 659.558,
+          "error": null
+        },
+        {
+          "request_id": "slow-dependency-23",
+          "scheduled_s": 5.75,
+          "started_utc": "2026-11-11T20:46:34.253+00:00",
+          "lag_ms": 10.575,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 662.213,
+          "error": null
+        }
+      ],
+      "liveness": [
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.505
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 4.903
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 3.085
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 5.481
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 5.859
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 2.833
+        }
+      ]
+    },
+    {
+      "name": "dependency-stopped",
+      "delay_ms": null,
+      "timeout_ms": 1500,
+      "frontend_before": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "frontend_after": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "dependency": {
+        "active_state": "inactive",
+        "main_pid": 0
+      },
+      "started_utc": "2026-11-11T20:46:39.061+00:00",
+      "finished_utc": "2026-11-11T20:46:44.823+00:00",
+      "requests": [
+        {
+          "request_id": "dependency-stopped-00",
+          "scheduled_s": 0.0,
+          "started_utc": "2026-11-11T20:46:39.063+00:00",
+          "lag_ms": 1.112,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 17.479,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-01",
+          "scheduled_s": 0.25,
+          "started_utc": "2026-11-11T20:46:39.438+00:00",
+          "lag_ms": 126.846,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 5.613,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-02",
+          "scheduled_s": 0.5,
+          "started_utc": "2026-11-11T20:46:39.739+00:00",
+          "lag_ms": 177.269,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 9.013,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-03",
+          "scheduled_s": 0.75,
+          "started_utc": "2026-11-11T20:46:39.813+00:00",
+          "lag_ms": 1.466,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 3.083,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-04",
+          "scheduled_s": 1.0,
+          "started_utc": "2026-11-11T20:46:40.062+00:00",
+          "lag_ms": 0.541,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 14.534,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-05",
+          "scheduled_s": 1.25,
+          "started_utc": "2026-11-11T20:46:40.314+00:00",
+          "lag_ms": 2.229,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 9.264,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-06",
+          "scheduled_s": 1.5,
+          "started_utc": "2026-11-11T20:46:40.562+00:00",
+          "lag_ms": 0.427,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 5.282,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-07",
+          "scheduled_s": 1.75,
+          "started_utc": "2026-11-11T20:46:40.813+00:00",
+          "lag_ms": 1.329,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 5.62,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-08",
+          "scheduled_s": 2.0,
+          "started_utc": "2026-11-11T20:46:41.062+00:00",
+          "lag_ms": 0.488,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 6.325,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-09",
+          "scheduled_s": 2.25,
+          "started_utc": "2026-11-11T20:46:41.313+00:00",
+          "lag_ms": 1.177,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 4.564,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-10",
+          "scheduled_s": 2.5,
+          "started_utc": "2026-11-11T20:46:41.562+00:00",
+          "lag_ms": 0.786,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 4.674,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-11",
+          "scheduled_s": 2.75,
+          "started_utc": "2026-11-11T20:46:41.813+00:00",
+          "lag_ms": 1.264,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 5.67,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-12",
+          "scheduled_s": 3.0,
+          "started_utc": "2026-11-11T20:46:42.110+00:00",
+          "lag_ms": 48.284,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 8.289,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-13",
+          "scheduled_s": 3.25,
+          "started_utc": "2026-11-11T20:46:42.314+00:00",
+          "lag_ms": 2.926,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 7.705,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-14",
+          "scheduled_s": 3.5,
+          "started_utc": "2026-11-11T20:46:42.563+00:00",
+          "lag_ms": 1.934,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 6.001,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-15",
+          "scheduled_s": 3.75,
+          "started_utc": "2026-11-11T20:46:42.842+00:00",
+          "lag_ms": 30.247,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 8.694,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-16",
+          "scheduled_s": 4.0,
+          "started_utc": "2026-11-11T20:46:43.109+00:00",
+          "lag_ms": 47.662,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 7.831,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-17",
+          "scheduled_s": 4.25,
+          "started_utc": "2026-11-11T20:46:43.313+00:00",
+          "lag_ms": 2.043,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 3.63,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-18",
+          "scheduled_s": 4.5,
+          "started_utc": "2026-11-11T20:46:43.564+00:00",
+          "lag_ms": 2.434,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 5.402,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-19",
+          "scheduled_s": 4.75,
+          "started_utc": "2026-11-11T20:46:43.812+00:00",
+          "lag_ms": 1.051,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 6.615,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-20",
+          "scheduled_s": 5.0,
+          "started_utc": "2026-11-11T20:46:44.062+00:00",
+          "lag_ms": 0.393,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 6.355,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-21",
+          "scheduled_s": 5.25,
+          "started_utc": "2026-11-11T20:46:44.442+00:00",
+          "lag_ms": 130.3,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 4.834,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-22",
+          "scheduled_s": 5.5,
+          "started_utc": "2026-11-11T20:46:44.562+00:00",
+          "lag_ms": 0.545,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 13.72,
+          "error": "dependency_connection_refused"
+        },
+        {
+          "request_id": "dependency-stopped-23",
+          "scheduled_s": 5.75,
+          "started_utc": "2026-11-11T20:46:44.816+00:00",
+          "lag_ms": 4.756,
+          "status": 503,
+          "correct": false,
+          "elapsed_ms": 6.497,
+          "error": "dependency_connection_refused"
+        }
+      ],
+      "liveness": [
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 11.917
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 13.004
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 4.467
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 5.66
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 4.031
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 3.878
+        }
+      ]
+    },
+    {
+      "name": "dependency-restored",
+      "delay_ms": 0,
+      "timeout_ms": 1500,
+      "frontend_before": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "frontend_after": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "dependency": {
+        "active_state": "active",
+        "main_pid": 242940
+      },
+      "started_utc": "2026-11-11T20:46:51.176+00:00",
+      "finished_utc": "2026-11-11T20:46:56.942+00:00",
+      "requests": [
+        {
+          "request_id": "dependency-restored-00",
+          "scheduled_s": 0.0,
+          "started_utc": "2026-11-11T20:46:51.177+00:00",
+          "lag_ms": 0.589,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 27.622,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-01",
+          "scheduled_s": 0.25,
+          "started_utc": "2026-11-11T20:46:51.433+00:00",
+          "lag_ms": 6.65,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.303,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-02",
+          "scheduled_s": 0.5,
+          "started_utc": "2026-11-11T20:46:51.678+00:00",
+          "lag_ms": 2.015,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.922,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-03",
+          "scheduled_s": 0.75,
+          "started_utc": "2026-11-11T20:46:51.941+00:00",
+          "lag_ms": 14.822,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.32,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-04",
+          "scheduled_s": 1.0,
+          "started_utc": "2026-11-11T20:46:52.188+00:00",
+          "lag_ms": 12.348,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 29.612,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-05",
+          "scheduled_s": 1.25,
+          "started_utc": "2026-11-11T20:46:52.439+00:00",
+          "lag_ms": 13.292,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.556,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-06",
+          "scheduled_s": 1.5,
+          "started_utc": "2026-11-11T20:46:52.678+00:00",
+          "lag_ms": 1.588,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.797,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-07",
+          "scheduled_s": 1.75,
+          "started_utc": "2026-11-11T20:46:52.939+00:00",
+          "lag_ms": 12.871,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 20.67,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-08",
+          "scheduled_s": 2.0,
+          "started_utc": "2026-11-11T20:46:53.291+00:00",
+          "lag_ms": 115.098,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 18.832,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-09",
+          "scheduled_s": 2.25,
+          "started_utc": "2026-11-11T20:46:53.458+00:00",
+          "lag_ms": 32.319,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 16.304,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-10",
+          "scheduled_s": 2.5,
+          "started_utc": "2026-11-11T20:46:53.678+00:00",
+          "lag_ms": 1.572,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.203,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-11",
+          "scheduled_s": 2.75,
+          "started_utc": "2026-11-11T20:46:53.929+00:00",
+          "lag_ms": 2.572,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 14.983,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-12",
+          "scheduled_s": 3.0,
+          "started_utc": "2026-11-11T20:46:54.179+00:00",
+          "lag_ms": 2.693,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 20.511,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-13",
+          "scheduled_s": 3.25,
+          "started_utc": "2026-11-11T20:46:54.435+00:00",
+          "lag_ms": 8.589,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 10.468,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-14",
+          "scheduled_s": 3.5,
+          "started_utc": "2026-11-11T20:46:54.682+00:00",
+          "lag_ms": 6.271,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 92.048,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-15",
+          "scheduled_s": 3.75,
+          "started_utc": "2026-11-11T20:46:54.928+00:00",
+          "lag_ms": 1.689,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 76.391,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-16",
+          "scheduled_s": 4.0,
+          "started_utc": "2026-11-11T20:46:55.178+00:00",
+          "lag_ms": 2.127,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 10.807,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-17",
+          "scheduled_s": 4.25,
+          "started_utc": "2026-11-11T20:46:55.427+00:00",
+          "lag_ms": 1.18,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 11.847,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-18",
+          "scheduled_s": 4.5,
+          "started_utc": "2026-11-11T20:46:55.723+00:00",
+          "lag_ms": 47.293,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.795,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-19",
+          "scheduled_s": 4.75,
+          "started_utc": "2026-11-11T20:46:55.950+00:00",
+          "lag_ms": 23.644,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.9,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-20",
+          "scheduled_s": 5.0,
+          "started_utc": "2026-11-11T20:46:56.188+00:00",
+          "lag_ms": 11.86,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 12.743,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-21",
+          "scheduled_s": 5.25,
+          "started_utc": "2026-11-11T20:46:56.520+00:00",
+          "lag_ms": 93.827,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.742,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-22",
+          "scheduled_s": 5.5,
+          "started_utc": "2026-11-11T20:46:56.677+00:00",
+          "lag_ms": 0.927,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.926,
+          "error": null
+        },
+        {
+          "request_id": "dependency-restored-23",
+          "scheduled_s": 5.75,
+          "started_utc": "2026-11-11T20:46:56.933+00:00",
+          "lag_ms": 6.783,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.419,
+          "error": null
+        }
+      ],
+      "liveness": [
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 12.398
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 5.876
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 3.608
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 5.779
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 4.121
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 5.259
+        }
+      ]
+    },
+    {
+      "name": "slow-with-timeout",
+      "delay_ms": 650,
+      "timeout_ms": 200,
+      "frontend_before": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "frontend_after": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "dependency": {
+        "active_state": "active",
+        "main_pid": 242940
+      },
+      "started_utc": "2026-11-11T20:47:01.575+00:00",
+      "finished_utc": "2026-11-11T20:47:07.900+00:00",
+      "requests": [
+        {
+          "request_id": "slow-with-timeout-00",
+          "scheduled_s": 0.0,
+          "started_utc": "2026-11-11T20:47:01.576+00:00",
+          "lag_ms": 0.61,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 213.757,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-01",
+          "scheduled_s": 0.25,
+          "started_utc": "2026-11-11T20:47:01.829+00:00",
+          "lag_ms": 2.943,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 411.645,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-02",
+          "scheduled_s": 0.5,
+          "started_utc": "2026-11-11T20:47:02.240+00:00",
+          "lag_ms": 164.884,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 215.477,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-03",
+          "scheduled_s": 0.75,
+          "started_utc": "2026-11-11T20:47:02.326+00:00",
+          "lag_ms": 0.569,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 482.553,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-04",
+          "scheduled_s": 1.0,
+          "started_utc": "2026-11-11T20:47:02.807+00:00",
+          "lag_ms": 231.183,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 223.515,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-05",
+          "scheduled_s": 1.25,
+          "started_utc": "2026-11-11T20:47:02.844+00:00",
+          "lag_ms": 18.754,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 228.338,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-06",
+          "scheduled_s": 1.5,
+          "started_utc": "2026-11-11T20:47:03.077+00:00",
+          "lag_ms": 1.171,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 206.9,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-07",
+          "scheduled_s": 1.75,
+          "started_utc": "2026-11-11T20:47:03.329+00:00",
+          "lag_ms": 3.225,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 215.01,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-08",
+          "scheduled_s": 2.0,
+          "started_utc": "2026-11-11T20:47:03.591+00:00",
+          "lag_ms": 15.139,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 214.035,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-09",
+          "scheduled_s": 2.25,
+          "started_utc": "2026-11-11T20:47:03.834+00:00",
+          "lag_ms": 8.02,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 206.491,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-10",
+          "scheduled_s": 2.5,
+          "started_utc": "2026-11-11T20:47:04.077+00:00",
+          "lag_ms": 0.997,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 211.742,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-11",
+          "scheduled_s": 2.75,
+          "started_utc": "2026-11-11T20:47:04.326+00:00",
+          "lag_ms": 0.557,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 213.553,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-12",
+          "scheduled_s": 3.0,
+          "started_utc": "2026-11-11T20:47:04.580+00:00",
+          "lag_ms": 3.779,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 223.705,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-13",
+          "scheduled_s": 3.25,
+          "started_utc": "2026-11-11T20:47:04.837+00:00",
+          "lag_ms": 11.658,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 210.697,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-14",
+          "scheduled_s": 3.5,
+          "started_utc": "2026-11-11T20:47:05.081+00:00",
+          "lag_ms": 5.09,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 233.681,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-15",
+          "scheduled_s": 3.75,
+          "started_utc": "2026-11-11T20:47:05.326+00:00",
+          "lag_ms": 0.687,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 214.709,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-16",
+          "scheduled_s": 4.0,
+          "started_utc": "2026-11-11T20:47:05.577+00:00",
+          "lag_ms": 1.22,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 350.827,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-17",
+          "scheduled_s": 4.25,
+          "started_utc": "2026-11-11T20:47:05.926+00:00",
+          "lag_ms": 100.345,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 206.494,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-18",
+          "scheduled_s": 4.5,
+          "started_utc": "2026-11-11T20:47:06.084+00:00",
+          "lag_ms": 8.441,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 229.534,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-19",
+          "scheduled_s": 4.75,
+          "started_utc": "2026-11-11T20:47:06.333+00:00",
+          "lag_ms": 7.518,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 230.44,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-20",
+          "scheduled_s": 5.0,
+          "started_utc": "2026-11-11T20:47:06.579+00:00",
+          "lag_ms": 3.299,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 213.395,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-21",
+          "scheduled_s": 5.25,
+          "started_utc": "2026-11-11T20:47:06.831+00:00",
+          "lag_ms": 5.234,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 407.944,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-22",
+          "scheduled_s": 5.5,
+          "started_utc": "2026-11-11T20:47:07.236+00:00",
+          "lag_ms": 160.615,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 223.277,
+          "error": "dependency_timeout"
+        },
+        {
+          "request_id": "slow-with-timeout-23",
+          "scheduled_s": 5.75,
+          "started_utc": "2026-11-11T20:47:07.327+00:00",
+          "lag_ms": 1.154,
+          "status": 504,
+          "correct": false,
+          "elapsed_ms": 572.963,
+          "error": "dependency_timeout"
+        }
+      ],
+      "liveness": [
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.044
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 4.798
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 5.352
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 4.811
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 3.39
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 4.611
+        }
+      ]
+    },
+    {
+      "name": "final-recovery",
+      "delay_ms": 0,
+      "timeout_ms": 200,
+      "frontend_before": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "frontend_after": {
+        "active_state": "active",
+        "main_pid": 8870
+      },
+      "dependency": {
+        "active_state": "active",
+        "main_pid": 242940
+      },
+      "started_utc": "2026-11-11T20:47:12.001+00:00",
+      "finished_utc": "2026-11-11T20:47:17.803+00:00",
+      "requests": [
+        {
+          "request_id": "final-recovery-00",
+          "scheduled_s": 0.0,
+          "started_utc": "2026-11-11T20:47:12.002+00:00",
+          "lag_ms": 0.607,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 26.895,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-01",
+          "scheduled_s": 0.25,
+          "started_utc": "2026-11-11T20:47:12.449+00:00",
+          "lag_ms": 197.602,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.783,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-02",
+          "scheduled_s": 0.5,
+          "started_utc": "2026-11-11T20:47:12.545+00:00",
+          "lag_ms": 44.278,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.162,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-03",
+          "scheduled_s": 0.75,
+          "started_utc": "2026-11-11T20:47:12.842+00:00",
+          "lag_ms": 90.755,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.642,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-04",
+          "scheduled_s": 1.0,
+          "started_utc": "2026-11-11T20:47:13.015+00:00",
+          "lag_ms": 13.859,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.338,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-05",
+          "scheduled_s": 1.25,
+          "started_utc": "2026-11-11T20:47:13.253+00:00",
+          "lag_ms": 1.821,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.704,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-06",
+          "scheduled_s": 1.5,
+          "started_utc": "2026-11-11T20:47:13.527+00:00",
+          "lag_ms": 25.563,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.626,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-07",
+          "scheduled_s": 1.75,
+          "started_utc": "2026-11-11T20:47:13.753+00:00",
+          "lag_ms": 1.695,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 10.93,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-08",
+          "scheduled_s": 2.0,
+          "started_utc": "2026-11-11T20:47:14.010+00:00",
+          "lag_ms": 8.745,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.379,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-09",
+          "scheduled_s": 2.25,
+          "started_utc": "2026-11-11T20:47:14.276+00:00",
+          "lag_ms": 25.124,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.338,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-10",
+          "scheduled_s": 2.5,
+          "started_utc": "2026-11-11T20:47:14.503+00:00",
+          "lag_ms": 1.704,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.996,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-11",
+          "scheduled_s": 2.75,
+          "started_utc": "2026-11-11T20:47:14.755+00:00",
+          "lag_ms": 3.52,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.039,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-12",
+          "scheduled_s": 3.0,
+          "started_utc": "2026-11-11T20:47:15.016+00:00",
+          "lag_ms": 14.713,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.876,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-13",
+          "scheduled_s": 3.25,
+          "started_utc": "2026-11-11T20:47:15.309+00:00",
+          "lag_ms": 58.159,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 12.376,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-14",
+          "scheduled_s": 3.5,
+          "started_utc": "2026-11-11T20:47:15.521+00:00",
+          "lag_ms": 19.39,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.595,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-15",
+          "scheduled_s": 3.75,
+          "started_utc": "2026-11-11T20:47:15.793+00:00",
+          "lag_ms": 41.625,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.142,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-16",
+          "scheduled_s": 4.0,
+          "started_utc": "2026-11-11T20:47:16.006+00:00",
+          "lag_ms": 4.381,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.66,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-17",
+          "scheduled_s": 4.25,
+          "started_utc": "2026-11-11T20:47:16.255+00:00",
+          "lag_ms": 3.976,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 16.989,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-18",
+          "scheduled_s": 4.5,
+          "started_utc": "2026-11-11T20:47:16.523+00:00",
+          "lag_ms": 21.68,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 10.499,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-19",
+          "scheduled_s": 4.75,
+          "started_utc": "2026-11-11T20:47:16.763+00:00",
+          "lag_ms": 11.807,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.054,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-20",
+          "scheduled_s": 5.0,
+          "started_utc": "2026-11-11T20:47:17.007+00:00",
+          "lag_ms": 5.85,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 8.568,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-21",
+          "scheduled_s": 5.25,
+          "started_utc": "2026-11-11T20:47:17.305+00:00",
+          "lag_ms": 53.715,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 7.036,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-22",
+          "scheduled_s": 5.5,
+          "started_utc": "2026-11-11T20:47:17.560+00:00",
+          "lag_ms": 58.459,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.167,
+          "error": null
+        },
+        {
+          "request_id": "final-recovery-23",
+          "scheduled_s": 5.75,
+          "started_utc": "2026-11-11T20:47:17.796+00:00",
+          "lag_ms": 44.693,
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.628,
+          "error": null
+        }
+      ],
+      "liveness": [
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 9.646
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 2.02
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 3.881
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 1.794
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 6.28
+        },
+        {
+          "status": 200,
+          "correct": true,
+          "elapsed_ms": 3.828
+        }
+      ]
+    }
+  ],
+  "journal": "2026-11-11T20:46:13+0000 systemd[1]: Started /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py frontend --bind 127.0.0.1 --port 8190 --setting /home/rahul/reliability-4049eb4e47/setting --peer lab-dependency --peer-port 8191.\n2026-11-11T20:46:18+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:18.083+00:00\", \"request_id\": \"healthy-00\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 7.203, \"timeout_ms\": 1500}\n2026-11-11T20:46:18+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:18.321+00:00\", \"request_id\": \"healthy-01\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.256, \"timeout_ms\": 1500}\n2026-11-11T20:46:18+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:18.580+00:00\", \"request_id\": \"healthy-02\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.227, \"timeout_ms\": 1500}\n2026-11-11T20:46:18+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:18.840+00:00\", \"request_id\": \"healthy-03\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.217, \"timeout_ms\": 1500}\n2026-11-11T20:46:19+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:19.084+00:00\", \"request_id\": \"healthy-04\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 11.023, \"timeout_ms\": 1500}\n2026-11-11T20:46:19+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:19.327+00:00\", \"request_id\": \"healthy-05\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 8.729, \"timeout_ms\": 1500}\n2026-11-11T20:46:19+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:19.573+00:00\", \"request_id\": \"healthy-06\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.084, \"timeout_ms\": 1500}\n2026-11-11T20:46:19+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:19.823+00:00\", \"request_id\": \"healthy-07\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.432, \"timeout_ms\": 1500}\n2026-11-11T20:46:20+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:20.330+00:00\", \"request_id\": \"healthy-09\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 6.762, \"timeout_ms\": 1500}\n2026-11-11T20:46:20+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:20.333+00:00\", \"request_id\": \"healthy-08\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 11.664, \"timeout_ms\": 1500}\n2026-11-11T20:46:20+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:20.624+00:00\", \"request_id\": \"healthy-10\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.824, \"timeout_ms\": 1500}\n2026-11-11T20:46:20+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:20.846+00:00\", \"request_id\": \"healthy-11\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 6.813, \"timeout_ms\": 1500}\n2026-11-11T20:46:21+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:21.441+00:00\", \"request_id\": \"healthy-13\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 12.977, \"timeout_ms\": 1500}\n2026-11-11T20:46:21+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:21.443+00:00\", \"request_id\": \"healthy-12\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 11.397, \"timeout_ms\": 1500}\n2026-11-11T20:46:21+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:21.581+00:00\", \"request_id\": \"healthy-14\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.047, \"timeout_ms\": 1500}\n2026-11-11T20:46:21+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:21.822+00:00\", \"request_id\": \"healthy-15\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.08, \"timeout_ms\": 1500}\n2026-11-11T20:46:22+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:22.079+00:00\", \"request_id\": \"healthy-16\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.216, \"timeout_ms\": 1500}\n2026-11-11T20:46:22+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:22.326+00:00\", \"request_id\": \"healthy-17\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.08, \"timeout_ms\": 1500}\n2026-11-11T20:46:22+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:22.579+00:00\", \"request_id\": \"healthy-18\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.011, \"timeout_ms\": 1500}\n2026-11-11T20:46:22+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:22.918+00:00\", \"request_id\": \"healthy-19\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.477, \"timeout_ms\": 1500}\n2026-11-11T20:46:23+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:23.074+00:00\", \"request_id\": \"healthy-20\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.016, \"timeout_ms\": 1500}\n2026-11-11T20:46:23+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:23.326+00:00\", \"request_id\": \"healthy-21\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.025, \"timeout_ms\": 1500}\n2026-11-11T20:46:23+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:23.619+00:00\", \"request_id\": \"healthy-22\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.063, \"timeout_ms\": 1500}\n2026-11-11T20:46:23+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:23.924+00:00\", \"request_id\": \"healthy-23\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.05, \"timeout_ms\": 1500}\n2026-11-11T20:46:29+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:29.160+00:00\", \"request_id\": \"slow-dependency-00\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 656.071, \"timeout_ms\": 1500}\n2026-11-11T20:46:29+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:29.602+00:00\", \"request_id\": \"slow-dependency-01\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 654.806, \"timeout_ms\": 1500}\n2026-11-11T20:46:29+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:29.819+00:00\", \"request_id\": \"slow-dependency-02\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.855, \"timeout_ms\": 1500}\n2026-11-11T20:46:30+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:30.089+00:00\", \"request_id\": \"slow-dependency-03\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.801, \"timeout_ms\": 1500}\n2026-11-11T20:46:30+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:30.154+00:00\", \"request_id\": \"slow-dependency-04\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 657.655, \"timeout_ms\": 1500}\n2026-11-11T20:46:30+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:30.402+00:00\", \"request_id\": \"slow-dependency-05\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 656.585, \"timeout_ms\": 1500}\n2026-11-11T20:46:30+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:30.652+00:00\", \"request_id\": \"slow-dependency-06\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 656.572, \"timeout_ms\": 1500}\n2026-11-11T20:46:30+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:30.901+00:00\", \"request_id\": \"slow-dependency-07\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.614, \"timeout_ms\": 1500}\n2026-11-11T20:46:31+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:31.152+00:00\", \"request_id\": \"slow-dependency-08\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 656.819, \"timeout_ms\": 1500}\n2026-11-11T20:46:31+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:31.401+00:00\", \"request_id\": \"slow-dependency-09\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 654.983, \"timeout_ms\": 1500}\n2026-11-11T20:46:31+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:31.653+00:00\", \"request_id\": \"slow-dependency-10\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.408, \"timeout_ms\": 1500}\n2026-11-11T20:46:31+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:31.900+00:00\", \"request_id\": \"slow-dependency-11\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 654.631, \"timeout_ms\": 1500}\n2026-11-11T20:46:32+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:32.153+00:00\", \"request_id\": \"slow-dependency-12\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 654.283, \"timeout_ms\": 1500}\n2026-11-11T20:46:32+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:32.401+00:00\", \"request_id\": \"slow-dependency-13\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 654.871, \"timeout_ms\": 1500}\n2026-11-11T20:46:32+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:32.654+00:00\", \"request_id\": \"slow-dependency-14\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.804, \"timeout_ms\": 1500}\n2026-11-11T20:46:32+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:32.905+00:00\", \"request_id\": \"slow-dependency-15\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 658.539, \"timeout_ms\": 1500}\n2026-11-11T20:46:33+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:33.153+00:00\", \"request_id\": \"slow-dependency-16\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 656.504, \"timeout_ms\": 1500}\n2026-11-11T20:46:33+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:33.401+00:00\", \"request_id\": \"slow-dependency-17\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.475, \"timeout_ms\": 1500}\n2026-11-11T20:46:33+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:33.653+00:00\", \"request_id\": \"slow-dependency-18\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.19, \"timeout_ms\": 1500}\n2026-11-11T20:46:33+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:33.902+00:00\", \"request_id\": \"slow-dependency-19\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.529, \"timeout_ms\": 1500}\n2026-11-11T20:46:34+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:34.163+00:00\", \"request_id\": \"slow-dependency-20\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 657.679, \"timeout_ms\": 1500}\n2026-11-11T20:46:34+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:34.409+00:00\", \"request_id\": \"slow-dependency-21\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 657.847, \"timeout_ms\": 1500}\n2026-11-11T20:46:34+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:34.709+00:00\", \"request_id\": \"slow-dependency-22\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 655.866, \"timeout_ms\": 1500}\n2026-11-11T20:46:34+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:34.914+00:00\", \"request_id\": \"slow-dependency-23\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 659.098, \"timeout_ms\": 1500}\n2026-11-11T20:46:39+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:39.078+00:00\", \"request_id\": \"dependency-stopped-00\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.88, \"timeout_ms\": 1500}\n2026-11-11T20:46:39+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:39.442+00:00\", \"request_id\": \"dependency-stopped-01\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.649, \"timeout_ms\": 1500}\n2026-11-11T20:46:39+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:39.746+00:00\", \"request_id\": \"dependency-stopped-02\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 4.936, \"timeout_ms\": 1500}\n2026-11-11T20:46:39+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:39.815+00:00\", \"request_id\": \"dependency-stopped-03\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 0.905, \"timeout_ms\": 1500}\n2026-11-11T20:46:40+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:40.075+00:00\", \"request_id\": \"dependency-stopped-04\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 11.285, \"timeout_ms\": 1500}\n2026-11-11T20:46:40+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:40.320+00:00\", \"request_id\": \"dependency-stopped-05\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 2.945, \"timeout_ms\": 1500}\n2026-11-11T20:46:40+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:40.565+00:00\", \"request_id\": \"dependency-stopped-06\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.531, \"timeout_ms\": 1500}\n2026-11-11T20:46:40+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:40.815+00:00\", \"request_id\": \"dependency-stopped-07\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 0.924, \"timeout_ms\": 1500}\n2026-11-11T20:46:41+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:41.067+00:00\", \"request_id\": \"dependency-stopped-08\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 2.087, \"timeout_ms\": 1500}\n2026-11-11T20:46:41+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:41.316+00:00\", \"request_id\": \"dependency-stopped-09\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.461, \"timeout_ms\": 1500}\n2026-11-11T20:46:41+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:41.565+00:00\", \"request_id\": \"dependency-stopped-10\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.255, \"timeout_ms\": 1500}\n2026-11-11T20:46:41+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:41.817+00:00\", \"request_id\": \"dependency-stopped-11\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.096, \"timeout_ms\": 1500}\n2026-11-11T20:46:42+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:42.117+00:00\", \"request_id\": \"dependency-stopped-12\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 3.554, \"timeout_ms\": 1500}\n2026-11-11T20:46:42+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:42.320+00:00\", \"request_id\": \"dependency-stopped-13\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 2.28, \"timeout_ms\": 1500}\n2026-11-11T20:46:42+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:42.568+00:00\", \"request_id\": \"dependency-stopped-14\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 2.439, \"timeout_ms\": 1500}\n2026-11-11T20:46:42+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:42.848+00:00\", \"request_id\": \"dependency-stopped-15\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 3.198, \"timeout_ms\": 1500}\n2026-11-11T20:46:43+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:43.115+00:00\", \"request_id\": \"dependency-stopped-16\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.196, \"timeout_ms\": 1500}\n2026-11-11T20:46:43+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:43.316+00:00\", \"request_id\": \"dependency-stopped-17\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 0.917, \"timeout_ms\": 1500}\n2026-11-11T20:46:43+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:43.567+00:00\", \"request_id\": \"dependency-stopped-18\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.153, \"timeout_ms\": 1500}\n2026-11-11T20:46:43+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:43.817+00:00\", \"request_id\": \"dependency-stopped-19\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 2.382, \"timeout_ms\": 1500}\n2026-11-11T20:46:44+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:44.067+00:00\", \"request_id\": \"dependency-stopped-20\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.775, \"timeout_ms\": 1500}\n2026-11-11T20:46:44+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:44.445+00:00\", \"request_id\": \"dependency-stopped-21\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.217, \"timeout_ms\": 1500}\n2026-11-11T20:46:44+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:44.574+00:00\", \"request_id\": \"dependency-stopped-22\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 4.579, \"timeout_ms\": 1500}\n2026-11-11T20:46:44+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:44.820+00:00\", \"request_id\": \"dependency-stopped-23\", \"status\": 503, \"cause\": \"dependency_connection_refused\", \"dependency_ms\": 1.801, \"timeout_ms\": 1500}\n2026-11-11T20:46:51+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:51.202+00:00\", \"request_id\": \"dependency-restored-00\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.643, \"timeout_ms\": 1500}\n2026-11-11T20:46:51+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:51.439+00:00\", \"request_id\": \"dependency-restored-01\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.741, \"timeout_ms\": 1500}\n2026-11-11T20:46:51+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:51.685+00:00\", \"request_id\": \"dependency-restored-02\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.588, \"timeout_ms\": 1500}\n2026-11-11T20:46:51+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:51.949+00:00\", \"request_id\": \"dependency-restored-03\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.392, \"timeout_ms\": 1500}\n2026-11-11T20:46:52+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:52.214+00:00\", \"request_id\": \"dependency-restored-04\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 19.475, \"timeout_ms\": 1500}\n2026-11-11T20:46:52+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:52.447+00:00\", \"request_id\": \"dependency-restored-05\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.997, \"timeout_ms\": 1500}\n2026-11-11T20:46:52+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:52.684+00:00\", \"request_id\": \"dependency-restored-06\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.735, \"timeout_ms\": 1500}\n2026-11-11T20:46:52+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:52.956+00:00\", \"request_id\": \"dependency-restored-07\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 13.332, \"timeout_ms\": 1500}\n2026-11-11T20:46:53+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:53.306+00:00\", \"request_id\": \"dependency-restored-08\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 9.955, \"timeout_ms\": 1500}\n2026-11-11T20:46:53+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:53.473+00:00\", \"request_id\": \"dependency-restored-09\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 13.06, \"timeout_ms\": 1500}\n2026-11-11T20:46:53+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:53.685+00:00\", \"request_id\": \"dependency-restored-10\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.147, \"timeout_ms\": 1500}\n2026-11-11T20:46:53+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:53.942+00:00\", \"request_id\": \"dependency-restored-11\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 11.413, \"timeout_ms\": 1500}\n2026-11-11T20:46:54+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:54.198+00:00\", \"request_id\": \"dependency-restored-12\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 16.597, \"timeout_ms\": 1500}\n2026-11-11T20:46:54+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:54.443+00:00\", \"request_id\": \"dependency-restored-13\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 6.858, \"timeout_ms\": 1500}\n2026-11-11T20:46:54+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:54.755+00:00\", \"request_id\": \"dependency-restored-14\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 70.952, \"timeout_ms\": 1500}\n2026-11-11T20:46:55+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:55.002+00:00\", \"request_id\": \"dependency-restored-15\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 72.182, \"timeout_ms\": 1500}\n2026-11-11T20:46:55+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:55.187+00:00\", \"request_id\": \"dependency-restored-16\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.129, \"timeout_ms\": 1500}\n2026-11-11T20:46:55+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:55.437+00:00\", \"request_id\": \"dependency-restored-17\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 7.69, \"timeout_ms\": 1500}\n2026-11-11T20:46:55+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:55.732+00:00\", \"request_id\": \"dependency-restored-18\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.579, \"timeout_ms\": 1500}\n2026-11-11T20:46:55+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:55.957+00:00\", \"request_id\": \"dependency-restored-19\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.841, \"timeout_ms\": 1500}\n2026-11-11T20:46:56+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:56.199+00:00\", \"request_id\": \"dependency-restored-20\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 6.482, \"timeout_ms\": 1500}\n2026-11-11T20:46:56+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:56.527+00:00\", \"request_id\": \"dependency-restored-21\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.447, \"timeout_ms\": 1500}\n2026-11-11T20:46:56+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:56.683+00:00\", \"request_id\": \"dependency-restored-22\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.769, \"timeout_ms\": 1500}\n2026-11-11T20:46:56+0000 python3[8870]: {\"time\": \"2026-11-11T20:46:56.939+00:00\", \"request_id\": \"dependency-restored-23\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.117, \"timeout_ms\": 1500}\n2026-11-11T20:47:01+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:01.787+00:00\", \"request_id\": \"slow-with-timeout-00\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 203.826, \"timeout_ms\": 200}\n2026-11-11T20:47:02+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:02.239+00:00\", \"request_id\": \"slow-with-timeout-01\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 408.699, \"timeout_ms\": 200}\n2026-11-11T20:47:02+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:02.455+00:00\", \"request_id\": \"slow-with-timeout-02\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 211.484, \"timeout_ms\": 200}\n2026-11-11T20:47:02+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:02.803+00:00\", \"request_id\": \"slow-with-timeout-03\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 475.007, \"timeout_ms\": 200}\n2026-11-11T20:47:03+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:03.029+00:00\", \"request_id\": \"slow-with-timeout-04\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 218.85, \"timeout_ms\": 200}\n2026-11-11T20:47:03+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:03.066+00:00\", \"request_id\": \"slow-with-timeout-05\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 220.198, \"timeout_ms\": 200}\n2026-11-11T20:47:03+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:03.282+00:00\", \"request_id\": \"slow-with-timeout-06\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 203.933, \"timeout_ms\": 200}\n2026-11-11T20:47:03+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:03.542+00:00\", \"request_id\": \"slow-with-timeout-07\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 211.292, \"timeout_ms\": 200}\n2026-11-11T20:47:03+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:03.802+00:00\", \"request_id\": \"slow-with-timeout-08\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 208.817, \"timeout_ms\": 200}\n2026-11-11T20:47:04+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:04.038+00:00\", \"request_id\": \"slow-with-timeout-09\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 202.779, \"timeout_ms\": 200}\n2026-11-11T20:47:04+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:04.286+00:00\", \"request_id\": \"slow-with-timeout-10\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 207.867, \"timeout_ms\": 200}\n2026-11-11T20:47:04+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:04.538+00:00\", \"request_id\": \"slow-with-timeout-11\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 209.518, \"timeout_ms\": 200}\n2026-11-11T20:47:04+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:04.801+00:00\", \"request_id\": \"slow-with-timeout-12\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 217.848, \"timeout_ms\": 200}\n2026-11-11T20:47:05+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:05.046+00:00\", \"request_id\": \"slow-with-timeout-13\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 205.87, \"timeout_ms\": 200}\n2026-11-11T20:47:05+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:05.313+00:00\", \"request_id\": \"slow-with-timeout-14\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 230.4, \"timeout_ms\": 200}\n2026-11-11T20:47:05+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:05.539+00:00\", \"request_id\": \"slow-with-timeout-15\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 211.164, \"timeout_ms\": 200}\n2026-11-11T20:47:05+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:05.926+00:00\", \"request_id\": \"slow-with-timeout-16\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 346.043, \"timeout_ms\": 200}\n2026-11-11T20:47:06+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:06.131+00:00\", \"request_id\": \"slow-with-timeout-17\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 202.926, \"timeout_ms\": 200}\n2026-11-11T20:47:06+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:06.312+00:00\", \"request_id\": \"slow-with-timeout-18\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 226.072, \"timeout_ms\": 200}\n2026-11-11T20:47:06+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:06.562+00:00\", \"request_id\": \"slow-with-timeout-19\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 227.087, \"timeout_ms\": 200}\n2026-11-11T20:47:06+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:06.791+00:00\", \"request_id\": \"slow-with-timeout-20\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 210.575, \"timeout_ms\": 200}\n2026-11-11T20:47:07+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:07.236+00:00\", \"request_id\": \"slow-with-timeout-21\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 403.544, \"timeout_ms\": 200}\n2026-11-11T20:47:07+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:07.458+00:00\", \"request_id\": \"slow-with-timeout-22\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 217.929, \"timeout_ms\": 200}\n2026-11-11T20:47:07+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:07.898+00:00\", \"request_id\": \"slow-with-timeout-23\", \"status\": 504, \"cause\": \"dependency_timeout\", \"dependency_ms\": 569.889, \"timeout_ms\": 200}\n2026-11-11T20:47:12+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:12.026+00:00\", \"request_id\": \"final-recovery-00\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 10.135, \"timeout_ms\": 200}\n2026-11-11T20:47:12+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:12.456+00:00\", \"request_id\": \"final-recovery-01\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 6.005, \"timeout_ms\": 200}\n2026-11-11T20:47:12+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:12.550+00:00\", \"request_id\": \"final-recovery-02\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.266, \"timeout_ms\": 200}\n2026-11-11T20:47:12+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:12.848+00:00\", \"request_id\": \"final-recovery-03\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.627, \"timeout_ms\": 200}\n2026-11-11T20:47:13+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:13.023+00:00\", \"request_id\": \"final-recovery-04\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.616, \"timeout_ms\": 200}\n2026-11-11T20:47:13+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:13.259+00:00\", \"request_id\": \"final-recovery-05\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.811, \"timeout_ms\": 200}\n2026-11-11T20:47:13+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:13.532+00:00\", \"request_id\": \"final-recovery-06\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.32, \"timeout_ms\": 200}\n2026-11-11T20:47:13+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:13.763+00:00\", \"request_id\": \"final-recovery-07\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.648, \"timeout_ms\": 200}\n2026-11-11T20:47:14+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:14.017+00:00\", \"request_id\": \"final-recovery-08\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.517, \"timeout_ms\": 200}\n2026-11-11T20:47:14+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:14.281+00:00\", \"request_id\": \"final-recovery-09\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.46, \"timeout_ms\": 200}\n2026-11-11T20:47:14+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:14.510+00:00\", \"request_id\": \"final-recovery-10\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.184, \"timeout_ms\": 200}\n2026-11-11T20:47:14+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:14.760+00:00\", \"request_id\": \"final-recovery-11\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.659, \"timeout_ms\": 200}\n2026-11-11T20:47:15+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:15.024+00:00\", \"request_id\": \"final-recovery-12\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.355, \"timeout_ms\": 200}\n2026-11-11T20:47:15+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:15.319+00:00\", \"request_id\": \"final-recovery-13\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 7.124, \"timeout_ms\": 200}\n2026-11-11T20:47:15+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:15.527+00:00\", \"request_id\": \"final-recovery-14\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.145, \"timeout_ms\": 200}\n2026-11-11T20:47:15+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:15.799+00:00\", \"request_id\": \"final-recovery-15\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.207, \"timeout_ms\": 200}\n2026-11-11T20:47:16+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:16.014+00:00\", \"request_id\": \"final-recovery-16\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.975, \"timeout_ms\": 200}\n2026-11-11T20:47:16+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:16.271+00:00\", \"request_id\": \"final-recovery-17\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 13.868, \"timeout_ms\": 200}\n2026-11-11T20:47:16+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:16.531+00:00\", \"request_id\": \"final-recovery-18\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 6.543, \"timeout_ms\": 200}\n2026-11-11T20:47:16+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:16.771+00:00\", \"request_id\": \"final-recovery-19\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 5.234, \"timeout_ms\": 200}\n2026-11-11T20:47:17+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:17.014+00:00\", \"request_id\": \"final-recovery-20\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.461, \"timeout_ms\": 200}\n2026-11-11T20:47:17+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:17.311+00:00\", \"request_id\": \"final-recovery-21\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 4.007, \"timeout_ms\": 200}\n2026-11-11T20:47:17+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:17.565+00:00\", \"request_id\": \"final-recovery-22\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.464, \"timeout_ms\": 200}\n2026-11-11T20:47:17+0000 python3[8870]: {\"time\": \"2026-11-11T20:47:17.802+00:00\", \"request_id\": \"final-recovery-23\", \"status\": 200, \"cause\": \"ok\", \"dependency_ms\": 3.822, \"timeout_ms\": 200}\n2026-11-11T20:47:20+0000 systemd[1]: Stopping /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py frontend --bind 127.0.0.1 --port 8190 --setting /home/rahul/reliability-4049eb4e47/setting --peer lab-dependency --peer-port 8191...\n2026-11-11T20:47:20+0000 systemd[1]: reliability-4049eb4e47-front.service: Deactivated successfully.\n2026-11-11T20:47:20+0000 systemd[1]: Stopped /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py frontend --bind 127.0.0.1 --port 8190 --setting /home/rahul/reliability-4049eb4e47/setting --peer lab-dependency --peer-port 8191.\n2026-11-06T11:59:14+0000 systemd[1]: Started /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py dependency --bind lab-dependency --port 8191 --setting /home/rahul/reliability-4049eb4e47/setting.\n2026-11-06T11:59:39+0000 systemd[1]: Stopping /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py dependency --bind lab-dependency --port 8191 --setting /home/rahul/reliability-4049eb4e47/setting...\n2026-11-06T11:59:39+0000 systemd[1]: reliability-4049eb4e47-dependency-a.service: Deactivated successfully.\n2026-11-06T11:59:39+0000 systemd[1]: Stopped /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py dependency --bind lab-dependency --port 8191 --setting /home/rahul/reliability-4049eb4e47/setting.\n2026-11-06T11:59:50+0000 systemd[1]: Started /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py dependency --bind lab-dependency --port 8191 --setting /home/rahul/reliability-4049eb4e47/setting.\n2026-11-06T12:00:22+0000 systemd[1]: Stopping /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py dependency --bind lab-dependency --port 8191 --setting /home/rahul/reliability-4049eb4e47/setting...\n2026-11-06T12:00:22+0000 systemd[1]: reliability-4049eb4e47-dependency-b.service: Deactivated successfully.\n2026-11-06T12:00:22+0000 systemd[1]: Stopped /usr/bin/python3 /home/rahul/reliability-4049eb4e47/service.py dependency --bind lab-dependency --port 8191 --setting /home/rahul/reliability-4049eb4e47/setting.\n",
+  "requests_per_second": 4,
+  "success_threshold_ms": 250,
+  "cleanup": {
+    "frontend_listener_absent": true,
+    "dependency_listener_absent": true,
+    "temporary_firewall_rule_absent": true,
+    "frontend": {
+      "active_state": "inactive",
+      "main_pid": 0
+    },
+    "dependencies": [
+      {
+        "active_state": "inactive",
+        "main_pid": 0
+      },
+      {
+        "active_state": "inactive",
+        "main_pid": 0
+      }
+    ]
+  }
+}

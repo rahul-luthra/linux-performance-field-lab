@@ -6,6 +6,8 @@ A technical portfolio project combining a read-only Linux collector, offline int
 
 ## Review the reports
 
+The service reliability lab follows a slow dependency, an outage and recovery across two Linux VMs. It compares liveness probes, real quote requests and request-level journal entries. [Interactive report](https://rahul-luthra.github.io/linux-performance-field-lab/reliability.html) · [Case study](RELIABILITY_CASE_STUDY.md) · [Reproduction guide](reliability/README.md)
+
 **[Open the interactive reports on GitHub Pages](https://rahul-luthra.github.io/linux-performance-field-lab/)** — switch between Java experiments, Linux scenarios and individual host captures directly in your browser. No download or connection to the VM is needed.
 
 **[Memory investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html).** Six measured allocation/failure/correction tests distinguish JVM heap exhaustion from Linux cgroup OOM kills while the host still has available RAM. Three HTTP experiments compare temporary allocation churn with reusable buffers. Read [the memory case study](MEMORY_CASE_STUDY.md) and [reproduction instructions](memory/README.md).

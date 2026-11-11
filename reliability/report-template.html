@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linux Service Reliability | Field Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0b111a;--panel:#131e2a;--border:#293d4e;--text:#f0f5fa;--muted:#b4c4d4;--good:#6ee7b7;--warn:#fbbf78;--bad:#fda4af;--link:#8cc9ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:32px 24px 56px}a{color:var(--link)}h1{font-size:clamp(2.1rem,5.7vw,4rem);line-height:1.07;margin:24px 0 14px;max-width:19ch}h2{font-size:1.25rem;margin:0 0 12px}p{color:var(--muted);max-width:82ch}header{margin:32px 0}.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}.panel,.metric{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px}.panel{margin:20px 0}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left;min-width:670px}th,td{border-bottom:1px solid var(--border);padding:10px 8px}th{color:var(--muted);font-weight:600}tr:last-child td{border-bottom:0}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.metric strong{display:block;font-size:1.6rem;line-height:1.25}.metric span{display:block;color:var(--muted)}button,select{font:inherit;color:var(--text);background:#162735;border:1px solid #557186;border-radius:7px;padding:7px 10px;max-width:100%}button{cursor:pointer}.chart{display:grid;gap:6px;margin-top:14px}.sample{height:12px;background:#233440;display:flex;align-items:center;border-radius:2px}.fill{height:100%;min-width:2px;border-radius:2px}.ok{background:var(--good)}.late{background:var(--warn)}.error{background:var(--bad)}.legend{display:flex;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:.85rem}.legend i{display:inline-block;width:.65rem;height:.65rem;margin-right:5px;border-radius:2px}.axis{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem}pre{padding:12px;background:var(--bg);border-radius:8px;overflow:auto;font-size:.85rem}footer{margin-top:24px}@media(max-width:560px){main{padding:20px 14px}.panel,.metric{padding:14px}.metrics{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>The service is running. Can users get a quote?</h1>
+<p>A frontend on one Linux VM calls a price service on a second VM. Six measured phases show the difference between a process answering a health probe and a user getting a correct response on time.</p>
+</header>
+<section class="panel">
+<h2>Incident timeline</h2>
+<p>Each phase sends 24 quote requests at four per second and six liveness probes. The lab target is a correct HTTP 200 within 250 ms. The p95 includes errors as well as successful responses.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Phase</th><th scope="col">Quote response</th><th scope="col">Within 250 ms</th><th scope="col">Quote p95</th><th scope="col">Liveness</th></tr></thead>
+<tbody id="timeline"></tbody>
+</table></div>
+</section>
+<section class="panel">
+<h2>Inspect a phase</h2>
+<div class="bar"><label for="phase">Phase</label><select id="phase"></select><button id="download" type="button">Download phase evidence</button></div>
+<div class="metrics" id="metrics" aria-live="polite"></div>
+<p id="context"></p>
+<div class="legend"><span><i class="ok"></i>Correct within target</span><span><i class="late"></i>Correct but late</span><span><i class="error"></i>HTTP error</span></div>
+<div class="chart" id="chart" role="img"></div>
+<div class="axis"><span>0 ms</span><span id="axis-max"></span></div>
+<p>One bar per quote request, ordered by scheduled arrival. Every phase uses the same scale.</p>
+<details><summary>Application journal for the selected phase</summary><pre id="journal"></pre></details>
+</section>
+<section class="panel">
+<h2>What restored the service</h2>
+<p>Starting the dependency again restored successful quotes after the outage. When the dependency was slow, a 200 ms timeout returned a 504 sooner. Those requests still missed the lab target. Removing the injected delay restored correct quotes within the target.</p>
+<p>The frontend process stayed active throughout, and the liveness endpoint answered every probe. The quote route exercised the remote dependency and showed the errors that a liveness probe would miss.</p>
+</section>
+<footer><a href="https://github.com/rahul-luthra/linux-performance-field-lab/blob/main/RELIABILITY_CASE_STUDY.md">Case study and interview walkthrough</a> · <a href="https://github.com/rahul-luthra/linux-performance-field-lab/tree/main/reliability">Reproduction guide and source</a></footer>
+</main>
+<script id="lab-data" type="application/json">__LAB_DATA__</script>
+<script>
+const capture = JSON.parse(document.getElementById("lab-data").textContent);
+const byId = id => document.getElementById(id);
+const labels = ["Healthy", "Slow dependency", "Dependency stopped", "Dependency restored", "Slow with 200 ms timeout", "Final recovery"];
+const scale = Math.ceil(Math.max(...capture.phases.flatMap(phase => phase.requests.map(row => row.elapsed_ms))) / 100) * 100;
+function add(parent, tag, value) {
+  const element = document.createElement(tag);
+  if (value !== undefined) element.textContent = value;
+  parent.append(element);
+  return element;
+}
+capture.phases.forEach((phase, index) => {
+  const option = add(byId("phase"), "option", labels[index]);
+  option.value = index;
+  const row = add(byId("timeline"), "tr");
+  const name = add(row, "th", labels[index]);
+  name.scope = "row";
+  add(row, "td", Object.entries(phase.summary.responses).map(([code,count]) => count + " × HTTP " + code).join(", "));
+  add(row, "td", phase.summary.within_target + " / " + phase.requests.length);
+  add(row, "td", phase.summary.p95_ms.toFixed(1) + " ms");
+  add(row, "td", phase.summary.liveness_ok + " / " + phase.liveness.length);
+});
+byId("axis-max").textContent = scale + " ms";
+function render() {
+  const phase = capture.phases[Number(byId("phase").value)];
+  const stats = phase.summary;
+  byId("metrics").replaceChildren();
+  for (const [value, label] of [[stats.correct + " / 24","Correct quotes"],
+      [stats.p95_ms.toFixed(1) + " ms","Quote p95"], [stats.within_target + " / 24","Within the 250 ms target"]]) {
+    const metric = add(byId("metrics"), "div");
+    metric.className = "metric";
+    add(metric, "strong", value);
+    add(metric, "span", label);
+  }
+  const delay = phase.delay_ms === null ? "Dependency service stopped" : "Injected dependency delay " + phase.delay_ms + " ms";
+  byId("context").textContent = delay + ". Dependency socket timeout " + phase.timeout_ms + " ms. Frontend stayed active.";
+  const chart = byId("chart");
+  chart.replaceChildren();
+  chart.setAttribute("aria-label", labels[Number(byId("phase").value)] + ", 24 quote response times with p95 " + stats.p95_ms.toFixed(1) + " milliseconds.");
+  for (const row of phase.requests) {
+    const sample = add(chart, "div");
+    sample.className = "sample";
+    sample.title = row.request_id + " · HTTP " + row.status + " · " + row.elapsed_ms.toFixed(1) + " ms";
+    const bar = add(sample, "span");
+    bar.className = "fill " + (row.correct ? (row.elapsed_ms <= capture.success_threshold_ms ? "ok" : "late") : "error");
+    bar.style.width = (row.elapsed_ms / scale * 100) + "%";
+  }
+  byId("journal").textContent = phase.journal_events.map(event => JSON.stringify(event)).join("\n");
+}
+byId("phase").addEventListener("change", render);
+byId("download").addEventListener("click", () => {
+  const phase = capture.phases[Number(byId("phase").value)];
+  const url = URL.createObjectURL(new Blob([JSON.stringify(phase, null, 2)], {type:"application/json"}));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = phase.name + ".json";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+});
+byId("phase").value = "2";
+render();
+</script>
+</body>
+</html>
