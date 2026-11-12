@@ -10,7 +10,7 @@ PUBLIC = ['.gitignore', 'README.md', 'CASE_STUDY.md', 'LIVE_RESULTS.md', 'RUNBOO
           'monitor.py', 'test_monitor.py', 'lab_cpu.py', 'run_live_lab.py', 'analyze_results.py',
           'make_demo.py', 'build_release.py', 'report-template.html', 'showcase.html', 'demo-data.json', 'preview.png',
           'app-report.html', 'APP_CASE_STUDY.md', 'PUBLISHING.md', 'app-preview.png', 'docs/index.html', 'docs/.nojekyll',
-          'docs/quotelab.html', 'docs/site.css',
+          'docs/about.html', 'docs/quotelab.html', 'docs/site.css',
           'app/QuoteLab.java', 'app/quotelab.service', 'app/install.sh', 'app/run_app_lab.py', 'app/analyze_app.py',
           'app/test_analysis.py', 'app/README.md', 'app/app-report-template.html', 'VIEWING_REPORTS.md', 'app-latency-preview.png',
           'build_pages.py', 'docs/showcase.html', 'docs/cpu-lab.html', 'docs/cpu-lab-repeat.html', 'docs/smoke-report.html',

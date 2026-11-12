@@ -68,7 +68,7 @@ SUPPORTING = {
 NAVIGATION = (
     '<a class="site-skip" href="#report-content">Skip to report</a>'
     '<nav class="site-nav" aria-label="Portfolio">'
-    '<a class="site-name" href="index.html">Rahul Luthra</a>'
+    '<a class="site-name" href="about.html">Rahul Luthra</a>'
     '<div class="site-links"><a href="index.html">Home</a>'
     '<a href="index.html#case-studies">Case Studies</a>'
     f'<a href="{GITHUB}">GitHub</a></div></nav>'
