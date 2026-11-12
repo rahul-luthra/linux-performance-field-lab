@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A measured QuoteLab incident with Prometheus, Grafana, Nagios, and an approval-gated AWX recovery.">
+  <title>From Alert to Recovery: A Slow Java Service | Rahul Luthra</title>
+  <style>
+    :root{--bg:#f7f8f2;--ink:#142b27;--muted:#52645c;--line:#d8e0d6;--panel:#fff;--teal:#205844;--rust:#a34020}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.55 "Instrument Sans",system-ui,sans-serif}
+    main{max-width:1160px;margin:auto;padding:clamp(2rem,5vw,4.5rem) clamp(1rem,4vw,2rem)}
+    h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.14;letter-spacing:-.025em}
+    h1{font-size:clamp(2.25rem,6vw,4.8rem);max-width:19ch}h2{font-size:clamp(1.45rem,3vw,2.15rem)}h3{font-size:1.12rem}
+    p+p{margin-top:.75rem}a{color:var(--teal);text-underline-offset:.18em}a:focus-visible,button:focus-visible{outline:3px solid #367f5e;outline-offset:3px}
+    header p{max-width:68ch;margin-top:1rem;color:var(--muted);font-size:1.1rem}
+    .headline-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin:1.4rem 0}
+    .stat{padding:.95rem 1rem;background:#e9f1ea;border:1px solid var(--line);border-radius:.5rem}
+    .stat strong{display:block;font-size:clamp(1.2rem,3vw,2rem);font-variant-numeric:tabular-nums}.stat span{color:#355345;font-size:.86rem}
+    .overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem 2rem;margin:1.5rem 0 2.2rem}
+    .overview dt{font-weight:750}.overview dd{margin:.25rem 0 0;color:var(--muted)}
+    .panel{min-width:0;padding:clamp(.9rem,3vw,1.5rem);margin-block:1.3rem;background:var(--panel);border:1px solid var(--line);border-radius:.65rem}
+    .panel h2+p,.panel h3+p{margin-top:.5rem;color:var(--muted)}
+    .phase-buttons{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0}
+    button{font:inherit;font-weight:650;color:var(--ink);background:#fff;border:1px solid #a9baac;border-radius:.35rem;padding:.45rem .8rem;cursor:pointer}
+    button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+    .phase-readout{color:var(--muted);min-height:2rem}.chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
+    figure{margin:0;min-width:0}figcaption{font-weight:700}.chart{display:block;width:100%;height:auto;margin:.35rem 0}
+    .chart text{font:12px system-ui,sans-serif;fill:#52645c}.chart .gridline{stroke:#d8e0d6}.chart .series{fill:none;stroke:#205844;stroke-width:2.5;stroke-linejoin:round}
+    .chart .threshold{stroke:#a34020;stroke-dasharray:5 4}.chart .marker{stroke:#7a8b7d;stroke-dasharray:2 4}
+    .legend{margin:.4rem 0 0;color:var(--muted);font-size:.86rem}.threshold-label{color:var(--rust)}
+    .table-wrap{overflow:auto;margin-top:.65rem}table{width:100%;border-collapse:collapse;font-size:.92rem}
+    th,td{text-align:left;padding:.55rem .65rem;border-bottom:1px solid var(--line);white-space:nowrap}th{color:#315345}td{font-variant-numeric:tabular-nums}
+    .timeline{padding-left:1.4rem;margin:.75rem 0 0}.timeline li{padding:.3rem 0}.timeline time{display:inline-block;min-width:4.7rem;font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--teal)}
+    details{margin-top:.85rem}summary{cursor:pointer;font-weight:700}pre{background:#ecf2ec;padding:.85rem;border-radius:.35rem;white-space:pre-wrap;overflow-wrap:anywhere}
+    .methods{color:var(--muted)}.method-links{display:flex;flex-wrap:wrap;gap:.5rem 1.3rem;margin-top:1rem}
+    @media(max-width:720px){.chart-grid{grid-template-columns:1fr}.headline-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:510px){.overview{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>From Alert to Recovery: A Slow Java Service</h1>
+    <p>A controlled incident on QuoteLab. Prometheus caught slow quotes, Nagios checked availability, and AWX ran a targeted recovery after approval.</p>
+  </header>
+
+  <div class="headline-stats" aria-label="Measured incident outcomes">
+    <div class="stat"><strong>@@BASELINE@@</strong><span>Baseline p95</span></div>
+    <div class="stat"><strong>@@INCIDENT@@</strong><span>Incident p95</span></div>
+    <div class="stat"><strong>@@RECOVERY_VALUE@@</strong><span>Recovery p95</span></div>
+    <div class="stat"><strong>@@DETECTION@@</strong><span>Load start to observed alert</span></div>
+  </div>
+
+  <dl class="overview">
+    <div><dt>What happened</dt><dd>Four lab workers competed with the Java service for CPU during a fixed-rate HTTP test. A systemd quota capped their combined use at 1.4 logical CPUs.</dd></div>
+    <div><dt>How I investigated</dt><dd>I compared client p95 and Linux CPU usage in Grafana, then used AWX to inspect the workload and service states. Nagios independently checked the HTTP health endpoint.</dd></div>
+    <div><dt>What I found</dt><dd>@@FINDING@@</dd></div>
+    <div><dt>What I changed</dt><dd>@@RECOVERY@@</dd></div>
+  </dl>
+
+  <section class="panel" aria-labelledby="replay-title">
+    <h2 id="replay-title">Replay the measurements</h2>
+    <p>Prometheus samples every five seconds. The p95 is the response time that 95% of successful quotes met. Select a phase to focus the charts and see its request totals.</p>
+    <div class="phase-buttons" aria-label="Time range">
+      <button type="button" data-phase="all" aria-pressed="true">Full timeline</button>
+      <button type="button" data-phase="baseline" aria-pressed="false">Baseline</button>
+      <button type="button" data-phase="incident" aria-pressed="false">Incident</button>
+      <button type="button" data-phase="recovery" aria-pressed="false">Recovery</button>
+    </div>
+    <p class="phase-readout" id="phase-readout" aria-live="polite"></p>
+    <div class="chart-grid">
+      <figure>
+        <figcaption>Quote response time (rolling p95)</figcaption>
+        <svg class="chart" id="latency-chart" viewBox="0 0 480 230" role="img" aria-label="Prometheus rolling p95 in milliseconds"></svg>
+        <p class="legend"><span class="threshold-label">Dashed orange line</span> shows the lab alert threshold.</p>
+      </figure>
+      <figure>
+        <figcaption>Linux CPU execution</figcaption>
+        <svg class="chart" id="cpu-chart" viewBox="0 0 480 230" role="img" aria-label="Linux host CPU execution percentage"></svg>
+      </figure>
+    </div>
+    <div class="table-wrap" tabindex="0" aria-label="Phase measurements">
+      <table>
+        <thead><tr><th scope="col">Phase</th><th scope="col">Valid quotes</th><th scope="col">HTTP p95</th><th scope="col">Mean host CPU</th><th scope="col">Handler wall / CPU mean</th></tr></thead>
+        <tbody id="phase-table"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="timeline-title">
+    <h2 id="timeline-title">Incident timeline</h2>
+    <p>Times are relative to the start of the CPU workers. The operator script polled the alert state every two seconds during detection and recovery.</p>
+    <ol class="timeline" id="timeline"></ol>
+    <details>
+      <summary>View all observed Prometheus alert state changes</summary>
+      <ol class="timeline" id="alert-transitions"></ol>
+    </details>
+  </section>
+
+  <section class="panel" aria-labelledby="automation-title">
+    <h2 id="automation-title">What AWX and Nagios recorded</h2>
+    <p id="automation-summary"></p>
+    <p>@@DIAGNOSIS@@</p>
+    <div class="method-links">
+      <a href="https://rahul-luthra.github.io/linux-performance-field-lab/incident-awx.png">View the AWX workflow screenshot</a>
+      <a href="https://rahul-luthra.github.io/linux-performance-field-lab/incident-grafana.png">View the Grafana dashboard screenshot</a>
+    </div>
+    <details>
+      <summary>View the AWX action output</summary>
+      <pre id="awx-output"></pre>
+    </details>
+    <details>
+      <summary>View the Nagios check results</summary>
+      <div class="table-wrap" tabindex="0" aria-label="Nagios status checks"><table>
+        <thead><tr><th scope="col">Relative time</th><th scope="col">State</th><th scope="col">Plugin result</th></tr></thead>
+        <tbody id="nagios-table"></tbody>
+      </table></div>
+    </details>
+  </section>
+
+  <section class="panel methods" aria-labelledby="methods-title">
+    <h2 id="methods-title">Scope and reproducibility</h2>
+    <p>The request generator offered four requests per second on the two-vCPU QuoteLab VM. It measured end-to-end HTTP latency over loopback and retained client dispatch delay and server handler wall and CPU times. The 20-second rolling alert used successful quote samples, a 500 ms lab threshold, and a 15-second hold. It stayed firing for 30 seconds after the rule condition dropped away, so alert clearance includes that delay.</p>
+    <p>The table uses per-request observations from stable phase windows. The charts show the live rolling values, so they can lag a phase boundary. Nagios tested HTTP status and the expected health body. These measurements describe one controlled incident, with the request generator sharing the same VM as the app. @@DISPATCH@@</p>
+    <div class="method-links">
+      <a href="https://github.com/rahul-luthra/linux-performance-field-lab/blob/main/incident/README.md">Read the runbook and limitations</a>
+      <a href="https://github.com/rahul-luthra/linux-performance-field-lab/tree/main/incident">Review the playbook and alert rule</a>
+      <a href="https://raw.githubusercontent.com/rahul-luthra/linux-performance-field-lab/main/results/incident/capture.json">Open the raw capture (JSON)</a>
+    </div>
+  </section>
+</main>
+<script type="application/json" id="incident-data">@@MODEL@@</script>
+<script>
+const data = JSON.parse(document.getElementById("incident-data").textContent);
+const get = id => document.getElementById(id);
+const label = key => key[0].toUpperCase() + key.slice(1);
+const loadStart = data.events.find(event => event.key === "load").time;
+const relative = (timestamp, decimals = 0) => {
+  const delta = timestamp - loadStart;
+  return (delta < 0 ? "−" : "+") + Math.abs(delta).toFixed(decimals) + " s";
+};
+const makeRow = (target, values) => {
+  const row = target.insertRow();
+  values.forEach(value => { row.insertCell().textContent = value; });
+};
+
+for (const [key, phase] of Object.entries(data.phases)) {
+  makeRow(get("phase-table"), [label(key), `${phase.successful} / ${phase.requests}`, `${phase.p95} ms`,
+    `${phase.mean_cpu}%`, `${phase.handler_wall} / ${phase.handler_cpu} ms`]);
+}
+for (const event of data.events) {
+  const item = document.createElement("li");
+  const time = document.createElement("time");
+  time.dateTime = new Date(event.time * 1000).toISOString();
+  time.textContent = relative(event.time, 1);
+  item.append(time, " ", event.label);
+  get("timeline").append(item);
+}
+for (const state of data.alert_transitions) {
+  const item = document.createElement("li");
+  const time = document.createElement("time");
+  time.dateTime = new Date(state.time * 1000).toISOString();
+  time.textContent = relative(state.time, 1);
+  item.append(time, " ", label(state.state));
+  get("alert-transitions").append(item);
+}
+for (const check of data.nagios) {
+  makeRow(get("nagios-table"), [relative(check.time), ["OK", "Warning", "Critical", "Unknown"][check.state], check.output]);
+}
+get("automation-summary").textContent = `AWX workflow #${data.awx.workflow} completed successfully. Nagios reported ${data.nagios_ok_during_alert} OK checks while the latency alert was firing and the workers were active.` +
+  (data.alert_interrupted_before_stop ? " The latency alert also briefly cleared and re-fired while the workers were still active." : "");
+get("awx-output").textContent = Object.entries(data.awx.steps).map(([name, step]) =>
+  `${label(name)} · #${step.id} · ${step.status}\n${step.output.join("\n")}`.trimEnd()
+).join("\n\n");
+
+function plot(id, samples, from, to, top, unit, threshold) {
+  const svg = get(id);
+  const left = 46, right = 466, yTop = 18, bottom = 194;
+  const x = timestamp => left + (timestamp - from) * (right - left) / (to - from);
+  const y = value => bottom - value * (bottom - yTop) / top;
+  const points = samples.filter(([t]) => t >= from && t <= to);
+  const lines = [];
+  for (let i = 0; i <= 4; i += 1) {
+    const value = top * i / 4;
+    lines.push(`<line class="gridline" x1="${left}" x2="${right}" y1="${y(value)}" y2="${y(value)}"/>`);
+    lines.push(`<text text-anchor="end" x="${left - 6}" y="${y(value) + 4}">${Math.round(value)}${unit}</text>`);
+    const timestamp = from + (to - from) * i / 4;
+    const anchor = i === 0 ? "start" : i === 4 ? "end" : "middle";
+    lines.push(`<text text-anchor="${anchor}" x="${x(timestamp)}" y="${bottom + 22}">${relative(timestamp)}</text>`);
+  }
+  for (const event of data.events.filter(event =>
+    ["load", "firing", "stop", "clear"].includes(event.key) && event.time >= from && event.time <= to)) {
+    lines.push(`<line class="marker" x1="${x(event.time)}" x2="${x(event.time)}" y1="${yTop}" y2="${bottom}"/>`);
+  }
+  if (threshold !== undefined) {
+    lines.push(`<line class="threshold" x1="${left}" x2="${right}" y1="${y(threshold)}" y2="${y(threshold)}"/>`);
+  }
+  if (points.length) {
+    lines.push(`<polyline class="series" points="${points.map(([t, value]) => `${x(t).toFixed(2)},${y(value).toFixed(2)}`).join(" ")}"/>`);
+  }
+  svg.innerHTML = lines.join("");
+}
+
+function show(key) {
+  const phase = data.phases[key];
+  const from = phase ? phase.start : data.start;
+  const to = phase ? phase.end : data.end;
+  document.querySelectorAll("[data-phase]").forEach(button =>
+    button.setAttribute("aria-pressed", String(button.dataset.phase === key)));
+  get("phase-readout").textContent = phase
+    ? `${label(key)}: ${phase.successful} valid quotes out of ${phase.requests} recorded, with p95 of ${phase.p95} ms.`
+    : "Full timeline, with event markers for load start, alert firing, workload stop, and alert clear.";
+  const latencyCeiling = Math.ceil(Math.max(data.threshold_ms, ...data.prometheus.p95_ms.map(([, ms]) => ms)) / 200) * 200;
+  plot("latency-chart", data.prometheus.p95_ms, from, to, latencyCeiling, "", data.threshold_ms);
+  plot("cpu-chart", data.prometheus.cpu_percent, from, to, 100, "%");
+}
+document.querySelectorAll("[data-phase]").forEach(button => button.addEventListener("click", () => show(button.dataset.phase)));
+show("all");
+</script>
+</body>
+</html>

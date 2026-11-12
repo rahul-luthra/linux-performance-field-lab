@@ -1,0 +1,52 @@
+{
+  "phases": {
+    "baseline": {
+      "requests": 172,
+      "successful": 172,
+      "p95": 217.4,
+      "handler_wall": 164.3,
+      "handler_cpu": 152.3,
+      "status_counts": {
+        "200": 172
+      },
+      "start": 1794491473.9520485,
+      "end": 1794491516.9507277,
+      "mean_cpu": 38.4
+    },
+    "incident": {
+      "requests": 583,
+      "successful": 583,
+      "p95": 1768.6,
+      "handler_wall": 344.3,
+      "handler_cpu": 176.0,
+      "status_counts": {
+        "200": 583
+      },
+      "start": 1794491521.9507277,
+      "end": 1794491668.0,
+      "mean_cpu": 98.9
+    },
+    "recovery": {
+      "requests": 118,
+      "successful": 118,
+      "p95": 275.6,
+      "handler_wall": 179.8,
+      "handler_cpu": 166.4,
+      "status_counts": {
+        "200": 118
+      },
+      "start": 1794491717.783387,
+      "end": 1794491747.7475972,
+      "mean_cpu": 47.5
+    }
+  },
+  "detection_seconds": 64.1,
+  "remediation_seconds": 86.9,
+  "clear_seconds": 49.8,
+  "total_seconds": 200.8,
+  "nagios_ok_during_alert": 4,
+  "nagios_other_during_alert": 0,
+  "nagios_total": 16,
+  "skipped_offers": 5,
+  "alert_interrupted_before_stop": false
+}

@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 GITHUB = 'https://github.com/rahul-luthra/linux-performance-field-lab'
 REPORTS = {
+    'incident.html': 'incident-report.html',
     'quotelab.html': 'app-report.html',
     'memory.html': 'memory-report.html',
     'storage.html': 'storage-report.html',
@@ -58,6 +59,7 @@ SUMMARIES = {
     ),
 }
 SUPPORTING = {
+    'incident.html': (('Original QuoteLab CPU investigation', 'quotelab.html'),),
     'showcase.html': (('QuoteLab case study', 'quotelab.html'), ('CPU run 1', 'cpu-lab.html'),
                       ('CPU repeat', 'cpu-lab-repeat.html'), ('Collector check', 'smoke-report.html')),
     'cpu-lab.html': (('QuoteLab case study', 'quotelab.html'), ('Linux scenarios', 'showcase.html'), ('CPU repeat', 'cpu-lab-repeat.html')),

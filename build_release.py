@@ -11,6 +11,12 @@ PUBLIC = ['.gitignore', 'README.md', 'CASE_STUDY.md', 'LIVE_RESULTS.md', 'RUNBOO
           'make_demo.py', 'build_release.py', 'report-template.html', 'showcase.html', 'demo-data.json', 'preview.png',
           'app-report.html', 'APP_CASE_STUDY.md', 'PUBLISHING.md', 'app-preview.png', 'docs/index.html', 'docs/.nojekyll',
           'docs/about.html', 'docs/quotelab.html', 'docs/site.css',
+          'incident-report.html', 'docs/incident.html', 'incident/README.md', 'incident/report-template.html',
+          'docs/incident-awx.png', 'docs/incident-grafana.png',
+          'incident/build_report.py', 'incident/probe.py', 'incident/load.py', 'incident/run.py',
+          'incident/monitoring.py', 'incident/awx_lab.py', 'incident/workflow.yml', 'incident/alert.yml',
+          'incident/nagios.cfg', 'incident/operator-command.sh', 'incident/target-command.sh',
+          'results/incident/capture.json', 'results/incident/summary.json',
           'app/QuoteLab.java', 'app/quotelab.service', 'app/install.sh', 'app/run_app_lab.py', 'app/analyze_app.py',
           'app/test_analysis.py', 'app/README.md', 'app/app-report-template.html', 'VIEWING_REPORTS.md', 'app-latency-preview.png',
           'build_pages.py', 'docs/showcase.html', 'docs/cpu-lab.html', 'docs/cpu-lab-repeat.html', 'docs/smoke-report.html',
@@ -47,6 +53,8 @@ def prepare():
         capture = directory / 'cpu-lab.json'
         if capture.exists():
             build_report(json.loads(capture.read_text()), directory / 'cpu-lab.html')
+    from incident.build_report import build as build_incident
+    build_incident()
     from build_pages import build
     build()
 

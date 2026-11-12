@@ -10,6 +10,8 @@ The service reliability lab follows a slow dependency, an outage and recovery ac
 
 **[Explore the Linux & DevOps portfolio on GitHub Pages](https://rahul-luthra.github.io/linux-performance-field-lab/)** for the case studies and their interactive measurements.
 
+**[From Alert to Recovery](https://rahul-luthra.github.io/linux-performance-field-lab/incident.html)** replays a measured QuoteLab slowdown from the Prometheus alert through AWX diagnosis, approval, and recovery. [Runbook and source](incident/README.md)
+
 **[Memory investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html).** Six measured allocation/failure/correction tests distinguish JVM heap exhaustion from Linux cgroup OOM kills while the host still has available RAM. Three HTTP experiments compare temporary allocation churn with reusable buffers. Read [the memory case study](MEMORY_CASE_STUDY.md) and [reproduction instructions](memory/README.md).
 
 **[Storage & NFS investigation](https://rahul-luthra.github.io/linux-performance-field-lab/storage.html).** Ten measured two-VM cases follow save latency through Java, NFS RPCs, network delay and server storage. All 1,200 requests passed. Network delay has a clear recovery signal; disk throttling results are inconsistent and the late baseline drift remains unresolved. Read [the case study](STORAGE_CASE_STUDY.md) and [reproduction guide](storage/README.md).

@@ -1,0 +1,52 @@
+---
+- name: Run one approved QuoteLab incident action
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Validate the action
+      ansible.builtin.assert:
+        that:
+          - incident_action in ['diagnose', 'recover', 'verify']
+    - name: Create a temporary known hosts file
+      ansible.builtin.tempfile:
+        state: file
+      register: incident_hosts_file
+    - name: Run the action over pinned SSH
+      block:
+        - name: Install the pinned target host key
+          ansible.builtin.copy:
+            content: "{{ incident_known_host }}\n"
+            dest: "{{ incident_hosts_file.path }}"
+            mode: "0600"
+          no_log: true
+        - name: Run the constrained target command
+          ansible.builtin.command:
+            argv:
+              - /usr/bin/ssh
+              - -F
+              - /dev/null
+              - -o
+              - BatchMode=yes
+              - -o
+              - IdentitiesOnly=yes
+              - -o
+              - StrictHostKeyChecking=yes
+              - -o
+              - ConnectTimeout=8
+              - -o
+              - "UserKnownHostsFile={{ incident_hosts_file.path }}"
+              - -i
+              - "{{ lookup('ansible.builtin.env', 'INCIDENT_SSH_KEY') }}"
+              - "{{ incident_ssh_target }}"
+              - "{{ incident_action }}"
+          register: incident_result
+          changed_when: incident_action == 'recover'
+        - name: Record the outcome
+          ansible.builtin.debug:
+            var: incident_result.stdout_lines
+      always:
+        - name: Remove the temporary known hosts file
+          ansible.builtin.file:
+            path: "{{ incident_hosts_file.path }}"
+            state: absent

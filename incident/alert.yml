@@ -1,0 +1,12 @@
+groups:
+  - name: quotelab-incident
+    interval: 5s
+    rules:
+      - alert: QuoteLabHighLatency
+        expr: quotelab_probe_window_p95_seconds > 0.500 and quotelab_probe_window_count >= 40
+        for: 15s
+        keep_firing_for: 30s
+        labels:
+          severity: lab
+        annotations:
+          summary: QuoteLab rolling p95 exceeded 500 ms

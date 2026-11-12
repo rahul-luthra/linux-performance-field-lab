@@ -27,25 +27,25 @@
     <article class="featured-case" aria-labelledby="feature-title">
       <div>
         <p class="feature-label">Featured case study</p>
-        <h2 id="feature-title">Why a Java service slowed down under CPU contention</h2>
-        <p>All requests succeeded, but p95 response time rose from 92 to 411 ms when a background job competed for CPU.</p>
-        <a class="feature-link" href="quotelab.html">Explore the QuoteLab investigation</a>
+        <h2 id="feature-title">From Alert to Recovery: A Slow Java Service</h2>
+        <p>Prometheus caught slow quotes while Nagios could still get a healthy response. AWX diagnosed the CPU contention and stopped the lab workers after an approval step.</p>
+        <a class="feature-link" href="incident.html">Replay the measured incident</a>
       </div>
       <figure class="feature-chart">
         <figcaption>HTTP response time (p95)</figcaption>
-        <span class="chart-note">First measured run · 4 requests/s</span>
+        <span class="chart-note">Measured incident · 4 requests/s offered</span>
         <dl>
           <div>
             <dt>Baseline</dt>
-            <dd><span class="chart-track" aria-hidden="true"><span style="--bar-width: 20.4%"></span></span><span class="chart-value">92 ms</span></dd>
+            <dd><span class="chart-track" aria-hidden="true"><span style="--bar-width: 12.1%"></span></span><span class="chart-value">217 ms</span></dd>
           </div>
           <div>
-            <dt>Contention</dt>
-            <dd><span class="chart-track" aria-hidden="true"><span class="chart-peak" style="--bar-width: 91.3%"></span></span><span class="chart-value">411 ms</span></dd>
+            <dt>Incident</dt>
+            <dd><span class="chart-track" aria-hidden="true"><span class="chart-peak" style="--bar-width: 98.3%"></span></span><span class="chart-value">1,769 ms</span></dd>
           </div>
           <div>
             <dt>Recovery</dt>
-            <dd><span class="chart-track" aria-hidden="true"><span style="--bar-width: 22.8%"></span></span><span class="chart-value">102 ms</span></dd>
+            <dd><span class="chart-track" aria-hidden="true"><span style="--bar-width: 15.3%"></span></span><span class="chart-value">276 ms</span></dd>
           </div>
         </dl>
       </figure>
@@ -56,7 +56,12 @@
 
       <section class="case-group" aria-labelledby="performance-title">
         <h3 id="performance-title">Linux Performance</h3>
-        <div class="case-grid">
+        <div class="case-grid performance-grid">
+          <article class="project-card">
+            <h4><a href="quotelab.html">Why a Java service slowed under CPU contention</a></h4>
+            <p>Compared Linux CPU usage with Java handler timings and tested a CPU quota for background work.</p>
+            <ul class="project-tags" aria-label="Technologies"><li>Java</li><li>systemd</li><li>JFR</li></ul>
+          </article>
           <article class="project-card">
             <h4><a href="memory.html">JVM heap exhaustion or Linux OOM kill?</a></h4>
             <p>Reproduced both failures and used JVM errors and cgroup counters to tell them apart.</p>
@@ -82,6 +87,16 @@
             <h4><a href="reliability.html">A live service that couldn’t serve quotes</a></h4>
             <p>All liveness probes passed, even as every quote request during the dependency outage returned HTTP 503.</p>
             <ul class="project-tags" aria-label="Technologies"><li>HTTP probes</li><li>systemd</li><li>journald</li></ul>
+          </article>
+        </div>
+      </section>
+      <section class="case-group" aria-labelledby="devops-title">
+        <h3 id="devops-title">DevOps &amp; Automation</h3>
+        <div class="case-grid">
+          <article class="project-card">
+            <h4><a href="incident.html">From Alert to Recovery</a></h4>
+            <p>Follow the measured timeline from a latency alert to an approved fix and verified recovery.</p>
+            <ul class="project-tags" aria-label="Technologies"><li>AWX</li><li>Prometheus</li><li>Grafana</li><li>Nagios</li></ul>
           </article>
         </div>
       </section>

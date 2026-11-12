@@ -68,7 +68,7 @@
 .feature-chart dl { margin: 0; }
 .feature-chart dl div { display: grid; grid-template-columns: 5.6rem minmax(0, 1fr); align-items: center; gap: .45rem; margin-block: .65rem; }
 .feature-chart dt, .feature-chart dd { font: .74rem/1.4 "IBM Plex Mono", ui-monospace, monospace; }
-.feature-chart dd { display: grid; grid-template-columns: minmax(1rem, 1fr) 3.1rem; align-items: center; gap: .45rem; margin: 0; }
+.feature-chart dd { display: grid; grid-template-columns: minmax(1rem, 1fr) 3.7rem; align-items: center; gap: .45rem; margin: 0; }
 .chart-track { height: .56rem; border-radius: .12rem; background: #365449; }
 .chart-track span { display: block; width: var(--bar-width); height: 100%; border-radius: inherit; background: var(--site-mint); }
 .chart-track .chart-peak { background: #ffc681; }
@@ -119,11 +119,14 @@
 @media (max-width: 790px) {
   .case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+@media (min-width: 1020px) {
+  .performance-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 @media (max-width: 620px) {
   .featured-case, .case-grid, .case-summary dl, .about-chapter { grid-template-columns: 1fr; }
 }
 @media (max-width: 365px) {
   .feature-chart dl div { grid-template-columns: 4.6rem minmax(0, 1fr); gap: .35rem; }
-  .feature-chart dd { grid-template-columns: minmax(1rem, 1fr) 2.8rem; gap: .35rem; }
+  .feature-chart dd { grid-template-columns: minmax(1rem, 1fr) 3.4rem; gap: .35rem; }
   .feature-chart dt, .feature-chart dd { font-size: .65rem; }
 }

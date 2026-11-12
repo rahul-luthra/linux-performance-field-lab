@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A measured QuoteLab incident with Prometheus, Grafana, Nagios, and an approval-gated AWX recovery.">
+  <title>From Alert to Recovery: A Slow Java Service | Rahul Luthra</title>
+  <style>
+    :root{--bg:#f7f8f2;--ink:#142b27;--muted:#52645c;--line:#d8e0d6;--panel:#fff;--teal:#205844;--rust:#a34020}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.55 "Instrument Sans",system-ui,sans-serif}
+    main{max-width:1160px;margin:auto;padding:clamp(2rem,5vw,4.5rem) clamp(1rem,4vw,2rem)}
+    h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.14;letter-spacing:-.025em}
+    h1{font-size:clamp(2.25rem,6vw,4.8rem);max-width:19ch}h2{font-size:clamp(1.45rem,3vw,2.15rem)}h3{font-size:1.12rem}
+    p+p{margin-top:.75rem}a{color:var(--teal);text-underline-offset:.18em}a:focus-visible,button:focus-visible{outline:3px solid #367f5e;outline-offset:3px}
+    header p{max-width:68ch;margin-top:1rem;color:var(--muted);font-size:1.1rem}
+    .headline-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin:1.4rem 0}
+    .stat{padding:.95rem 1rem;background:#e9f1ea;border:1px solid var(--line);border-radius:.5rem}
+    .stat strong{display:block;font-size:clamp(1.2rem,3vw,2rem);font-variant-numeric:tabular-nums}.stat span{color:#355345;font-size:.86rem}
+    .overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem 2rem;margin:1.5rem 0 2.2rem}
+    .overview dt{font-weight:750}.overview dd{margin:.25rem 0 0;color:var(--muted)}
+    .panel{min-width:0;padding:clamp(.9rem,3vw,1.5rem);margin-block:1.3rem;background:var(--panel);border:1px solid var(--line);border-radius:.65rem}
+    .panel h2+p,.panel h3+p{margin-top:.5rem;color:var(--muted)}
+    .phase-buttons{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0}
+    button{font:inherit;font-weight:650;color:var(--ink);background:#fff;border:1px solid #a9baac;border-radius:.35rem;padding:.45rem .8rem;cursor:pointer}
+    button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+    .phase-readout{color:var(--muted);min-height:2rem}.chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
+    figure{margin:0;min-width:0}figcaption{font-weight:700}.chart{display:block;width:100%;height:auto;margin:.35rem 0}
+    .chart text{font:12px system-ui,sans-serif;fill:#52645c}.chart .gridline{stroke:#d8e0d6}.chart .series{fill:none;stroke:#205844;stroke-width:2.5;stroke-linejoin:round}
+    .chart .threshold{stroke:#a34020;stroke-dasharray:5 4}.chart .marker{stroke:#7a8b7d;stroke-dasharray:2 4}
+    .legend{margin:.4rem 0 0;color:var(--muted);font-size:.86rem}.threshold-label{color:var(--rust)}
+    .table-wrap{overflow:auto;margin-top:.65rem}table{width:100%;border-collapse:collapse;font-size:.92rem}
+    th,td{text-align:left;padding:.55rem .65rem;border-bottom:1px solid var(--line);white-space:nowrap}th{color:#315345}td{font-variant-numeric:tabular-nums}
+    .timeline{padding-left:1.4rem;margin:.75rem 0 0}.timeline li{padding:.3rem 0}.timeline time{display:inline-block;min-width:4.7rem;font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--teal)}
+    details{margin-top:.85rem}summary{cursor:pointer;font-weight:700}pre{background:#ecf2ec;padding:.85rem;border-radius:.35rem;white-space:pre-wrap;overflow-wrap:anywhere}
+    .methods{color:var(--muted)}.method-links{display:flex;flex-wrap:wrap;gap:.5rem 1.3rem;margin-top:1rem}
+    @media(max-width:720px){.chart-grid{grid-template-columns:1fr}.headline-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:510px){.overview{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>From Alert to Recovery: A Slow Java Service</h1>
+    <p>A controlled incident on QuoteLab. Prometheus caught slow quotes, Nagios checked availability, and AWX ran a targeted recovery after approval.</p>
+  </header>
+
+  <div class="headline-stats" aria-label="Measured incident outcomes">
+    <div class="stat"><strong>217 ms</strong><span>Baseline p95</span></div>
+    <div class="stat"><strong>1,769 ms</strong><span>Incident p95</span></div>
+    <div class="stat"><strong>276 ms</strong><span>Recovery p95</span></div>
+    <div class="stat"><strong>64 s</strong><span>Load start to observed alert</span></div>
+  </div>
+
+  <dl class="overview">
+    <div><dt>What happened</dt><dd>Four lab workers competed with the Java service for CPU during a fixed-rate HTTP test. A systemd quota capped their combined use at 1.4 logical CPUs.</dd></div>
+    <div><dt>How I investigated</dt><dd>I compared client p95 and Linux CPU usage in Grafana, then used AWX to inspect the workload and service states. Nagios independently checked the HTTP health endpoint.</dd></div>
+    <div><dt>What I found</dt><dd>In this run, p95 rose from 217 to 1,769 ms. Nagios reported OK on 4 checks while the latency alert was firing and the workers were still active.</dd></div>
+    <div><dt>What I changed</dt><dd>AWX stopped the lab CPU workers after an approval step. The alert cleared 50 seconds later, and stable recovery p95 was 276 ms.</dd></div>
+  </dl>
+
+  <section class="panel" aria-labelledby="replay-title">
+    <h2 id="replay-title">Replay the measurements</h2>
+    <p>Prometheus samples every five seconds. The p95 is the response time that 95% of successful quotes met. Select a phase to focus the charts and see its request totals.</p>
+    <div class="phase-buttons" aria-label="Time range">
+      <button type="button" data-phase="all" aria-pressed="true">Full timeline</button>
+      <button type="button" data-phase="baseline" aria-pressed="false">Baseline</button>
+      <button type="button" data-phase="incident" aria-pressed="false">Incident</button>
+      <button type="button" data-phase="recovery" aria-pressed="false">Recovery</button>
+    </div>
+    <p class="phase-readout" id="phase-readout" aria-live="polite"></p>
+    <div class="chart-grid">
+      <figure>
+        <figcaption>Quote response time (rolling p95)</figcaption>
+        <svg class="chart" id="latency-chart" viewBox="0 0 480 230" role="img" aria-label="Prometheus rolling p95 in milliseconds"></svg>
+        <p class="legend"><span class="threshold-label">Dashed orange line</span> shows the lab alert threshold.</p>
+      </figure>
+      <figure>
+        <figcaption>Linux CPU execution</figcaption>
+        <svg class="chart" id="cpu-chart" viewBox="0 0 480 230" role="img" aria-label="Linux host CPU execution percentage"></svg>
+      </figure>
+    </div>
+    <div class="table-wrap" tabindex="0" aria-label="Phase measurements">
+      <table>
+        <thead><tr><th scope="col">Phase</th><th scope="col">Valid quotes</th><th scope="col">HTTP p95</th><th scope="col">Mean host CPU</th><th scope="col">Handler wall / CPU mean</th></tr></thead>
+        <tbody id="phase-table"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="timeline-title">
+    <h2 id="timeline-title">Incident timeline</h2>
+    <p>Times are relative to the start of the CPU workers. The operator script polled the alert state every two seconds during detection and recovery.</p>
+    <ol class="timeline" id="timeline"></ol>
+    <details>
+      <summary>View all observed Prometheus alert state changes</summary>
+      <ol class="timeline" id="alert-transitions"></ol>
+    </details>
+  </section>
+
+  <section class="panel" aria-labelledby="automation-title">
+    <h2 id="automation-title">What AWX and Nagios recorded</h2>
+    <p id="automation-summary"></p>
+    <p>Mean host CPU execution rose from 38.4% to 98.9%. Mean Java handler wall time rose from 164.3 to 344.3 ms, while handler CPU time went from 152.3 to 176.0 ms. The running workers, the gap between wall time and CPU time, and recovery after stopping the workers support CPU contention as the cause in this lab.</p>
+    <div class="method-links">
+      <a href="https://rahul-luthra.github.io/linux-performance-field-lab/incident-awx.png">View the AWX workflow screenshot</a>
+      <a href="https://rahul-luthra.github.io/linux-performance-field-lab/incident-grafana.png">View the Grafana dashboard screenshot</a>
+    </div>
+    <details>
+      <summary>View the AWX action output</summary>
+      <pre id="awx-output"></pre>
+    </details>
+    <details>
+      <summary>View the Nagios check results</summary>
+      <div class="table-wrap" tabindex="0" aria-label="Nagios status checks"><table>
+        <thead><tr><th scope="col">Relative time</th><th scope="col">State</th><th scope="col">Plugin result</th></tr></thead>
+        <tbody id="nagios-table"></tbody>
+      </table></div>
+    </details>
+  </section>
+
+  <section class="panel methods" aria-labelledby="methods-title">
+    <h2 id="methods-title">Scope and reproducibility</h2>
+    <p>The request generator offered four requests per second on the two-vCPU QuoteLab VM. It measured end-to-end HTTP latency over loopback and retained client dispatch delay and server handler wall and CPU times. The 20-second rolling alert used successful quote samples, a 500 ms lab threshold, and a 15-second hold. It stayed firing for 30 seconds after the rule condition dropped away, so alert clearance includes that delay.</p>
+    <p>The table uses per-request observations from stable phase windows. The charts show the live rolling values, so they can lag a phase boundary. Nagios tested HTTP status and the expected health body. These measurements describe one controlled incident, with the request generator sharing the same VM as the app. The probe&#x27;s skipped-offer counter rose by 5 across the sampled window.</p>
+    <div class="method-links">
+      <a href="https://github.com/rahul-luthra/linux-performance-field-lab/blob/main/incident/README.md">Read the runbook and limitations</a>
+      <a href="https://github.com/rahul-luthra/linux-performance-field-lab/tree/main/incident">Review the playbook and alert rule</a>
+      <a href="https://raw.githubusercontent.com/rahul-luthra/linux-performance-field-lab/main/results/incident/capture.json">Open the raw capture (JSON)</a>
+    </div>
+  </section>
+</main>
+<script type="application/json" id="incident-data">{"events":[{"key":"baseline","label":"Started recording the healthy baseline","time":1794491468.9520485},{"key":"load","label":"Started four CPU workers under a 140% CPU quota","time":1794491516.9507277},{"key":"firing","label":"Prometheus latency alert fired","time":1794491581.0604675},{"key":"workflow","label":"Launched the AWX incident workflow","time":1794491582.2047215},{"key":"diagnosis","label":"AWX identified the running CPU workers","time":1794491619.615647},{"key":"approval","label":"Approved stopping the scoped load unit","time":1794491620.2488918},{"key":"stop","label":"AWX stopped the CPU workers","time":1794491668.0},{"key":"verify","label":"AWX verified the service and stopped workload","time":1794491688.870705},{"key":"clear","label":"Prometheus latency alert cleared","time":1794491717.783387},{"key":"end","label":"Completed the recovery observation","time":1794491747.7475972}],"alert_transitions":[{"time":1794491469.0270946,"state":"pending","active_at":"2026-11-12T13:50:58.304970914Z","value":1.2289436080027372},{"time":1794491475.092086,"state":"inactive"},{"time":1794491564.94351,"state":"pending","active_at":"2026-11-12T13:52:43.304970914Z","value":0.5887228799983859},{"time":1794491581.0600686,"state":"firing","active_at":"2026-11-12T13:52:43.304970914Z","value":0.6674595150034293},{"time":1794491717.7783723,"state":"inactive"}],"prometheus":{"p95_ms":[[1794491468.952,1228.9436080027372],[1794491473.952,217.0025080049527],[1794491478.952,195.87043699721107],[1794491483.952,195.87043699721107],[1794491488.952,195.87043699721107],[1794491493.952,195.87043699721107],[1794491498.952,195.87043699721107],[1794491503.952,265.50813000358175],[1794491508.952,265.50813000358175],[1794491513.952,203.87993100302992],[1794491518.952,203.87993100302992],[1794491523.952,240.78184999962104],[1794491528.952,240.78184999962104],[1794491533.952,240.78184999962104],[1794491538.952,409.70850399753544],[1794491543.952,409.70850399753544],[1794491548.952,440.09888599975966],[1794491553.952,440.09888599975966],[1794491558.952,368.62368199945195],[1794491563.952,588.7228799983859],[1794491568.952,588.7228799983859],[1794491573.952,588.7228799983859],[1794491578.952,667.4595150034293],[1794491583.952,844.6551489978447],[1794491588.952,2097.3261799954344],[1794491593.952,2148.9926270005526],[1794491598.952,2147.429860000557],[1794491603.952,2147.429860000557],[1794491608.952,2147.429860000557],[1794491613.952,2104.2738590040244],[1794491618.952,2104.2738590040244],[1794491623.952,2094.822368999303],[1794491628.952,2094.822368999303],[1794491633.952,2094.822368999303],[1794491638.952,2094.822368999303],[1794491643.952,611.4272649938357],[1794491648.952,601.2613710045116],[1794491653.952,601.2613710045116],[1794491658.952,601.2613710045116],[1794491663.952,1131.153048001579],[1794491668.952,1131.153048001579],[1794491673.952,1131.153048001579],[1794491678.952,534.3706739949994],[1794491683.952,448.69867600209545],[1794491688.952,412.48423399520107],[1794491693.952,400.9758239990333],[1794491698.952,180.31461999635212],[1794491703.952,178.4760800001095],[1794491708.952,209.93088000250282],[1794491713.952,209.93088000250282],[1794491718.952,344.2177149991039],[1794491723.952,403.4614240008523],[1794491728.952,403.4614240008523],[1794491733.952,415.0606289986172],[1794491738.952,415.0606289986172],[1794491743.952,415.0606289986172]],"sample_count":[[1794491468.952,78.0],[1794491473.952,80.0],[1794491478.952,80.0],[1794491483.952,80.0],[1794491488.952,80.0],[1794491493.952,80.0],[1794491498.952,80.0],[1794491503.952,79.0],[1794491508.952,79.0],[1794491513.952,80.0],[1794491518.952,80.0],[1794491523.952,80.0],[1794491528.952,80.0],[1794491533.952,80.0],[1794491538.952,80.0],[1794491543.952,80.0],[1794491548.952,79.0],[1794491553.952,79.0],[1794491558.952,80.0],[1794491563.952,80.0],[1794491568.952,80.0],[1794491573.952,81.0],[1794491578.952,79.0],[1794491583.952,75.0],[1794491588.952,71.0],[1794491593.952,79.0],[1794491598.952,80.0],[1794491603.952,80.0],[1794491608.952,80.0],[1794491613.952,77.0],[1794491618.952,77.0],[1794491623.952,80.0],[1794491628.952,81.0],[1794491633.952,81.0],[1794491638.952,81.0],[1794491643.952,79.0],[1794491648.952,80.0],[1794491653.952,80.0],[1794491658.952,80.0],[1794491663.952,80.0],[1794491668.952,80.0],[1794491673.952,83.0],[1794491678.952,82.0],[1794491683.952,80.0],[1794491688.952,81.0],[1794491693.952,80.0],[1794491698.952,80.0],[1794491703.952,80.0],[1794491708.952,80.0],[1794491713.952,80.0],[1794491718.952,80.0],[1794491723.952,80.0],[1794491728.952,80.0],[1794491733.952,79.0],[1794491738.952,79.0],[1794491743.952,79.0]],"cpu_percent":[[1794491468.952,100.0],[1794491473.952,38.07106598984771],[1794491478.952,39.068825910931174],[1794491483.952,39.068825910931174],[1794491488.952,39.068825910931174],[1794491493.952,39.068825910931174],[1794491498.952,39.068825910931174],[1794491503.952,38.02242609582059],[1794491508.952,38.02242609582059],[1794491513.952,35.45454545454545],[1794491518.952,48.27935222672065],[1794491523.952,91.19433198380567],[1794491528.952,91.19433198380567],[1794491533.952,91.19433198380567],[1794491538.952,99.78586723768737],[1794491543.952,99.78586723768737],[1794491548.952,100.0],[1794491553.952,99.59798994974875],[1794491558.952,99.38900203665987],[1794491563.952,100.0],[1794491568.952,98.97540983606558],[1794491573.952,99.79057591623037],[1794491578.952,99.68186638388123],[1794491583.952,100.0],[1794491588.952,100.0],[1794491593.952,100.0],[1794491598.952,100.0],[1794491603.952,100.0],[1794491608.952,100.0],[1794491613.952,100.0],[1794491618.952,100.0],[1794491623.952,100.0],[1794491628.952,99.28131416837782],[1794491633.952,99.28131416837782],[1794491638.952,99.28131416837782],[1794491643.952,99.79317476732162],[1794491648.952,99.67672413793103],[1794491653.952,99.67672413793103],[1794491658.952,99.67672413793103],[1794491663.952,99.79338842975206],[1794491668.952,99.89281886387997],[1794491673.952,95.0253807106599],[1794491678.952,48.604651162790695],[1794491683.952,36.88442211055276],[1794491688.952,40.5840886203424],[1794491693.952,34.74320241691843],[1794491698.952,33.6318407960199],[1794491703.952,35.44813695871098],[1794491708.952,35.44813695871098],[1794491713.952,33.5678391959799],[1794491718.952,33.5678391959799],[1794491723.952,82.84473398479913],[1794491728.952,67.56176154672396],[1794491733.952,33.66733466933868],[1794491738.952,33.66733466933868],[1794491743.952,33.66733466933868]],"runnable":[[1794491468.952,8.0],[1794491473.952,1.0],[1794491478.952,1.0],[1794491483.952,1.0],[1794491488.952,1.0],[1794491493.952,1.0],[1794491498.952,1.0],[1794491503.952,3.0],[1794491508.952,3.0],[1794491513.952,3.0],[1794491518.952,5.0],[1794491523.952,6.0],[1794491528.952,6.0],[1794491533.952,6.0],[1794491538.952,7.0],[1794491543.952,7.0],[1794491548.952,6.0],[1794491553.952,6.0],[1794491558.952,8.0],[1794491563.952,8.0],[1794491568.952,5.0],[1794491573.952,6.0],[1794491578.952,7.0],[1794491583.952,9.0],[1794491588.952,8.0],[1794491593.952,7.0],[1794491598.952,7.0],[1794491603.952,7.0],[1794491608.952,7.0],[1794491613.952,7.0],[1794491618.952,7.0],[1794491623.952,7.0],[1794491628.952,6.0],[1794491633.952,6.0],[1794491638.952,6.0],[1794491643.952,8.0],[1794491648.952,6.0],[1794491653.952,6.0],[1794491658.952,6.0],[1794491663.952,7.0],[1794491668.952,8.0],[1794491673.952,2.0],[1794491678.952,3.0],[1794491683.952,1.0],[1794491688.952,2.0],[1794491693.952,1.0],[1794491698.952,2.0],[1794491703.952,2.0],[1794491708.952,2.0],[1794491713.952,2.0],[1794491718.952,2.0],[1794491723.952,3.0],[1794491728.952,2.0],[1794491733.952,2.0],[1794491738.952,2.0],[1794491743.952,2.0]],"failed_total":[[1794491468.952,0.0],[1794491473.952,0.0],[1794491478.952,0.0],[1794491483.952,0.0],[1794491488.952,0.0],[1794491493.952,0.0],[1794491498.952,0.0],[1794491503.952,0.0],[1794491508.952,0.0],[1794491513.952,0.0],[1794491518.952,0.0],[1794491523.952,0.0],[1794491528.952,0.0],[1794491533.952,0.0],[1794491538.952,0.0],[1794491543.952,0.0],[1794491548.952,0.0],[1794491553.952,0.0],[1794491558.952,0.0],[1794491563.952,0.0],[1794491568.952,0.0],[1794491573.952,0.0],[1794491578.952,0.0],[1794491583.952,0.0],[1794491588.952,0.0],[1794491593.952,0.0],[1794491598.952,0.0],[1794491603.952,0.0],[1794491608.952,0.0],[1794491613.952,0.0],[1794491618.952,0.0],[1794491623.952,0.0],[1794491628.952,0.0],[1794491633.952,0.0],[1794491638.952,0.0],[1794491643.952,0.0],[1794491648.952,0.0],[1794491653.952,0.0],[1794491658.952,0.0],[1794491663.952,0.0],[1794491668.952,0.0],[1794491673.952,0.0],[1794491678.952,0.0],[1794491683.952,0.0],[1794491688.952,0.0],[1794491693.952,0.0],[1794491698.952,0.0],[1794491703.952,0.0],[1794491708.952,0.0],[1794491713.952,0.0],[1794491718.952,0.0],[1794491723.952,0.0],[1794491728.952,0.0],[1794491733.952,0.0],[1794491738.952,0.0],[1794491743.952,0.0]],"skipped_total":[[1794491468.952,1.0],[1794491473.952,5.0],[1794491478.952,5.0],[1794491483.952,5.0],[1794491488.952,5.0],[1794491493.952,5.0],[1794491498.952,5.0],[1794491503.952,5.0],[1794491508.952,5.0],[1794491513.952,5.0],[1794491518.952,5.0],[1794491523.952,5.0],[1794491528.952,5.0],[1794491533.952,5.0],[1794491538.952,5.0],[1794491543.952,5.0],[1794491548.952,5.0],[1794491553.952,5.0],[1794491558.952,5.0],[1794491563.952,5.0],[1794491568.952,5.0],[1794491573.952,5.0],[1794491578.952,5.0],[1794491583.952,5.0],[1794491588.952,5.0],[1794491593.952,5.0],[1794491598.952,5.0],[1794491603.952,5.0],[1794491608.952,5.0],[1794491613.952,5.0],[1794491618.952,5.0],[1794491623.952,5.0],[1794491628.952,5.0],[1794491633.952,5.0],[1794491638.952,5.0],[1794491643.952,5.0],[1794491648.952,5.0],[1794491653.952,5.0],[1794491658.952,5.0],[1794491663.952,5.0],[1794491668.952,5.0],[1794491673.952,5.0],[1794491678.952,5.0],[1794491683.952,5.0],[1794491688.952,5.0],[1794491693.952,5.0],[1794491698.952,5.0],[1794491703.952,5.0],[1794491708.952,5.0],[1794491713.952,5.0],[1794491718.952,5.0],[1794491723.952,5.0],[1794491728.952,5.0],[1794491733.952,6.0],[1794491738.952,6.0],[1794491743.952,6.0]]},"start":1794491468.9520485,"end":1794491747.7475972,"threshold_ms":500,"awx":{"version":"24.6.1","workflow":11,"status":"successful","steps":{"diagnose":{"id":12,"status":"successful","started":"2026-11-12T13:53:03.411762Z","finished":"2026-11-12T13:53:35.127211Z","output":["2026-11-12T13:53:12Z","Load average: 4.71, 3.21, 2.67","MainPID=101085","TasksCurrent=5","CPUQuotaPerSecUSec=1.400000s","ActiveState=active","COMMAND         %CPU     TIME","python3          0.1 00:00:00","COMMAND         %CPU     TIME","python3         26.2 00:00:19","python3         26.2 00:00:19","python3         26.2 00:00:19","python3         26.5 00:00:20","QuoteLab ActiveState=active"]},"recover":{"id":14,"status":"successful","started":"2026-11-12T13:53:40.793585Z","finished":"2026-11-12T13:54:30.707543Z","output":["Stopped quotelab-incident-load.service at 2026-11-12T13:54:28Z"]},"verify":{"id":15,"status":"successful","started":"2026-11-12T13:54:31.816385Z","finished":"2026-11-12T13:54:42.277385Z","output":["Load inactive. QuoteLab health: {\"status\":\"ok\"}"]},"approval":{"id":13,"status":"successful","started":"2026-11-12T13:53:35.833203Z","finished":"2026-11-12T13:53:40.168379Z","output":[]}}},"nagios":[{"time":1794491469,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.076 second response time"},{"time":1794491500,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.023 second response time"},{"time":1794491511,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.119 second response time"},{"time":1794491538,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.037 second response time"},{"time":1794491548,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.051 second response time"},{"time":1794491558,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.042 second response time"},{"time":1794491568,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.019 second response time"},{"time":1794491589,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.170 second response time"},{"time":1794491612,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 1.314 second response time"},{"time":1794491641,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.096 second response time"},{"time":1794491664,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.107 second response time"},{"time":1794491676,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.066 second response time"},{"time":1794491688,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.070 second response time"},{"time":1794491698,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.070 second response time"},{"time":1794491708,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.063 second response time"},{"time":1794491719,"state":0,"output":"HTTP OK: Status line output matched \"HTTP/1.1 200\" - 163 bytes in 0.070 second response time"}],"phases":{"baseline":{"requests":172,"successful":172,"p95":217.4,"handler_wall":164.3,"handler_cpu":152.3,"status_counts":{"200":172},"start":1794491473.9520485,"end":1794491516.9507277,"mean_cpu":38.4},"incident":{"requests":583,"successful":583,"p95":1768.6,"handler_wall":344.3,"handler_cpu":176.0,"status_counts":{"200":583},"start":1794491521.9507277,"end":1794491668.0,"mean_cpu":98.9},"recovery":{"requests":118,"successful":118,"p95":275.6,"handler_wall":179.8,"handler_cpu":166.4,"status_counts":{"200":118},"start":1794491717.783387,"end":1794491747.7475972,"mean_cpu":47.5}},"detection_seconds":64.1,"remediation_seconds":86.9,"clear_seconds":49.8,"total_seconds":200.8,"nagios_ok_during_alert":4,"nagios_other_during_alert":0,"nagios_total":16,"skipped_offers":5,"alert_interrupted_before_stop":false}</script>
+<script>
+const data = JSON.parse(document.getElementById("incident-data").textContent);
+const get = id => document.getElementById(id);
+const label = key => key[0].toUpperCase() + key.slice(1);
+const loadStart = data.events.find(event => event.key === "load").time;
+const relative = (timestamp, decimals = 0) => {
+  const delta = timestamp - loadStart;
+  return (delta < 0 ? "−" : "+") + Math.abs(delta).toFixed(decimals) + " s";
+};
+const makeRow = (target, values) => {
+  const row = target.insertRow();
+  values.forEach(value => { row.insertCell().textContent = value; });
+};
+
+for (const [key, phase] of Object.entries(data.phases)) {
+  makeRow(get("phase-table"), [label(key), `${phase.successful} / ${phase.requests}`, `${phase.p95} ms`,
+    `${phase.mean_cpu}%`, `${phase.handler_wall} / ${phase.handler_cpu} ms`]);
+}
+for (const event of data.events) {
+  const item = document.createElement("li");
+  const time = document.createElement("time");
+  time.dateTime = new Date(event.time * 1000).toISOString();
+  time.textContent = relative(event.time, 1);
+  item.append(time, " ", event.label);
+  get("timeline").append(item);
+}
+for (const state of data.alert_transitions) {
+  const item = document.createElement("li");
+  const time = document.createElement("time");
+  time.dateTime = new Date(state.time * 1000).toISOString();
+  time.textContent = relative(state.time, 1);
+  item.append(time, " ", label(state.state));
+  get("alert-transitions").append(item);
+}
+for (const check of data.nagios) {
+  makeRow(get("nagios-table"), [relative(check.time), ["OK", "Warning", "Critical", "Unknown"][check.state], check.output]);
+}
+get("automation-summary").textContent = `AWX workflow #${data.awx.workflow} completed successfully. Nagios reported ${data.nagios_ok_during_alert} OK checks while the latency alert was firing and the workers were active.` +
+  (data.alert_interrupted_before_stop ? " The latency alert also briefly cleared and re-fired while the workers were still active." : "");
+get("awx-output").textContent = Object.entries(data.awx.steps).map(([name, step]) =>
+  `${label(name)} · #${step.id} · ${step.status}\n${step.output.join("\n")}`.trimEnd()
+).join("\n\n");
+
+function plot(id, samples, from, to, top, unit, threshold) {
+  const svg = get(id);
+  const left = 46, right = 466, yTop = 18, bottom = 194;
+  const x = timestamp => left + (timestamp - from) * (right - left) / (to - from);
+  const y = value => bottom - value * (bottom - yTop) / top;
+  const points = samples.filter(([t]) => t >= from && t <= to);
+  const lines = [];
+  for (let i = 0; i <= 4; i += 1) {
+    const value = top * i / 4;
+    lines.push(`<line class="gridline" x1="${left}" x2="${right}" y1="${y(value)}" y2="${y(value)}"/>`);
+    lines.push(`<text text-anchor="end" x="${left - 6}" y="${y(value) + 4}">${Math.round(value)}${unit}</text>`);
+    const timestamp = from + (to - from) * i / 4;
+    const anchor = i === 0 ? "start" : i === 4 ? "end" : "middle";
+    lines.push(`<text text-anchor="${anchor}" x="${x(timestamp)}" y="${bottom + 22}">${relative(timestamp)}</text>`);
+  }
+  for (const event of data.events.filter(event =>
+    ["load", "firing", "stop", "clear"].includes(event.key) && event.time >= from && event.time <= to)) {
+    lines.push(`<line class="marker" x1="${x(event.time)}" x2="${x(event.time)}" y1="${yTop}" y2="${bottom}"/>`);
+  }
+  if (threshold !== undefined) {
+    lines.push(`<line class="threshold" x1="${left}" x2="${right}" y1="${y(threshold)}" y2="${y(threshold)}"/>`);
+  }
+  if (points.length) {
+    lines.push(`<polyline class="series" points="${points.map(([t, value]) => `${x(t).toFixed(2)},${y(value).toFixed(2)}`).join(" ")}"/>`);
+  }
+  svg.innerHTML = lines.join("");
+}
+
+function show(key) {
+  const phase = data.phases[key];
+  const from = phase ? phase.start : data.start;
+  const to = phase ? phase.end : data.end;
+  document.querySelectorAll("[data-phase]").forEach(button =>
+    button.setAttribute("aria-pressed", String(button.dataset.phase === key)));
+  get("phase-readout").textContent = phase
+    ? `${label(key)}: ${phase.successful} valid quotes out of ${phase.requests} recorded, with p95 of ${phase.p95} ms.`
+    : "Full timeline, with event markers for load start, alert firing, workload stop, and alert clear.";
+  const latencyCeiling = Math.ceil(Math.max(data.threshold_ms, ...data.prometheus.p95_ms.map(([, ms]) => ms)) / 200) * 200;
+  plot("latency-chart", data.prometheus.p95_ms, from, to, latencyCeiling, "", data.threshold_ms);
+  plot("cpu-chart", data.prometheus.cpu_percent, from, to, 100, "%");
+}
+document.querySelectorAll("[data-phase]").forEach(button => button.addEventListener("click", () => show(button.dataset.phase)));
+show("all");
+</script>
+</body>
+</html>
