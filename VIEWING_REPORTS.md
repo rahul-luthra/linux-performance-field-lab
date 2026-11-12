@@ -2,7 +2,7 @@
 
 ## Open directly in your browser
 
-**[Open the Java application report](https://rahul-luthra.github.io/linux-performance-field-lab/)** or **[the memory investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html)**. Use the shared navigation to switch between these reports, Linux scenarios, individual CPU captures and the collector check. The site displays saved measurements; it does not connect to or expose the lab VM.
+**[Open the portfolio](https://rahul-luthra.github.io/linux-performance-field-lab/)** or go straight to **[the Java application report](https://rahul-luthra.github.io/linux-performance-field-lab/quotelab.html)**. The case studies link to their supporting captures and methods. The interactive reports use saved measurements.
 
 The repository and Pages site are public. No download, GitHub sign-in, Java or Python installation is needed for online viewing.
 
@@ -27,7 +27,7 @@ Use the live links for rendered reports. The source links intentionally open cod
 
 | Report | View online | Local file | Source on GitHub |
 |---|---|---|---|
-| Java application: all three measured runs and mitigation | [Open report](https://rahul-luthra.github.io/linux-performance-field-lab/) | `app-report.html` | [HTML source](app-report.html) |
+| Java application: all three measured runs and mitigation | [Open report](https://rahul-luthra.github.io/linux-performance-field-lab/quotelab.html) | `app-report.html` | [HTML source](app-report.html) |
 | Memory: six fault/correction tests and three HTTP/GC experiments | [Open investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html) | `memory-report.html` | [HTML source](memory-report.html) |
 | Storage/NFS: ten measured local/network/server-I/O cases | [Open investigation](https://rahul-luthra.github.io/linux-performance-field-lab/storage.html) | `storage-report.html` | [HTML source](storage-report.html) |
 | Network: delay, loss, bandwidth and application-wait experiments | [Open investigation](https://rahul-luthra.github.io/linux-performance-field-lab/network.html) | `network-report.html` | [HTML source](network-report.html) |
@@ -36,7 +36,7 @@ Use the live links for rendered reports. The source links intentionally open cod
 | First measured host CPU experiment | [Open capture](https://rahul-luthra.github.io/linux-performance-field-lab/cpu-lab.html) | `results/cpu-lab.html` | [HTML source](results/cpu-lab.html) |
 | Repeated host CPU experiment | [Open capture](https://rahul-luthra.github.io/linux-performance-field-lab/cpu-lab-repeat.html) | `results/repeat/cpu-lab.html` | [HTML source](results/repeat/cpu-lab.html) |
 | Three-interval collector smoke test | [Open check](https://rahul-luthra.github.io/linux-performance-field-lab/smoke-report.html) | `results/smoke-report.html` | [HTML source](results/smoke-report.html) |
-| Published Pages entry point with shared navigation | [Open report](https://rahul-luthra.github.io/linux-performance-field-lab/) | `docs/index.html` | [HTML source](docs/index.html) |
+| Portfolio and case study directory | [Open portfolio](https://rahul-luthra.github.io/linux-performance-field-lab/) | `docs/index.html` | [HTML source](docs/index.html) |
 
 `report-template.html`, `app/app-report-template.html` `memory/report-template.html` `storage/report-template.html` and `network/report-template.html` are authoring templates with data placeholders. They are not generated reports; opening them directly will not produce a working interactive report.
 

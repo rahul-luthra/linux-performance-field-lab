@@ -14,7 +14,7 @@ Use a public repository for the source, raw public evidence and case study, with
 6. Add that URL to the repository's About website field and to the top of the README. Pin the repository on your GitHub profile.
 7. Put the Pages URL on your résumé and in emails; link the repository as the supporting source.
 
-The prepared `docs/index.html` is self-contained. It visualizes saved measurements and has no connection to the VM. GitHub documents branch/folder publishing in [Configure a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+The portfolio starts at `docs/index.html`. The Java report is at `docs/quotelab.html`, and the portfolio and reports share `docs/site.css`. Run `python build_pages.py` after changing a source report to regenerate its Pages copy. The charts use saved measurements. GitHub documents branch and folder publishing in [Configure a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 If you prefer Git over browser uploads, initialize a repository only inside the clean extracted folder, add the project files, commit, add your new repository's remote URL and push to main. Inspect the staged files before publishing. The release already omits private material; retain its `.gitignore`.
 
