@@ -1,0 +1,17 @@
+[Unit]
+Description=Rolling patch lab quote backend
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/patch-demo/backend.py
+DynamicUser=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+Restart=on-failure
+MemoryMax=64M
+TasksMax=32
+
+[Install]
+WantedBy=multi-user.target

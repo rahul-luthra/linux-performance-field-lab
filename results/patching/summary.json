@@ -1,0 +1,105 @@
+{
+  "package": {
+    "patch_package": "tzdata",
+    "patch_from": "2024a-2ubuntu1",
+    "patch_to": "2026e-0ubuntu0.24.04.1"
+  },
+  "normal": {
+    "requests": 946,
+    "valid": 946,
+    "errors": 0,
+    "skipped": 214,
+    "p95_ms": 30.72,
+    "max_probe_gap_seconds": 7.33,
+    "duration_seconds": 290.1,
+    "by_node": {
+      "patch-canary": 484,
+      "patch-peer": 462
+    },
+    "canary_drain_seconds": 78.2,
+    "peer_quotes_while_canary_drained": 227,
+    "canary_quotes_while_peer_drained": 250,
+    "recovery": null,
+    "workflow": 21,
+    "jobs": {
+      "preflight": {
+        "id": 22,
+        "status": "successful",
+        "started": "2026-11-12T15:38:37.194079Z",
+        "finished": "2026-11-12T15:39:27.093319Z"
+      },
+      "approval": {
+        "id": 23,
+        "status": "successful",
+        "started": "2026-11-12T15:39:29.445966Z",
+        "finished": "2026-11-12T15:39:39.150981Z"
+      },
+      "canary": {
+        "id": 24,
+        "status": "successful",
+        "started": "2026-11-12T15:39:40.275332Z",
+        "finished": "2026-11-12T15:41:21.474921Z"
+      },
+      "peer": {
+        "id": 25,
+        "status": "successful",
+        "started": "2026-11-12T15:41:23.852280Z",
+        "finished": "2026-11-12T15:42:58.941284Z"
+      }
+    }
+  },
+  "failed": {
+    "requests": 784,
+    "valid": 784,
+    "errors": 0,
+    "skipped": 357,
+    "p95_ms": 33.97,
+    "max_probe_gap_seconds": 47.87,
+    "duration_seconds": 285.2,
+    "by_node": {
+      "patch-peer": 638,
+      "patch-canary": 146
+    },
+    "canary_drain_seconds": 194.7,
+    "peer_quotes_while_canary_drained": 484,
+    "canary_quotes_while_peer_drained": null,
+    "recovery": {
+      "failure_to_rejoin_seconds": 106.2,
+      "snapshot": "pre-patch-baseline",
+      "canary_version": "2024a-2ubuntu1",
+      "canary_previous_version": "2026e-0ubuntu0.24.04.1",
+      "peer_version": "2024a-2ubuntu1",
+      "canary_quote": 42,
+      "canary_boot_changed": true,
+      "vbox_seconds": 12.217,
+      "operator_seconds": 52.954
+    },
+    "workflow": 32,
+    "jobs": {
+      "preflight": {
+        "id": 33,
+        "status": "successful",
+        "started": "2026-11-12T15:53:48.643130Z",
+        "finished": "2026-11-12T15:54:22.918911Z"
+      },
+      "approval": {
+        "id": 34,
+        "status": "successful",
+        "started": "2026-11-12T15:54:25.201099Z",
+        "finished": "2026-11-12T15:54:35.643702Z"
+      },
+      "canary": {
+        "id": 35,
+        "status": "failed",
+        "started": "2026-11-12T15:54:37.246938Z",
+        "finished": "2026-11-12T15:56:26.984458Z"
+      },
+      "containment": {
+        "id": 36,
+        "status": "successful",
+        "started": "2026-11-12T15:56:32.506082Z",
+        "finished": "2026-11-12T15:56:51.462166Z"
+      }
+    }
+  }
+}

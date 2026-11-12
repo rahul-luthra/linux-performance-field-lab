@@ -1,0 +1,25 @@
+---
+- name: Confirm the failed canary is isolated
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Read pool membership
+      ansible.builtin.uri:
+        url: "{{ pool_url }}/pool"
+        headers:
+          Authorization: "Bearer {{ lookup('ansible.builtin.env', 'PATCH_POOL_TOKEN') }}"
+        return_content: true
+      register: membership
+      no_log: true
+    - name: Verify only the untouched peer is serving
+      ansible.builtin.assert:
+        that:
+          - membership.json.active == ['patch-peer']
+    - name: Record containment evidence
+      ansible.builtin.debug:
+        msg:
+          event: contained
+          node: patch-canary
+          time: "{{ lookup('ansible.builtin.pipe', 'date +%s.%N') }}"
+          active: "{{ membership.json.active }}"

@@ -17,6 +17,12 @@ PUBLIC = ['.gitignore', 'README.md', 'CASE_STUDY.md', 'LIVE_RESULTS.md', 'RUNBOO
           'incident/monitoring.py', 'incident/awx_lab.py', 'incident/workflow.yml', 'incident/alert.yml',
           'incident/nagios.cfg', 'incident/operator-command.sh', 'incident/target-command.sh',
           'results/incident/capture.json', 'results/incident/summary.json',
+          'patching-report.html', 'docs/patching.html', 'patching/README.md', 'patching/report-template.html',
+          'docs/patching-normal-awx.png', 'docs/patching-failed-awx.png',
+          'patching/build_report.py', 'patching/make_seed.py', 'patching/create_vms.ps1', 'patching/snapshot.ps1',
+          'patching/control.py', 'patching/backend.py', 'patching/patch-demo.service', 'patching/pool.py',
+          'patching/probe.py', 'patching/awx_rollout.py', 'patching/run.py', 'patching/rollout.yml', 'patching/audit.yml',
+          'results/patching/normal.json', 'results/patching/failed.json', 'results/patching/summary.json',
           'app/QuoteLab.java', 'app/quotelab.service', 'app/install.sh', 'app/run_app_lab.py', 'app/analyze_app.py',
           'app/test_analysis.py', 'app/README.md', 'app/app-report-template.html', 'VIEWING_REPORTS.md', 'app-latency-preview.png',
           'build_pages.py', 'docs/showcase.html', 'docs/cpu-lab.html', 'docs/cpu-lab-repeat.html', 'docs/smoke-report.html',
@@ -55,6 +61,8 @@ def prepare():
             build_report(json.loads(capture.read_text()), directory / 'cpu-lab.html')
     from incident.build_report import build as build_incident
     build_incident()
+    from patching.build_report import build as build_patching
+    build_patching()
     from build_pages import build
     build()
 

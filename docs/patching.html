@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Two measured rolling Linux maintenance trials with AWX, a failed canary, and a verified snapshot recovery.">
+  <title>The Canary Failed | Rolling Linux Patching with AWX</title>
+  <style>
+    :root{--bg:#f7f8f2;--ink:#142b27;--muted:#52645c;--line:#d8e0d6;--panel:#fff;--green:#205844;--blue:#356788;--orange:#a34020}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.55 "Instrument Sans",system-ui,sans-serif}
+    main{max-width:1160px;margin:auto;padding:clamp(2rem,5vw,4.5rem) clamp(1rem,4vw,2rem)}
+    h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.15;letter-spacing:-.025em}h1{font-size:clamp(2.3rem,6vw,4.8rem);max-width:21ch}
+    h2{font-size:clamp(1.4rem,3vw,2rem)}h3{font-size:1.12rem}
+    a{color:var(--green);text-underline-offset:.18em}a:focus-visible,button:focus-visible{outline:3px solid #367f5e;outline-offset:3px}
+    header p{max-width:64ch;margin-top:1rem;color:var(--muted);font-size:1.12rem}
+    .outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1.4rem 0 2rem}
+    .outcomes div{background:#e9f1ea;border:1px solid var(--line);border-radius:.5rem;padding:.85rem 1rem}
+    .outcomes dt{font-size:.9rem;color:#355345}.outcomes dd{margin:.2rem 0 0;font-size:clamp(1.25rem,3vw,2rem);font-weight:750;font-variant-numeric:tabular-nums}
+    .panel{min-width:0;padding:clamp(.85rem,3vw,1.5rem);margin-block:1.3rem;background:var(--panel);border:1px solid var(--line);border-radius:.65rem}
+    .panel p{margin:.55rem 0;color:var(--muted);max-width:78ch}
+    .buttons,.links,.legend{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin:.85rem 0}
+    button{font:inherit;font-weight:650;color:var(--ink);background:#fff;border:1px solid #a9baac;border-radius:.35rem;padding:.45rem .8rem;cursor:pointer}
+    button[aria-pressed=true]{background:var(--green);border-color:var(--green);color:#fff}
+    .legend{font-size:.88rem;color:var(--muted)}.legend span:before{display:inline-block;content:"";width:.68rem;height:.68rem;margin-right:.35rem;border-radius:.12rem;background:var(--series)}
+    .chart{display:block;width:100%;height:auto;min-height:125px}.chart text{font:13px system-ui,sans-serif;fill:#52645c}
+    .chart .grid{stroke:var(--line)}.chart .milestone{stroke:#596b63;stroke-dasharray:3 4;stroke-width:1.15}
+    .table-wrap{overflow:auto;margin-top:.6rem}table{width:100%;border-collapse:collapse;font-size:.92rem}
+    td,th{text-align:left;white-space:nowrap;padding:.5rem .65rem;border-bottom:1px solid var(--line)}th{color:#315345}td{font-variant-numeric:tabular-nums}
+    .timeline{padding-left:1.4rem;margin:.65rem 0 0}.timeline li{padding:.24rem 0}
+    .timeline .at{display:inline-block;min-width:4.8rem;font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--green)}
+    details{margin-top:1rem}summary{cursor:pointer;font-weight:700}code{overflow-wrap:anywhere}
+    @media(max-width:640px){.outcomes{grid-template-columns:1fr}.timeline .at{min-width:4.4rem}}
+  </style>
+<link rel="stylesheet" href="site.css"></head>
+<body>
+<a class="site-skip" href="#report-content">Skip to report</a><nav class="site-nav" aria-label="Portfolio"><a class="site-name" href="about.html">Rahul Luthra</a><div class="site-links"><a href="index.html">Home</a><a href="index.html#case-studies">Case Studies</a><a href="https://github.com/rahul-luthra/linux-performance-field-lab">GitHub</a></div></nav><main id="report-content">
+  <header>
+    <h1>The Canary Failed: Rolling Linux Patching with AWX</h1>
+    <p>Two Ubuntu VMs served quotes behind one load balancer. I tested a successful rollout and a failed canary to see whether traffic stayed healthy while AWX applied an update, rebooted the hosts, and checked the application.</p>
+  </header><div class="case-related"><p class="case-links"><a href="incident.html">From Alert to Recovery</a></p></div>
+
+  <dl class="outcomes">
+    <div><dt>Valid quotes during normal rollout</dt><dd>946 / 946</dd></div>
+    <div><dt>Valid quotes during failed-canary trial</dt><dd>784 / 784</dd></div>
+    <div><dt>Failed check to verified rejoin</dt><dd>106 s</dd></div>
+  </dl>
+
+  <section class="panel" aria-labelledby="results-title">
+    <h2 id="results-title">What the two runs showed</h2>
+    <p>AWX upgraded <code>tzdata</code> from <code>2024a-2ubuntu1</code> to <code>2026e-0ubuntu0.24.04.1</code>. I scheduled a reboot on each patched host to exercise the rolling maintenance path.</p>
+    <div class="table-wrap" tabindex="0" aria-label="Comparison of measured runs">
+      <table>
+        <thead><tr><th scope="col">Trial</th><th scope="col">Canary</th><th scope="col">Peer</th><th scope="col">Client errors</th><th scope="col">Skipped offers</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Normal rollout</th><td>Patched and rejoined</td><td>Patched and rejoined</td><td>0</td><td>214</td></tr>
+          <tr><th scope="row">Failed canary</th><td>Isolated, restored and rejoined</td><td>Served traffic on original version</td><td>0</td><td>357</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Client errors count requests that were actually sent. The probe skipped some scheduled sends, with a longest gap of 47.87 seconds between sent requests.</p>
+    <p>In the failure trial I injected an application regression on the canary after its reboot. The endpoint returned HTTP 200 with the wrong quote. The body check failed, AWX left the canary out of rotation, and the peer patch job did not launch.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="replay-title">
+    <h2 id="replay-title">Replay client traffic</h2>
+    <p>Each bar counts observations in five seconds. Vertical markers show the change milestones. Choose a run to see which VM served traffic during each drain.</p>
+    <div class="buttons" aria-label="Recorded run">
+      <button type="button" data-trial="normal" aria-pressed="true">Normal rollout</button>
+      <button type="button" data-trial="failed" aria-pressed="false">Failed canary</button>
+    </div>
+    <p id="readout" aria-live="polite"></p>
+    <div class="legend">
+      <span style="--series:#205844">Canary</span><span style="--series:#356788">Peer</span><span style="--series:#a34020">Invalid or skipped</span>
+    </div>
+    <svg class="chart" id="traffic" viewBox="0 0 800 225" role="img" aria-label="Five-second client observations by backend"></svg>
+    <h3>Change timeline</h3>
+    <ol class="timeline" id="timeline"></ol>
+    <details>
+      <summary>View AWX node outcomes</summary>
+      <div class="table-wrap" tabindex="0" aria-label="AWX job outcomes">
+        <table><thead><tr><th scope="col">Node</th><th scope="col">Job</th><th scope="col">Outcome</th></tr></thead><tbody id="jobs"></tbody></table>
+      </div>
+    </details>
+    <div class="links">
+      <a href="https://rahul-luthra.github.io/linux-performance-field-lab/patching-normal-awx.png">Normal AWX workflow screenshot</a>
+      <a href="https://rahul-luthra.github.io/linux-performance-field-lab/patching-failed-awx.png">Failed-canary AWX workflow screenshot</a>
+    </div>
+    <p>AWX marked the failed-canary workflow successful because its containment branch completed. The canary node shows the failed check, and the peer node shows that it was skipped.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="methods-title">
+    <h2 id="methods-title">How I ran the change</h2>
+    <p>AWX checked disk space, the package candidate, and a real quote on both hosts before approval. It drained one VM, waited for requests already in flight, applied the update and rebooted. A host could rejoin only after the package, boot, and quote checks passed.</p>
+    <p>For recovery I restored the failed canary’s powered-off VirtualBox snapshot while the peer carried traffic. I verified the previous package version, a new boot identity, and the correct quote before putting it back into rotation.</p>
+    <p>The client scheduled four requests per second. The two trials exercised one Ubuntu package and a controlled application regression. The availability figures apply to the measured traffic and lab conditions.</p>
+    <div class="links">
+      <a href="https://github.com/rahul-luthra/linux-performance-field-lab/tree/main/patching">Runbook and playbooks</a>
+      <a href="https://github.com/rahul-luthra/linux-performance-field-lab/tree/main/results/patching">Raw captures and summary</a>
+    </div>
+  </section>
+</main>
+<script id="patch-data" type="application/json">{"normal":{"requests":946,"valid":946,"errors":0,"skipped":214,"p95_ms":30.72,"max_probe_gap_seconds":7.33,"duration_seconds":290.1,"by_node":{"patch-canary":484,"patch-peer":462},"canary_drain_seconds":78.2,"peer_quotes_while_canary_drained":227,"canary_quotes_while_peer_drained":250,"recovery":null,"workflow":21,"jobs":{"preflight":{"id":22,"status":"successful","started":"2026-11-12T15:38:37.194079Z","finished":"2026-11-12T15:39:27.093319Z"},"approval":{"id":23,"status":"successful","started":"2026-11-12T15:39:29.445966Z","finished":"2026-11-12T15:39:39.150981Z"},"canary":{"id":24,"status":"successful","started":"2026-11-12T15:39:40.275332Z","finished":"2026-11-12T15:41:21.474921Z"},"peer":{"id":25,"status":"successful","started":"2026-11-12T15:41:23.852280Z","finished":"2026-11-12T15:42:58.941284Z"}},"buckets":[[0,3,3,1],[5,3,2,28],[10,8,9,2],[15,7,7,7],[20,3,3,14],[25,8,8,4],[30,8,7,5],[35,8,8,3],[40,8,8,3],[45,9,10,3],[50,8,8,3],[55,9,9,3],[60,10,9,0],[65,9,10,2],[70,8,8,4],[75,10,9,1],[80,9,9,2],[85,10,10,0],[90,9,9,2],[95,2,17,0],[100,0,17,4],[105,0,16,4],[110,0,18,2],[115,0,17,3],[120,0,19,1],[125,0,18,2],[130,0,14,1],[135,0,8,16],[140,0,0,0],[145,0,15,26],[150,0,19,1],[155,0,8,11],[160,0,19,2],[165,0,20,0],[170,1,16,1],[175,10,10,2],[180,9,9,2],[185,9,9,2],[190,9,10,1],[195,18,1,1],[200,17,0,1],[205,18,0,2],[210,20,0,2],[215,19,0,1],[220,18,0,2],[225,15,0,0],[230,9,0,11],[235,3,0,22],[240,20,0,0],[245,20,0,0],[250,19,0,0],[255,19,0,2],[260,20,0,0],[265,20,0,0],[270,13,7,0],[275,9,9,2],[280,10,10,0],[285,10,10,0],[290,0,0,0]],"events":[{"event":"baseline","time":0.0},{"event":"workflow","time":10.5,"job":21},{"event":"approved","time":74.3},{"event":"drain","node":"patch-canary","time":97.09},{"event":"patched","node":"patch-canary","time":171.32,"version":"2026e-0ubuntu0.24.04.1","rebooted":true},{"event":"application_check","node":"patch-canary","time":173.36,"status":"200","quote":"42"},{"event":"rejoined","node":"patch-canary","time":175.28},{"event":"drain","node":"patch-peer","time":196.14},{"event":"patched","node":"patch-peer","time":268.35,"version":"2026e-0ubuntu0.24.04.1","rebooted":true},{"event":"application_check","node":"patch-peer","time":270.45,"status":"200","quote":"42"},{"event":"rejoined","node":"patch-peer","time":272.46},{"event":"end","time":290.13}]},"failed":{"requests":784,"valid":784,"errors":0,"skipped":357,"p95_ms":33.97,"max_probe_gap_seconds":47.87,"duration_seconds":285.2,"by_node":{"patch-peer":638,"patch-canary":146},"canary_drain_seconds":194.7,"peer_quotes_while_canary_drained":484,"canary_quotes_while_peer_drained":null,"recovery":{"failure_to_rejoin_seconds":106.2,"snapshot":"pre-patch-baseline","canary_version":"2024a-2ubuntu1","canary_previous_version":"2026e-0ubuntu0.24.04.1","peer_version":"2024a-2ubuntu1","canary_quote":42,"canary_boot_changed":true,"vbox_seconds":12.217,"operator_seconds":52.954},"workflow":32,"jobs":{"preflight":{"id":33,"status":"successful","started":"2026-11-12T15:53:48.643130Z","finished":"2026-11-12T15:54:22.918911Z"},"approval":{"id":34,"status":"successful","started":"2026-11-12T15:54:25.201099Z","finished":"2026-11-12T15:54:35.643702Z"},"canary":{"id":35,"status":"failed","started":"2026-11-12T15:54:37.246938Z","finished":"2026-11-12T15:56:26.984458Z"},"containment":{"id":36,"status":"successful","started":"2026-11-12T15:56:32.506082Z","finished":"2026-11-12T15:56:51.462166Z"}},"buckets":[[0,6,6,3],[5,4,5,16],[10,9,9,2],[15,10,9,1],[20,7,7,6],[25,9,9,2],[30,8,9,1],[35,11,10,1],[40,9,10,1],[45,10,10,0],[50,6,6,3],[55,8,7,10],[60,9,10,1],[65,8,8,4],[70,10,9,1],[75,8,10,1],[80,0,21,0],[85,0,18,2],[90,0,10,1],[95,0,8,18],[100,0,18,5],[105,0,16,2],[110,0,16,6],[115,0,12,8],[120,0,12,0],[125,0,6,22],[130,0,17,3],[135,0,13,6],[140,0,18,2],[145,0,18,3],[150,0,18,2],[155,0,17,1],[160,0,18,3],[165,0,20,1],[170,0,19,1],[175,0,20,0],[180,0,18,2],[185,0,19,0],[190,0,16,5],[195,0,19,1],[200,0,17,3],[205,0,18,2],[210,0,20,0],[215,0,20,0],[220,0,17,3],[225,0,12,3],[230,0,0,0],[235,0,0,0],[240,0,0,0],[245,0,0,0],[250,0,0,0],[255,0,0,0],[260,0,0,0],[265,0,0,0],[270,0,0,102],[275,8,7,88],[280,5,6,9],[285,1,0,0]],"events":[{"event":"baseline","time":0.0},{"event":"workflow","time":10.37,"job":32},{"event":"approved","time":59.69},{"event":"drain","node":"patch-canary","time":80.5},{"event":"patched","node":"patch-canary","time":161.76,"version":"2026e-0ubuntu0.24.04.1","rebooted":true},{"event":"application_check","node":"patch-canary","time":169.03,"status":"200","quote":"0"},{"event":"contained","node":"patch-canary","time":191.38,"active":["patch-peer"]},{"event":"awaiting_snapshot_restore","time":205.62},{"event":"restored_and_rejoined","time":275.18,"node":"patch-canary"},{"event":"end","time":285.18}]}}</script>
+<script>
+const data = JSON.parse(document.getElementById("patch-data").textContent);
+const byId = id => document.getElementById(id);
+const names = {"patch-canary": "Canary", "patch-peer": "Peer"};
+const labels = {
+  baseline: "Began recording client traffic", workflow: "Launched AWX workflow", approved: "Approved the change",
+  contained: "AWX confirmed only the peer was in rotation", awaiting_snapshot_restore: "Started operator recovery handoff",
+  restored_and_rejoined: "Verified restored canary and returned it to rotation", end: "Ended the capture"
+};
+function describe(row) {
+  const node = names[row.node];
+  if (row.event === "drain") return node + " drained";
+  if (row.event === "patched") return node + " patched to " + row.version + " and rebooted";
+  if (row.event === "application_check") return node + " returned HTTP " + row.status + " and quote " + row.quote;
+  if (row.event === "rejoined") return node + " returned to rotation";
+  return labels[row.event];
+}
+function plot(trial) {
+  const left = 40, right = 788, bottom = 182, top = 17;
+  const extent = trial.buckets.at(-1)[0] + 5;
+  const peak = Math.max(20, ...trial.buckets.map(([, a, b, c]) => a + b + c));
+  const x = sec => left + (right - left) * sec / extent;
+  const y = count => bottom - (bottom - top) * count / peak;
+  const output = [];
+  for (const count of [0, 5, 10, 15, 20]) {
+    output.push('<line class="grid" x1="' + left + '" x2="' + right + '" y1="' + y(count) + '" y2="' + y(count) + '"/>');
+    output.push('<text text-anchor="end" x="' + (left - 6) + '" y="' + (y(count) + 4) + '">' + count + '</text>');
+  }
+  const width = Math.max(1, (right - left) * 5 / extent - 1);
+  for (const [sec, ...counts] of trial.buckets) {
+    let sum = 0;
+    counts.forEach((count, index) => {
+      if (count) {
+        output.push('<rect x="' + x(sec) + '" y="' + y(sum + count) + '" width="' + width +
+          '" height="' + (y(sum) - y(sum + count)) + '" fill="' + ["#205844", "#356788", "#a34020"][index] + '"/>');
+        sum += count;
+      }
+    });
+  }
+  for (const event of trial.events.filter(row => ["drain", "application_check", "rejoined", "restored_and_rejoined"].includes(row.event))) {
+    output.push('<line class="milestone" x1="' + x(event.time) + '" x2="' + x(event.time) + '" y1="' + top + '" y2="' + bottom + '"/>');
+  }
+  for (let i = 0; i <= 4; i += 1) {
+    const sec = extent * i / 4;
+    output.push('<text text-anchor="' + (i === 0 ? "start" : i === 4 ? "end" : "middle") +
+      '" x="' + x(sec) + '" y="207">' + Math.round(sec) + ' s</text>');
+  }
+  byId("traffic").innerHTML = output.join("");
+}
+function show(mode) {
+  const trial = data[mode];
+  document.querySelectorAll("[data-trial]").forEach(button =>
+    button.setAttribute("aria-pressed", String(button.dataset.trial === mode)));
+  byId("readout").textContent = trial.valid.toLocaleString("en-US") + " valid quotes, " + trial.errors +
+    " errors, " + trial.skipped + " skipped offers. The longest gap between dispatched probes was " +
+    trial.max_probe_gap_seconds + " s. Client p95 was " + trial.p95_ms +
+    " ms. The peer served " + trial.peer_quotes_while_canary_drained + " valid quotes during the sampled canary drain window.";
+  byId("timeline").replaceChildren(...trial.events.map(event => {
+    const item = document.createElement("li");
+    const time = document.createElement("span");
+    time.className = "at";
+    time.textContent = "+" + event.time.toFixed(1) + " s";
+    item.append(time, " ", describe(event));
+    return item;
+  }));
+  byId("jobs").replaceChildren();
+  for (const key of ["preflight", "approval", "canary", "peer", "containment"]) {
+    const record = trial.jobs[key];
+    const row = byId("jobs").insertRow();
+    for (const text of [key, record ? "#" + record.id : "—", record ? record.status : "Did not launch"]) {
+      row.insertCell().textContent = text;
+    }
+  }
+  plot(trial);
+}
+document.querySelectorAll("[data-trial]").forEach(button => button.addEventListener("click", () => show(button.dataset.trial)));
+show("normal");
+</script>
+</body>
+</html>

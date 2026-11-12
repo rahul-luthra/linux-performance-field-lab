@@ -1,0 +1,156 @@
+---
+- name: Verify or patch disposable QuoteLab targets
+  hosts: patch_targets
+  gather_facts: false
+  serial: 1
+  any_errors_fatal: true
+  vars:
+    ansible_ssh_private_key_file: "{{ lookup('ansible.builtin.env', 'PATCH_SSH_KEY') }}"
+    ansible_host_key_checking: true
+    ansible_ssh_host_key_checking: true
+    ansible_ssh_common_args: >-
+      -o StrictHostKeyChecking=yes
+      -o UserKnownHostsFile={{ lookup('ansible.builtin.env', 'PATCH_KNOWN_HOSTS') }}
+      -o IdentitiesOnly=yes
+    pool_headers:
+      Authorization: "Bearer {{ lookup('ansible.builtin.env', 'PATCH_POOL_TOKEN') }}"
+  tasks:
+    - name: Check free disk space
+      ansible.builtin.command: df -Pm /
+      register: disk
+      changed_when: false
+    - name: Record the installed package version
+      ansible.builtin.command:
+        argv: [dpkg-query, -W, "{{ patch_package }}"]
+      register: before_version
+      changed_when: false
+    - name: Check the update candidate
+      ansible.builtin.command:
+        argv: [apt-cache, policy, "{{ patch_package }}"]
+      register: candidate
+      changed_when: false
+    - name: Check the current application response
+      ansible.builtin.uri:
+        url: http://127.0.0.1:8080/quote
+        return_content: true
+      register: before_quote
+    - name: Validate preflight evidence
+      ansible.builtin.assert:
+        that:
+          - disk.stdout_lines[-1].split()[3] | int >= 512
+          - before_version.stdout.split()[-1] == patch_from
+          - "('Candidate: ' ~ patch_to) in candidate.stdout"
+          - before_quote.json.quote == 42
+          - before_quote.json.node == inventory_hostname
+    - name: Record preflight evidence
+      ansible.builtin.debug:
+        msg:
+          event: preflight
+          node: "{{ inventory_hostname }}"
+          time: "{{ lookup('ansible.builtin.pipe', 'date +%s.%N') }}"
+          version: "{{ before_version.stdout.split()[-1] }}"
+          free_mib: "{{ disk.stdout_lines[-1].split()[3] | int }}"
+
+    - name: Run the rolling patch on this host
+      when: patch_action == 'apply'
+      block:
+        - name: Drain this host and wait for in-flight quotes
+          ansible.builtin.uri:
+            url: "{{ pool_url }}/pool/{{ inventory_hostname }}"
+            method: PUT
+            body_format: json
+            body: {state: drained}
+            headers: "{{ pool_headers }}"
+            status_code: 200
+          delegate_to: localhost
+          no_log: true
+        - name: Record the drain
+          ansible.builtin.debug:
+            msg:
+              event: drain
+              node: "{{ inventory_hostname }}"
+              time: "{{ lookup('ansible.builtin.pipe', 'date +%s.%N') }}"
+        - name: Capture the boot identity before maintenance
+          ansible.builtin.command: cat /proc/sys/kernel/random/boot_id
+          register: boot_before
+          changed_when: false
+        - name: Apply the one approved Ubuntu package version
+          ansible.builtin.apt:
+            name: "{{ patch_package }}={{ patch_to }}"
+            state: present
+            lock_timeout: 60
+          become: true
+        - name: Reboot the drained lab host to exercise the reboot path
+          ansible.builtin.reboot:
+            reboot_timeout: 110
+            post_reboot_delay: 2
+          become: true
+        - name: Check the current boot identity
+          ansible.builtin.command: cat /proc/sys/kernel/random/boot_id
+          register: boot_after
+          changed_when: false
+        - name: Confirm the new installed version
+          ansible.builtin.command:
+            argv: [dpkg-query, -W, "{{ patch_package }}"]
+          register: after_version
+          changed_when: false
+        - name: Verify the patch and reboot
+          ansible.builtin.assert:
+            that:
+              - after_version.stdout.split()[-1] == patch_to
+              - boot_before.stdout != boot_after.stdout
+        - name: Record patch and reboot evidence
+          ansible.builtin.debug:
+            msg:
+              event: patched
+              node: "{{ inventory_hostname }}"
+              time: "{{ lookup('ansible.builtin.pipe', 'date +%s.%N') }}"
+              version: "{{ after_version.stdout.split()[-1] }}"
+              rebooted: true
+        - name: Inject the controlled canary application regression
+          ansible.builtin.copy:
+            dest: /etc/patch-demo/fault
+            content: "Controlled test failure\n"
+            mode: '0644'
+          become: true
+          when:
+            - inject_fault | default(false) | bool
+            - inventory_hostname == 'patch-canary'
+        - name: Request an actual quote after maintenance
+          ansible.builtin.uri:
+            url: http://127.0.0.1:8080/quote
+            return_content: true
+          register: after_quote
+          retries: 8
+          delay: 2
+          until: after_quote.status | default(0) == 200
+        - name: Record HTTP status and application result
+          ansible.builtin.debug:
+            msg:
+              event: application_check
+              node: "{{ inventory_hostname }}"
+              time: "{{ lookup('ansible.builtin.pipe', 'date +%s.%N') }}"
+              status: "{{ after_quote.status }}"
+              quote: "{{ after_quote.json.quote }}"
+        - name: Require a correct quote before rejoining the pool
+          ansible.builtin.assert:
+            that:
+              - after_quote.json.quote == 42
+              - after_quote.json.node == inventory_hostname
+            fail_msg: "Application verification failed. Keep the host drained and halt rollout."
+        - name: Return this host after independent pool verification
+          ansible.builtin.uri:
+            url: "{{ pool_url }}/pool/{{ inventory_hostname }}"
+            method: PUT
+            body_format: json
+            body: {state: ready}
+            headers: "{{ pool_headers }}"
+            status_code: 200
+          delegate_to: localhost
+          no_log: true
+        - name: Record pool rejoin
+          ansible.builtin.debug:
+            msg:
+              event: rejoined
+              node: "{{ inventory_hostname }}"
+              time: "{{ lookup('ansible.builtin.pipe', 'date +%s.%N') }}"

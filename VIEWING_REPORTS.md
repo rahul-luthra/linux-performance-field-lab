@@ -27,6 +27,7 @@ Use the live links for rendered reports. The source links intentionally open cod
 
 | Report | View online | Local file | Source on GitHub |
 |---|---|---|---|
+| The Canary Failed: rolling patching and snapshot recovery | [Compare the trials](https://rahul-luthra.github.io/linux-performance-field-lab/patching.html) | `patching-report.html` | [HTML source](patching-report.html) |
 | From Alert to Recovery: Java slowdown, alert and AWX remediation | [Replay the incident](https://rahul-luthra.github.io/linux-performance-field-lab/incident.html) | `incident-report.html` | [HTML source](incident-report.html) |
 | Java application: all three measured runs and mitigation | [Open report](https://rahul-luthra.github.io/linux-performance-field-lab/quotelab.html) | `app-report.html` | [HTML source](app-report.html) |
 | Memory: six fault/correction tests and three HTTP/GC experiments | [Open investigation](https://rahul-luthra.github.io/linux-performance-field-lab/memory.html) | `memory-report.html` | [HTML source](memory-report.html) |
